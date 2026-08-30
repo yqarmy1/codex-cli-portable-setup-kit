@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose a focused improvement to portability or verification.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe observable behavior rather than only an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Verification idea
+      description: How could the forward path and rollback be tested?
+    validations:
+      required: true

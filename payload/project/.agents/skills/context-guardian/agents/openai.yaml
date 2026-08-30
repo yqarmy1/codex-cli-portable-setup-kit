@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Guardian"
+  short_description: "Opt-in bounded context for long or resumed work"
+  default_prompt: "Use $context-guardian only for this explicit resume or long-running objective. Checkpoint verified state, but never create, resume, or infer a Goal and never synthesize continuation from state. Automatic rollover requires the separately validated durable controller; otherwise checkpoint and yield normally."

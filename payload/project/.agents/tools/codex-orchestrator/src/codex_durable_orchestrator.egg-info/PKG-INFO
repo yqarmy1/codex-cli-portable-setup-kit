@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: codex-durable-orchestrator
+Version: 0.1.0
+Summary: Fail-closed durable Codex orchestration backed by Temporal
+Requires-Python: >=3.11
+Requires-Dist: openai-codex==0.144.4
+Requires-Dist: temporalio==1.30.0

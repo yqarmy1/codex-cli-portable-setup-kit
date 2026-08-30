@@ -1,0 +1,3 @@
+[console_scripts]
+codex-orchestrator = codex_orchestrator.cli:main
+codex-orchestrator-worker = codex_orchestrator.worker:main

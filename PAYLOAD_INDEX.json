@@ -1,0 +1,2661 @@
+{
+    "schema":  1,
+    "release":  "6.1.0",
+    "generated_at":  "2026-08-30",
+    "file_count":  442,
+    "total_bytes":  3162140,
+    "files":  [
+                  {
+                      "path":  "payload/agents-home/skills/find-skills/SKILL.md",
+                      "component":  "agent-user",
+                      "bytes":  5472,
+                      "sha256":  "C00EEEA0E13E74FE4A9D84BA0A8542205A1B736D65F13134FE1A6647EB14976F"
+                  },
+                  {
+                      "path":  "payload/codex-home/AGENTS.md",
+                      "component":  "codex-user",
+                      "bytes":  1162,
+                      "sha256":  "3A9AAEABB647782C3F0A1C83C1F539AA1EE8EF90A5970B7CC914757A740F460E"
+                  },
+                  {
+                      "path":  "payload/codex-home/config.portable.toml",
+                      "component":  "codex-user",
+                      "bytes":  1234,
+                      "sha256":  "25C0BC45A1B702D49380FE5E0A1B99ABE37E4393DE82CF0B8A1B7309A07B9070"
+                  },
+                  {
+                      "path":  "payload/codex-home/instructions/portable-agent-instructions.md",
+                      "component":  "codex-user",
+                      "bytes":  1876,
+                      "sha256":  "0B323E579454B7875F15CF1FC002800D48E6BD0182DBBD5764D6210000F98435"
+                  },
+                  {
+                      "path":  "payload/codex-home/rules/default.rules.template",
+                      "component":  "codex-user",
+                      "bytes":  494,
+                      "sha256":  "801C362CDD8291A950C0FC4EC92B4051A8D4E5B1B49110F09D36A77E5481022D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/browse-the-web.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1634,
+                      "sha256":  "E35B6627EEE0BCD0F86E264AD0973AA5C364A5BD3EC14838AD36217FAF47C841"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/callable.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2115,
+                      "sha256":  "4C116204CD68FF53908C49100A110D5FB773F9A3BC486A2BE57AFB09A4EAD248"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/client-sdk.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2287,
+                      "sha256":  "CEFD3D4947E8C081AC2A66CE6DEDF95EDB3E30F34BDE0C6B8A2EAEF182EE7210"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/codemode.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2902,
+                      "sha256":  "35D9639FE1DB69400479C34670A71090031608276EBF9BC1C5E7FA32F77D487B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1837,
+                      "sha256":  "91842E59FB17EFF0D40DF1CF16905ACA8ABD3AD9A939F8D15BFD6C5B84175354"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/durable-execution.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1705,
+                      "sha256":  "7CEA752AA3423745BE812CC97DF38B6BEEEA97900B97B21F171FC3AD1A5E281B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/email.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3539,
+                      "sha256":  "0A156971806F83F2F93450D731A57D6CB315CAB387E3ADEB33AD6FF50FE49ECC"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/human-in-the-loop.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1804,
+                      "sha256":  "729BB89C146B1E260E58B751BF47566AC7870AFA33FFF35D672AD485ED695766"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/mcp.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4663,
+                      "sha256":  "C991CB8ED89CA93F0C34433BCEADF54D4AC42BD0C6D439130829D058FB7BCCAF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/observability.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1339,
+                      "sha256":  "4563C0B9856B0F2CE9728470473CAAB565442CB2EB40044434D771805B9AA7F1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/queue-retries.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2228,
+                      "sha256":  "989733A31AA7AB7B6E9B778DA975A3A5DB6E21F200A02AF073069150EB700EA3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/routing.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1828,
+                      "sha256":  "55C9C94B02F827CBD90BC00CA798197B4CDEE0E87E0B2FE15B8F77D7725D66A6"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/server-driven-messages.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1681,
+                      "sha256":  "8AC4EAC5459693272C6E54FC1A656538F5E4A118029EE76988726CA84D20FD05"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/state-scheduling.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4047,
+                      "sha256":  "F0B0AB893B85135C4001B123A0CBEE1CDC3CE85C5D8339ACDED546E16F582CEA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/streaming-chat.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5080,
+                      "sha256":  "DFC8D08564187EA5920ECC78779973A432C03CA29EEA50C258C8984E521E0704"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/think.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2929,
+                      "sha256":  "1C507F9A22414290CF1C45821DEB1D83AE3B008098EAD751AF380559789547E5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/voice.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1901,
+                      "sha256":  "B6254F2AFA76A9530C43741BC9EA4DFCC9BCEF2C7819DFBA026825811943B06A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/webhooks-push.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2423,
+                      "sha256":  "1EE166AB7D14D2B26DB04CE8C6071E7CF0B348BF5BF704B13F943229E1A52CB5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/references/workflows.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3878,
+                      "sha256":  "1778B2DEE2788D0238C1D4B61E3EE42538A24166770CF33C38D78C22C1AC6DBE"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/agents-sdk/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  12195,
+                      "sha256":  "A05244D3CFB23330DAFF956EC28A990241F5DBBE489CD7FD6489C8F76BB60877"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/agents-sdk/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5885,
+                      "sha256":  "3C5B0816E92FF702A851BF071DDF2F2E814C4F841D5313FC86D3F7BDFA64AB8F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/agents-sdk/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3617,
+                      "sha256":  "4A24FC6BE3CBC5578FA58D6DED8495FED77831909AF599000C7F9849E9282AFD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/agents-sdk/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5108,
+                      "sha256":  "01E857E317F073CF75909F4054BEA3ADEBECB373799C5630FECD870C410A391B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/agents-sdk/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5618,
+                      "sha256":  "7CB1997C0FA2F66B00AA5C2A128D00BF788EC485EB86BFF38E83A2AE02762B46"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/agents-sdk/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2778,
+                      "sha256":  "B8BBF95920B105CC587B93280209BCA95104CD32D944B6E7344CFFD0A751E6C2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-gateway/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2954,
+                      "sha256":  "1135A774A42E059942CCB12D8BA514E6479D7F8F5F47400B4053F6DA5984B532"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-gateway/dynamic-routing.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1835,
+                      "sha256":  "56F3539A61BAE2FDA7D8A98C81ED14E820CAF733F27E6CCE2FFFEEAF7A6C1DB5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-gateway/features.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2726,
+                      "sha256":  "EFBC7D2D4464C1AAB4881F059589439E2979B9967568878C32F7CB3E72CC6CCF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-gateway/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6308,
+                      "sha256":  "3D1EDF888AD79BF599C6B21B66E0BA68C0473C5A2C60BE1BF2E5A21B68623089"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-gateway/sdk-integration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2684,
+                      "sha256":  "3633951A1EA8F419D85059DFB98F23E830805F728B516D7D87D1FA11EF9D9101"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-gateway/troubleshooting.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2420,
+                      "sha256":  "C79D02CE7B9E6CB361F1700EFF6E12149FC74547AAD3438501863D8CD02B2A79"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-search/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2519,
+                      "sha256":  "CFF4CE1BEE49988265F176FE5A0BDD69714A1B6E215A65662DDBF305F981D05F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-search/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1760,
+                      "sha256":  "59AF92D0C3B196BEA13AC72E18B42DB528721F8971C7D335B27951B77AA4DDB0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-search/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2135,
+                      "sha256":  "E548C0F2CBA170E81DD3E9E15B7CF430EABD7E73770ED29589B90DC20C3BF452"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-search/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2008,
+                      "sha256":  "1215875BF8A9E6317D31019A84A124AA7BA7E85BAC10B92BC445D0EF7383D619"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ai-search/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4521,
+                      "sha256":  "C8C484AB7723F38B649186E1C70F85A9B492C597CC513FE08876910B5406EFF2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/analytics-engine/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3161,
+                      "sha256":  "AE82C22E055E2EDEF7078286B7442763E19F70894B95FE310DD7C1709F9A572C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/analytics-engine/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2361,
+                      "sha256":  "86112C2385FE4E44B4825F9962CFE3429E6681DE9F051A50A1C70514F1B85131"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/analytics-engine/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2018,
+                      "sha256":  "08D11A06BC1CC955BDF4ADE8D1A523B0E78157434D559169C4BC2D36F886667B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/analytics-engine/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2312,
+                      "sha256":  "D294A7EE3CE2D58FBB8413EB6E58FAF7AF8F699CECC7480B955CEB31E87204B2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/analytics-engine/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3418,
+                      "sha256":  "D60BB6B6BB29C836886637EE584485BA9145CA1B326EE8EA55D86A4F62BB2C6F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4308,
+                      "sha256":  "847C33CE18C1A4FF210CE5DB75DB0694113FE5367BDBA983B0E6F0D7DD2742B1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3748,
+                      "sha256":  "6EA23FB895605FD2A2380580F7CD21AB39C51DDE470067ED191FD387F6337CB4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5390,
+                      "sha256":  "B721D8E28866F376CA8AC91D8F7F9FA35726F6378F83796BAED13687F6ECA6E2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4639,
+                      "sha256":  "7EA6B294371BC04FFBF0A1FDC71A2E138F3303BFCDD85B91B1E29D0D53F80BC2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2497,
+                      "sha256":  "F5C1E63C45D540FAE02993C8C665D908BB5AE12A2953E3750839A352D2295F84"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api-shield/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3900,
+                      "sha256":  "2AC3F5BE499C1047575DDDAE5FE10FD9AB93E153EEC3BD3FAE3E2ADD82275AAA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api-shield/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5020,
+                      "sha256":  "79ACD0A84BDECA4F45EF92D3772E9F403D15266210205700A7FCCC313A084418"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api-shield/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4946,
+                      "sha256":  "6941ECB164F0CD23432029E319CDFD7C999365ECA6AA1A1DF76B52BB59D565DD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api-shield/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5844,
+                      "sha256":  "66F0E9BC0D7440D76368F3863B8009CFE80DE3A61E91C76727A249E2EB192574"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/api-shield/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1796,
+                      "sha256":  "A032C7160B70C9A200E982BC457ACD746760C2960E25B7554DFB315DA98F71DC"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/argo-smart-routing/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6579,
+                      "sha256":  "8C3266518ED0F9F98AEFD6702EAF7400C40B0DE0F49CC4DAA7FF6F763F7E7EDE"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/argo-smart-routing/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4457,
+                      "sha256":  "9CC0C9F4CE01828E0153BADED0393F0569E9ACEFF2601C16AAD71E12E2FA8A39"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/argo-smart-routing/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4327,
+                      "sha256":  "FC890C1E98C117AC8B6EB5EF39A62059732D9DF2642700A8AD9FD2C877107FC7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/argo-smart-routing/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3053,
+                      "sha256":  "8F0E0D9ABDC17971AFC802C23A04BF8780365031E5C4241CF084B0AD97C3707E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/argo-smart-routing/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4060,
+                      "sha256":  "405AB3A8878C32C95E12FB1C769F6CF79A597DEF8898B5E291D347A04C3E9052"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/artifacts/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5096,
+                      "sha256":  "5A6FD7BCACBBAF2C2EA83A5A899480A667F504A15CB973256260D1B476BEF3E9"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/artifacts/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3154,
+                      "sha256":  "04648F76AD4D32A2265BBC6696C37229DB2F67ED1CED99BE6783EE61000C2D14"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/artifacts/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3772,
+                      "sha256":  "D48C787042E9352DFD459B49F660F979F169990FEA899260FAD8341EFB84E583"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bindings/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5199,
+                      "sha256":  "D0567127790EA92EBBA3570785363D1752EAB1C9570AEDA5C7885E8C104677C5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bindings/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4496,
+                      "sha256":  "D52FDCAEE45D9F7FA7279247E09D382F69B5FAB60BA8257FDCF92D8B37E14B34"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bindings/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6169,
+                      "sha256":  "F14C1EF1D9104DF78642CDA287CA6BA21E3EF954A6E71E33C7D4E47F75164C28"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bindings/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5052,
+                      "sha256":  "9FFACAB42680AA74DD7CFFFA24925B4728BF5C7C349CA204332260B52C82D3FC"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bindings/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4042,
+                      "sha256":  "5BA09AF5A3CE0B8EA090F60B87A0660F56D6252E256A36EFF86EC1DFCD8C69A0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bot-management/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5803,
+                      "sha256":  "A00CEAEA1F51F7536829B2F93323D0DF5C8F6B7742BFBCF9FCBD489EB910C4E9"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bot-management/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5744,
+                      "sha256":  "361F709D6561C916B6082AFA689AD3E69AA05F2CB4F9ED7BCBDFA62605B95C47"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bot-management/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5657,
+                      "sha256":  "D26A1B2DEE0B92E6E2F4046067E0BA3F9E14F0B548B1D06537232D265E4CBB56"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bot-management/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4970,
+                      "sha256":  "DAEB6AA87D2C1FE00E7D3BA3EBCB5E782725A6A3E22EDDE56C03527D1EB1BA63"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/bot-management/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3762,
+                      "sha256":  "4D50475AA586FB08CADBC7067D55B7EF1A6E5556BAD3587B23E35AE37D541967"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/browser-rendering/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2976,
+                      "sha256":  "0F346BFC469D1DEB6077523B6EA20F071975C5223267415B2B9398CC6AB566AE"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/browser-rendering/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1802,
+                      "sha256":  "DB9206A7F14BF13D5F8ADE9875927662796016C52B0221B54C3E08238890B952"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/browser-rendering/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2520,
+                      "sha256":  "31C3E69294545B1F7F9AECC80C3809521EFE3B8D4C36BBC47BA8A693A81460EA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/browser-rendering/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2647,
+                      "sha256":  "ED518864D14D821619B23D0A6E4FE0B39B64C8DA98AD17D3DA07B4B42D35C161"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/browser-rendering/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3092,
+                      "sha256":  "A0C6E51AFC6C19F2A892E3F144B9210F4FE067318AD2550E34DED538A9DB9463"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/c3/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2286,
+                      "sha256":  "1C5429D72D1F5D5DAB6D21914F7EB8ADED761A828B4190655A2D4A0BE6B12592"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/c3/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1637,
+                      "sha256":  "01E7F90DFBFCE4D20A86A41B3CA882DAB74D0B540EA07952DA2F4FF1C6B6626C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/c3/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2307,
+                      "sha256":  "4ACFBC2572326CD0BE2BDD76BC7C7FB629A68DABB7C98B3FC6BED234D13E72B0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/c3/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2203,
+                      "sha256":  "592E533F9658678BFEE0F5E7E65D9CFBF4A23AB4E47A3004543980643CE8826A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/c3/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3352,
+                      "sha256":  "A29848E8C74B2A8055330461F2FFEC6CCB14D5D61B97B8214195EE7787C70D20"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cache-reserve/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6018,
+                      "sha256":  "21B1448498E35B32FEA54786FFA8DEC6FFF4FF597A3ACFA10904FF459082207F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cache-reserve/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3660,
+                      "sha256":  "7A033BCBE69E1617D6DF25D202C8ECF58FE40A1A06B91C7B71D9AC1964886869"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cache-reserve/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5797,
+                      "sha256":  "3642800CD57F39FA3841021057A0AB6FB8BBCD8270B45B4ACF33D6F1345E0F92"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cache-reserve/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6265,
+                      "sha256":  "94B4739CFAA9AA8D805B5D820C5CFE2259EE9A108A574BF5FFF8837655647DCB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cache-reserve/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5609,
+                      "sha256":  "90F848F9B142DDBFD911EEA882B46BD45B5062EFEDA6B22E5BE3D526C6155144"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/containers/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4310,
+                      "sha256":  "D79640924C80DECC91EF17011F021FD21FDB8DC97FB2E8DD81F735A06ECB0A1D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/containers/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5424,
+                      "sha256":  "00AF782C2E2AB7C95CD4491D0269EDDC12EFCC541EC67A5692AB0B50BC7C6CDD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/containers/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4485,
+                      "sha256":  "5707E264B73F62B30624E3AE14646D5FB7DD889A463376F3123A5424F2DD66D2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/containers/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4925,
+                      "sha256":  "129853373101F0A96B3E7CCFE6D840AC93CC089FCFEB8D551FCA0AF81C74A904"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/containers/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3531,
+                      "sha256":  "84AC21E42DA260E8A2A5CBF677B455A7A06E0585DCD56BE49895C014A26AE998"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cron-triggers/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5866,
+                      "sha256":  "2768DEDD364F5424F5A5B4E6AB579F5D8B9DE8C5D7FB32924CEE73404450C64C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cron-triggers/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4250,
+                      "sha256":  "EF4548A7F8F80B1BE2C41391A5ABA2CE18EF0E02A96EC3B675BB84971DC383A0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cron-triggers/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6356,
+                      "sha256":  "D9204A25D6F22F970EB38DEA053D2BA365C6CDB9E6B33591D83A6B62B835B016"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cron-triggers/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6980,
+                      "sha256":  "99E9E973FEE96B3A1C9FF3A896546CC8A498F9831CB168E1CF4E4B4ECFF38102"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/cron-triggers/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2994,
+                      "sha256":  "E2283E3DE4E8C32B9700DFA4C714E4639C3DA2EF1FBC5A2703082BF7F5D4B839"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/d1/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6806,
+                      "sha256":  "EA957B3260A43C46AB7845303ED34065655B4367683BF502C53B334E5FA4C776"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/d1/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5680,
+                      "sha256":  "94D31FEE923AC3C9859F5741692EC843101463BC72DD8EAD1FD3B086BB48A834"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/d1/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4318,
+                      "sha256":  "1FFA594D0BDC7E02E64629C999F587119A5453A764BBF6ED69712FFC2C4C1F93"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/d1/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7251,
+                      "sha256":  "2E548A1267C7EFAE89FBE77A3627D096B3D77A64AF61D8E3F53D36D15D01E48B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/d1/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4756,
+                      "sha256":  "A8374574FF4963E39014CA1228DBF651F36FE8C6355187687C2609AE1F7633D4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ddos/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4170,
+                      "sha256":  "EBA158F9CCA3CE70A07E5050A5586E3C1ACD60F69E22069D9D02C8C91AD60CF5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ddos/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3005,
+                      "sha256":  "0D0FAE2B22EDBA2D40FDDBBCEC3F0C63651A25A0115E708EDFC8B4E4C584C925"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ddos/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3912,
+                      "sha256":  "320F6D383FE22756AE19E3A79FB1C1A5D147D74A493B73EED6DD6644FB9FD1A0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ddos/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5680,
+                      "sha256":  "546D722C64D8B1C14BC0A924B38EEC24BCD3E639C25BBF424BB8CF73933AC306"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/ddos/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2054,
+                      "sha256":  "63018C3C2D25CE26A0F1B80DD60BD2D3C5193A26BF96979EF624030AB766C4A8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/do-storage/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3571,
+                      "sha256":  "D3A0957CCA017AE837BCF891D34404A6FACA40A9B4D9B4BE26A3F6272C223622"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/do-storage/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2235,
+                      "sha256":  "B2C7EF2F41948280DF468B8D1ED618486FB865EC8BD985706721F9DEBE472945"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/do-storage/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5200,
+                      "sha256":  "82C019A3E36341D3D9113B9B30F0D2E6692A59FDD903ED00DCE2F7774E6E4F5A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/do-storage/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6127,
+                      "sha256":  "DC5118F06AC3FBF05323E17794BFFA2E38E105E47D71F483B5545CAE5F12A64C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/do-storage/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2765,
+                      "sha256":  "2DD7FA0EFC7DB9A4EDB0935B77A48973FE79978B693D29385DB0403F1792154A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/do-storage/testing.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4912,
+                      "sha256":  "035B05FED943B2322941D7BD713D4D0E3025F2E514A3EF00642FC53509133472"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/durable-objects/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6142,
+                      "sha256":  "ADA50C598680F4D1E50D3E0588A1A6C0F4875346E583E34B87956EDEDFF12E22"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/durable-objects/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4266,
+                      "sha256":  "30486904F250952DF8F11B7899F3EBEDC46B7F9BB1C28D4695A3BF8ACFB87375"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/durable-objects/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7318,
+                      "sha256":  "B7156D2D5415F3670698D2CCAE91877852FBEBF7868B66412497907901BF1661"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/durable-objects/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6691,
+                      "sha256":  "E3AD270B7BEAAD53F700B4B5F49202EC7D9EA5C95BD22F963F2DC7A9272142A9"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/durable-objects/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6609,
+                      "sha256":  "EEAAFE38E5F85B70D5D548735A62181E055121932F98625F7B12D8F364751F4A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-routing/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5311,
+                      "sha256":  "BB8355F4EF58AB1577982D1F6E399038538EC5F84E93071CD9F928B5A6832D36"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-routing/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3571,
+                      "sha256":  "A9A45E84286FFCE8B67CD6A50E72A3A0F169F4414280FD94E5F33F9E9AC4ECD1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-routing/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4127,
+                      "sha256":  "7D16C6D42EEF4CA6AA2B6D677D4C87D8F614C85C41E7EAC032E2BDE5A0E3E77F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-routing/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5480,
+                      "sha256":  "507BFCA00D2B363D6168EC918FC75829BBF0145402AA3239916BA1BF7E92B6A3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-routing/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3431,
+                      "sha256":  "4E28709E319F3912008A2887F9F3D62BDAA98AD9E52CC5AE139B8D220E825479"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-workers/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6078,
+                      "sha256":  "5E4B0E68FCF88E3332B15A8F6EF22CF706953D51B38456CD0346348543F06754"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-workers/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2719,
+                      "sha256":  "984D84D6842F4ADDA147CB783537FFD51AC887C331A0DE3C100374C63C06D33E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-workers/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3058,
+                      "sha256":  "D1ECCC06D83DCE5AC8B0FAB47BAD9694E5B067752EBAD52B51BD8F32FCDE45BB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-workers/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2785,
+                      "sha256":  "E8704F7BEAC19235631B246420C5CE730B054CCF899F43548366D70FE430737D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/email-workers/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5389,
+                      "sha256":  "54BCE4CAFACBB335D111F5A6DE5463B6F33F4F8DB5BB52D22F85AE0487CD1311"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/flagship/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  11749,
+                      "sha256":  "C7B8EB86ED852A3F37709F000988AEB89860C24AEDEE58527379E475F0996894"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/flagship/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4863,
+                      "sha256":  "A067854B48B4F6CBBB7FAC4CA886EF6A14DDD1FC108650EC2F096CA730D55C02"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/flagship/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6353,
+                      "sha256":  "5DAAA2C1895E625B06F9DD413F7548603AA0159FB4781145B0CDBCB0A6F07C44"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/flagship/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  14059,
+                      "sha256":  "E89E1F39FADFB9AAD0C01FD6AC84B8C8F36716E88F26DF1FD79C53AAF2EEE8E7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/flagship/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3663,
+                      "sha256":  "A4D1719C39D4A93ED884EEF6E7CDDC81E203D386332BA0D288D34436D3ED2995"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/graphql-api/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5782,
+                      "sha256":  "0C0250CDF31ADFBF2C7F96BF3EC257C32D14709160A8552B3238A861B3540DE5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/graphql-api/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4675,
+                      "sha256":  "765E696DFD11BFA87D231C011B10FB2C10A2E33D704D7C6D04F1F125585C5B92"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/graphql-api/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4857,
+                      "sha256":  "59DBB9A541DB17CDAC52665FD6883D2EB660EC6FEA4B45CC87C291D2E2B4A50F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/graphql-api/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6539,
+                      "sha256":  "902D188040A60C5D130790222442158FF12879232357EE34AB410E0D7B9B5E76"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/graphql-api/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7769,
+                      "sha256":  "324DF669A01CACEFF7F0DBDB25E3B35DCAA40A5C20700605628C4BCB66B0D093"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/hyperdrive/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3875,
+                      "sha256":  "7E7BB032DC6151CA8E3C30B278EFA19D617362E9225F7A5F77A176585F10F7E5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/hyperdrive/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3913,
+                      "sha256":  "9C66135E7D5ED7A0E4F6B1395B71387B62AA22166D7EB26AB7D918B1FB5B5E57"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/hyperdrive/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3926,
+                      "sha256":  "C0001867D043C37581BC1A0D0EA556B649D7522E965AB2EEDD431B1F3B0CA56E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/hyperdrive/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5980,
+                      "sha256":  "E3BCDFB9C42DF3CA1A84F175D727E918B638F28759FB5BD38FD3BCFDD21594FF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/hyperdrive/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2918,
+                      "sha256":  "4D0E1A0E8366975D6AC0DCFD183E8B0A925F582C35917897AACE568ADDFF09F6"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/images/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2574,
+                      "sha256":  "92C62BD77B133BF58287E93F12DCED76725C0DC699B28ECAD2ACDAE709CEEA3C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/images/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4126,
+                      "sha256":  "E4C66BFCBF49B9C0CEF84D66C7F8B49CE4520C92190661D13C409EAA0825C8F2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/images/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2490,
+                      "sha256":  "447EC285923C9AB4B29E56EC7EC0318F30A559C05C257D37B02F60E62971B9D2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/images/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3582,
+                      "sha256":  "B1CFEBD7AFDD7024E581E4A1002A304AF0C00E630D4CD4623E97CAAE1C02FCD1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/images/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2900,
+                      "sha256":  "2DF48CF4D8D5269C55A2C2E94EC331C576200DB80CB33BDB3F08F104FEE88676"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/kv/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4327,
+                      "sha256":  "94A2FC711801BF91B2697D3690CA5B5F6C7732F22EC50965E1EB0EAFED204FF4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/kv/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3083,
+                      "sha256":  "59138344E7C23B43B360E0DF44A23EE56253D013A4A1A9633C5B459B3D4EBAC3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/kv/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4454,
+                      "sha256":  "F535FBF107435B03C72967A6505B279A1E3A34C1C0CFB76F6FDDC081FD7DB3D1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/kv/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4740,
+                      "sha256":  "4FC5129467BA3E9820609512C3CE9AC0E2DB5C125CAE6C892C239AD273381754"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/kv/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2883,
+                      "sha256":  "C141EC2F48645A0F0884511BACEEE0265776075F3073AEFBD199F3037B420681"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/miniflare/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4606,
+                      "sha256":  "468EA31044EC445B89FB54692335F26705BA10EE977F233AFB075F340E8A77A2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/miniflare/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3525,
+                      "sha256":  "54DCE11B0189897AAE54406B09BFE4F9DA89293DAAFC33898B80CCDC728494F2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/miniflare/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3724,
+                      "sha256":  "EB42FD5887ECCD3B8100A4BE7C1BA4209D8E0F169EA080252C4B46D38C745F63"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/miniflare/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4260,
+                      "sha256":  "3CDE456AE68DF13DDC6987DF3C45C2440409AB7E2574E5E58B2C1F037F902AF0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/miniflare/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2976,
+                      "sha256":  "484F0EDC585D46559EE0BE2BC443DA8C7E96D6CDE31E2C18EA52A2AE6C73BB95"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/network-interconnect/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5626,
+                      "sha256":  "A4785017781A4B469B1C3E5C94F520A50B89412092B65963DEE44BCB6E00B868"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/network-interconnect/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4257,
+                      "sha256":  "3EDFA1D1642A0AED71121156ACD7E4F76258B027B8F3758CBCA68AB0EA5A1956"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/network-interconnect/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5554,
+                      "sha256":  "8444D367D9389661E040061C009011263C429B52B72A27F2FB4FF82AD261B7BE"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/network-interconnect/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4041,
+                      "sha256":  "E696A628F29643CB7955ED5D0607875188D462DCDFF8A2758D287302D6B0FA1F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/network-interconnect/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3230,
+                      "sha256":  "00AA27F34CBE4277A1C79624A06BFE3AB8CF910E2C847EB5BA9C5206F1E12B3E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/observability/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3480,
+                      "sha256":  "0DD66198A6832B3DE90B32FABFAE0E89B9AD98921181BFA5D77CB31DA2C309C5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/observability/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3584,
+                      "sha256":  "8A1B85928D8F146B57D8EF4C9B60F3CCD052E32A32B58B698DA28A2483027960"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/observability/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3755,
+                      "sha256":  "569BD59B08317BD6AA85621E7974650E3602A0CC5CBCD0E98DD503D9E879FB9F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/observability/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2481,
+                      "sha256":  "DF66DCE8D14A5887E183DBC1831C3914CDFC731A854F1A12F6833DA4B6FC05C7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/observability/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4016,
+                      "sha256":  "3C33E551008C5862BB09373B6D2B7FBAEC300FACF4FA70030F6E16598FEB595E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5980,
+                      "sha256":  "90989F928DF3E394E9BC9587AC4EDA172BF3735A338A0B1F6EDBA4D6AF3A2652"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5879,
+                      "sha256":  "65142FFA10DE9517C126311D8D94A0C401447277DF034123FCA33EF48D03B3DD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  8040,
+                      "sha256":  "9A38076368F938DFC34BC1FA797F00A4D1B1BD2D0B0284595F2081CFD05EF182"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5992,
+                      "sha256":  "5A527102EDE2C5B01543F356B0EDF2574472251439C08B257EBEFA4753EEE957"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2834,
+                      "sha256":  "0B79F0E3BD7DD929D03DE09AC7C35E006547C99763399F01B64436749085AFE8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages-functions/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4677,
+                      "sha256":  "EDF4EA412A1372E46A704A3C0B7B60D208722B0DBDA106D04BAB41AB48DDA1DA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages-functions/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3002,
+                      "sha256":  "ADAF79D53CA4D46EBC1BE695314BB67AA42A11F412D9B61A48A765C828DD0D94"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages-functions/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3871,
+                      "sha256":  "407B5630E9489EA6AAF55E93AC03C61068D193BF9B300B7F2EB2B67CC77070B6"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages-functions/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4214,
+                      "sha256":  "35F462E5F5681BD317D66A62F7E297CD8395C406E9E52CDB05F8C5B17DF6877C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pages-functions/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3322,
+                      "sha256":  "19474E50D4C3C5FDA0184F62DF8302AEF0BA8A09999FC3111D8CB979AA280FD7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pipelines/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5058,
+                      "sha256":  "6DFCED39253C563560C990FE062E3DE2DE9254CBDE159771F488842CA2882597"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pipelines/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6099,
+                      "sha256":  "C10E1EB1066DA113B54C33E4B06034C7E359912A344EDE6ED7752AB29768BD52"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pipelines/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3029,
+                      "sha256":  "B0D85C6A6519BAC88F9D08D5FD9449515C2CA6750CB220FFC1C2E1394E87E2F3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pipelines/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4674,
+                      "sha256":  "2790AA7AD664B4BA467D39F8FE8952B663876B56BA4D229BB7D4B15251823F4C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pipelines/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4257,
+                      "sha256":  "4F27DAC23439852855E23DD270EFE6791F360F11D80FB9EDA6633C1B2B216E83"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pulumi/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5761,
+                      "sha256":  "5E6459DBE3BCD802965FBC8467C54744671D5A9B3C600FECECB2DB314295797D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pulumi/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5657,
+                      "sha256":  "5C102D4EB4D16A1647B451AF42599D6123F6F4F31E4390EDD698BA6AD8154EB6"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pulumi/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6555,
+                      "sha256":  "F05C3E92C94F3FE24AAB6072AA2A10A050A1DF9D2EF56059D568150F6E6BB0A4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pulumi/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6974,
+                      "sha256":  "975CD37CD6735D790624D042982A683F05F96DD6509F9DA8ADA7E78F8E645F2E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/pulumi/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3231,
+                      "sha256":  "2803DD115110B5F4B8AC414FB78DEBBE06C3A653D57032AEE2374F89ECA4D2D5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/queues/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5563,
+                      "sha256":  "FFE55706D2BCBB14F799D3254631C8B5E77A21534CE8831DDBA7CBB325061E8C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/queues/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3828,
+                      "sha256":  "F8730E15875FAF99FF444CA6DC198D96A0EBBB2ADDE14163C1455E754F24197B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/queues/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7233,
+                      "sha256":  "A6ADBA9DDAC675D2C4FAA9C42D9AABA06E09A7802184AFF22905D3EA135A92B1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/queues/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5498,
+                      "sha256":  "4CE6CECEA3AC1BEEAE91F5F3DCA2FAD88B4B65159ABEE4D56C12BE8EC731C541"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/queues/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3058,
+                      "sha256":  "FAA1106897E0F1B89A0B87040E14955F7594A48EF966D3EE88ECE436CBEF9359"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5649,
+                      "sha256":  "D229E1D53595DB452FB893AB5053D37781E782BD46F5EAD3193599474ABBBA88"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3654,
+                      "sha256":  "C2E3BB6047AF5CA71E4E539A3DEDAF9C62B7D41D4EF7F41C298495E9E9380FD3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5048,
+                      "sha256":  "C9068FB874E3CE0244E11E04C99383F9CA4E314A176E782E3E2CBC3DCEF9A0F8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5844,
+                      "sha256":  "FE0E4CAA70E1F1A04D8559B56445B9DB0CC51019D03A40A0EF996A1B5298698E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2825,
+                      "sha256":  "E7D0E772E34C8FD6FB1D2AADB6A2C07A6D30D8E04EA50CE9A2B8C638836A8BF0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-data-catalog/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5615,
+                      "sha256":  "10ED527665327F3EF405B8E8B1119C50DF7406924D2965854C9EBC75B2DAC094"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-data-catalog/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3969,
+                      "sha256":  "FFFC79472AE6ED229CBCFADFD938D1CE0E60E07386EA6A17913CAB602E4E1D34"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-data-catalog/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3244,
+                      "sha256":  "DDFE37A9189EB4CAA0ED54F8B07BB0309598C141B77BA719C53B53C121905775"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-data-catalog/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5345,
+                      "sha256":  "5D7BF03405CBB311701728508678A47328E2903CC9FD052D81C603618AE14FD3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-data-catalog/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3980,
+                      "sha256":  "B07F4B83262229427E5AF643A719CAFE8BD991FE2CE95CBF251222E61572EBAD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-sql/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4898,
+                      "sha256":  "4D5601B6C29DF2A54EB68786E69AA2F1BC0D86409515394EA46EDB762BB32D66"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-sql/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1679,
+                      "sha256":  "742A0B853A519BBC02085C4C71B22DC5A82516A0A6FEFD2E0696B371E04CB052"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-sql/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1969,
+                      "sha256":  "0776A81BA0FFEB1B0FBA4067F23EFC5CF9D1437F675CE0B113F57C301203B6ED"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-sql/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4357,
+                      "sha256":  "55141805996052BE7B8DBFEAAE1472808C1085CA364CF92FCBCCFB5015393A35"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/r2-sql/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3260,
+                      "sha256":  "EBFB497E2ABFB46B4E0AC29AE3AC8088D8DE69FB2D409435781D114E56C9AB12"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtimekit/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  8352,
+                      "sha256":  "37020E6102C6F4F080F430F3DE20C83532930E59CDCAAEE52752D1FE62190152"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtimekit/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5192,
+                      "sha256":  "4D4CCF99FA72D8923DF1EB3910EADE99021CB77C5D9B4AA95310A01AEADE0AAF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtimekit/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6883,
+                      "sha256":  "83CECDA63BAD4C55C4B375F0B83FD90BCDC9A15A257FC95809AB08FA4C102618"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtimekit/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7660,
+                      "sha256":  "2E02421351F5A7AD19887C38CCAE65F14C8118956C6763C029072847036EBCD8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtimekit/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4047,
+                      "sha256":  "190ECAE4BB2ED00795CEC6B59DF4B0B3045CBC07D09B818ABE398C239E97D531"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtime-sfu/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3768,
+                      "sha256":  "7C6C3D15D77976A87ABCBA5A8358C29C81E7DBEB15713CF5CCF71374E6017BFB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtime-sfu/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3509,
+                      "sha256":  "6CEE79842FDF8FC68B75951A8FA015CBD9276C7BABE6E8753F654D3B112C3FB1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtime-sfu/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4902,
+                      "sha256":  "9717FBBF38EA4A8ADC51631FD093EEFACD6D6C7C30A961E54A5D404FA206B259"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtime-sfu/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5403,
+                      "sha256":  "51A2B40AFD609346A367DCF8A626E905DFE895B3309FCB53432290C3DA93CF0E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/realtime-sfu/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3078,
+                      "sha256":  "2C1A23B8C44198E95EABB9F8DB96453DB61D935F96292932E9A5D1FEEA31E98C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/sandbox/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5030,
+                      "sha256":  "252AF5AD0F10D80F221A325B8CD12D7A277F9B15EDC9EE7642E35663B385672D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/sandbox/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3412,
+                      "sha256":  "685B16622ABEF8FACA88401B0CAB758F2B1E9498403A84ED3183AAC8ABE6C314"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/sandbox/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5469,
+                      "sha256":  "56B1E74E0AD0EC803BB096DD1A9FCABF043A92078A0AA5B82A4B42D896C84D84"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/sandbox/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5257,
+                      "sha256":  "F99EF6DBF0A9833235C536B5BC4366930A76E57ECB4D9F90A45FDFE68EF641A7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/sandbox/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3118,
+                      "sha256":  "200282C2CFEE1D30145949CE77EEAB61C9CD7B0FBC0123CF3D8302E27AD865E6"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/secrets-store/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4358,
+                      "sha256":  "D6453C2646C9B2A7FA74B9A63A7A6AA0707CEB499A06705BDDA367CFE3E8A1FD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/secrets-store/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3890,
+                      "sha256":  "A7CB7BA5AFEDECBD005217D6155D85E2800B9F5029BC49F16F15498FC99F17BA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/secrets-store/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3838,
+                      "sha256":  "572D2D0464D24D66C4720B52C57F6A3234335CFB2FD18308BBA876B72229A296"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/secrets-store/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5660,
+                      "sha256":  "60F60F7EF93D50208629A2E630D24F4758B1B995EAB146395FC639844829058A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/secrets-store/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2215,
+                      "sha256":  "82C078E9D71D9BD28B2F23535F086E74BEC7ADAD08E3CB6C289326A4A6E14550"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/smart-placement/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5559,
+                      "sha256":  "D3D8B440A7E362799D7B02DFC3CE348D7BBE51A760F4C6945F2D93BD82785774"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/smart-placement/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6119,
+                      "sha256":  "7D29937845C26F42EC568F4A98262BDBFE2E983C45E94C7C6376DDA0EA67E856"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/smart-placement/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5637,
+                      "sha256":  "8E56C052E6B513B9AB565F0EAF0E7F84BCA236DFC30BB77EC6715B70821A5B92"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/smart-placement/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5784,
+                      "sha256":  "693558FE87218C6EE1ADCA94CA3362EB9CCE923E369559F7FF87DCA1B9BC5047"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/smart-placement/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5024,
+                      "sha256":  "2A41285BAE05A8772A6B52B292C28AA87BD4F65C6B984BA85E2733FEC104567D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/snippets/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5133,
+                      "sha256":  "E76A59C5005AD537EA4AD83FAB71365995717FB51938797A4DC29AF324285755"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/snippets/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6300,
+                      "sha256":  "F93AFBFF530B656E2668CD3F1C3998BAEE2F0093570A46BD4C975488447D25BA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/snippets/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2220,
+                      "sha256":  "301C7167F03075505498F1F6B5FE1C72A393065A8228F42C435FDE9F1B694150"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/snippets/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3346,
+                      "sha256":  "2B06454DF89A837E16AE554769AD055E8DE90D2C6BC19A81B4AEEE0FC423029D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/snippets/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3132,
+                      "sha256":  "4F66291949E5FB2A66E49A98B392C2D18057FF36BA74906FEAE3AEEF94F9701F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/spectrum/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4924,
+                      "sha256":  "BEF098862434F4C8E253D718D3437091813E45C3BFAA5004E8E86D6CEB83BEB2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/spectrum/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4332,
+                      "sha256":  "2079F33DFE2EF2ED715927C95C2BA5389F5F426745597AEF94E5885DA5EEC403"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/spectrum/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3739,
+                      "sha256":  "CB07BB56C6C5E2B2F88380772CBAA25143D7F32CCE69C8F5BBBB1E77D4FDD216"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/spectrum/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4778,
+                      "sha256":  "087E7D9A1A1A308EB13614332DF217137296501CF57082077F05BB3A1F2BF7B0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/spectrum/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2355,
+                      "sha256":  "6DFD516D6E54696ACCBE6BB499F4E70686061ABD0AFA192897B32D7FD0C3F32E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/static-assets/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4451,
+                      "sha256":  "619ACB0A8D9732395316FC0BEEED11E1A10557E08C639338AC92473CEA1C5701"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/static-assets/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4826,
+                      "sha256":  "C35204C02177893D0B8C5B9BF2341D7814ED9D1E8E2CA3FC7C87D05603E9EC50"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/static-assets/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4127,
+                      "sha256":  "37B51D4F42E2A685934B7199DC62A0D8FD3D98C9DCF197CA5F5667AEE01EA86D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/static-assets/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4895,
+                      "sha256":  "A9B508F7936D8EDF7C63C65FB217D27F6AA555209A21E0A65EADF7A32D9EC9C4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/static-assets/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2197,
+                      "sha256":  "EF31F6CA300CB5FB1F111A626F6D92EF2B5B48A3ED97C2203874C33A2F38C0E8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/stream/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5260,
+                      "sha256":  "5440838FB2FB329FE815AECDE94709A3D32BE08C917491355709314FF7E3D8F1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/stream/api-live.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5174,
+                      "sha256":  "7C384BB3EE0575F41BCC57CF1D7C6F37741E21DE5D4EBB86EE4D1A05F6D671B0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/stream/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3222,
+                      "sha256":  "74C156E9C665E9D523BCD7C5D9A763339ABA0356B1DC69D723EF6BAB41A25328"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/stream/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4308,
+                      "sha256":  "65EF0E0F81470833DEA11179849D5BF78F695720286DB5E5EEBE7D8DCF77A1D4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/stream/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6394,
+                      "sha256":  "1A18C1989FB525C15167126F98246AFA27766E701C86150CB60409759A3E08F4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/stream/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3864,
+                      "sha256":  "EAD31DA7979689BFFDA222B1B1C20903FB1ACA03301B208EFF0B3682A422B6AB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tail-workers/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5132,
+                      "sha256":  "D8349BFABDFAC0D2CD8C911F2314C34FF1045B2A85B6D135CF4F4692940A94B3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tail-workers/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3472,
+                      "sha256":  "E30B9D4E0846C61563696E2DB6D645491DEDB2DC07172F98AE3FFE51B2E8D126"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tail-workers/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4595,
+                      "sha256":  "4BA9DC553F71ED2422A03C4FE8022AEF313761227B88551E07B21496F0C68AC7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tail-workers/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4034,
+                      "sha256":  "400BB20063049D802F9B9D97924810817234BBA9A12D8FD5FF13E9F0913812E4"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tail-workers/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3020,
+                      "sha256":  "22776DD6348B07D2C7132EE4A52715F49BC61C1BB50D0AF81E49281E44BB9799"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/terraform/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4020,
+                      "sha256":  "5DC812C078D06454D801B0E126D50C48031C1A7B0FFEF7EBF77A97CF7B41E768"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/terraform/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7577,
+                      "sha256":  "4D12CAD256EAF2B021C1C19E7BE29EF79E2D76183E387EEFCE2D4EB50B8D483E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/terraform/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5268,
+                      "sha256":  "EDE039589518CCEB96D40C12B7E22AAF0FBB1A5EC4D806AF57940DFCAF9DA672"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/terraform/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6640,
+                      "sha256":  "1C5D35E79BDFBB2BFCE92B095DBDB4FB08923B651A8F8E40E6E70E2956E6FFEF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/terraform/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3680,
+                      "sha256":  "A7070AAA31C8E229B2EBFCA6FE66BCF6EAD9CDF1EF6D7B494A556080253EC073"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tunnel/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4444,
+                      "sha256":  "698055870E668A0827B8BBB83D9016B093E22E4A95F4AABEACA7EF2E0D1E099F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tunnel/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3698,
+                      "sha256":  "41C67B8A19309F3D626F8AD94BC0D4748BE63AD311C220C73F76FAAABDE461EC"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tunnel/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3933,
+                      "sha256":  "267E3FAD1F1A328BEC1786CE883F7D658EE328EE5E812C2A4EE61739B507C691"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tunnel/networking.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3993,
+                      "sha256":  "99F51BCB065FDD62DF94AA116F11EFFDE03D81C4299F369770492346ADD235CA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tunnel/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3853,
+                      "sha256":  "696D5FE99640934A94B6FACB6E3198D93DC38BFAC3C3324FD817E47F620BC40D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/tunnel/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3738,
+                      "sha256":  "1CBEDA06E54AE97DC5DB42721579E9B455CC1A2EEC61F4756B3D4DE29DDDF2A0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turn/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5220,
+                      "sha256":  "912EC9AA734843078DB5CEB9C6732F3AA62778AA7FFB836B9798B46152F377FF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turn/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4178,
+                      "sha256":  "8DF0CF402A41DD2A8205B9FC94F868DF48273EF9E85CF1AD690732AC1E2469B7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turn/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7020,
+                      "sha256":  "7135E3E6E0351BF85FCFD5A914FD499979E7E15540D155810BE5BC710E5841D7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turn/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6189,
+                      "sha256":  "DE0A2E64A0FE6456028CBD0CD8F29195CC8D4DA0E8935746357587D5937AA636"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turn/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3693,
+                      "sha256":  "9B1E36931F40B1FAF3C8F24F89ACB12C4F4223DE0AFC83E6B8DE636F4730D542"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turnstile/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6424,
+                      "sha256":  "8D9123CE63066A64D40C7DA10AE3251DAD64710F8122F3C57F826985D1474D27"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turnstile/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6719,
+                      "sha256":  "EAC60F420FA7122C275C40E6B7A9A55A672C42027D56D5E187432A1653F221B1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turnstile/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6276,
+                      "sha256":  "3166F9A79A6512310B84A7958DC911906395FD10E3540AF7698083EC8E5D8286"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turnstile/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4677,
+                      "sha256":  "7D229CB935AAA187796A8667B4D9843C8585A7F90FA30DDC6999240960F12BD8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/turnstile/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3539,
+                      "sha256":  "137CAA7C326B4F57FECAA6174179D140AAE4E20770301AC9EE207FA0F5A2CFFD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/vectorize/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2442,
+                      "sha256":  "1A9EB04DC17CD4C346FDCA49F10B8059A8897E3CBC28EA5EC6CA898874B86318"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/vectorize/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1986,
+                      "sha256":  "057EAEF43F53E8BD71699CA17A3D296EB0C165CE1C1A304D71DEA53EE9AB0908"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/vectorize/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2241,
+                      "sha256":  "ED128E78CB088CD62D3A4A4ADA65AA7729E09B0BC9ECDE1066FB38D00906FDAF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/vectorize/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2514,
+                      "sha256":  "DCC4227997E7A856444A701B9243A9A1C8D1CB38680429AC3047B761F85E71C3"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/vectorize/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4288,
+                      "sha256":  "BADC6F6E66868E9EAF30E46BABF9E5C060FE7E425ED62D29D17161677323B388"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/waf/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5831,
+                      "sha256":  "D7F67E1A1EE4096EDB8382FA04C610FC933593AFB442CEC3F2D5E76BF6A604FA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/waf/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4765,
+                      "sha256":  "E4FB36EBCCDB73EB8BE9513D316A7294AB62A6CE355B7E09498A77AF91CDB095"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/waf/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6290,
+                      "sha256":  "D002F5D683577B734B6A1D787B96D04BFF5AC47D454E720219FF58A9D850F4CB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/waf/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5356,
+                      "sha256":  "8FC5FAB71800154D1128725274BCFE1A59B3E667C2C0F841A96F643E5DA89BA1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/waf/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3455,
+                      "sha256":  "DFCF0FF026F351637A2C7E9321740A24A87A3A5EE9698712677C2914B5D22163"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/web-analytics/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2003,
+                      "sha256":  "82A7C2312B3D8D9852D14547EF7771616F0DA3CDECAA146AFBF6272B77976017"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/web-analytics/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1999,
+                      "sha256":  "E81A0AC61DCE03A4890B9950BA06662C16E4B9DDB4EECDFF204221501CD8D6D5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/web-analytics/integration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1772,
+                      "sha256":  "A0DBFD1A658252E25D7FFA86180C691C6976265526B36AB14CE9E4B469D95CBA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/web-analytics/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2237,
+                      "sha256":  "6CCD1E334D260B968731F5F613AD28882BC199B72883E3254A52DED8D859F5A8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/web-analytics/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5368,
+                      "sha256":  "F284CBFD425E0D2C53F79C79187287D7C0C74E6D84259294F2CA5B996834857C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workerd/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4959,
+                      "sha256":  "7A6652E76E27424B0CE0D7393E1A04595460290D44E5CA937E3B0090A3B61166"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workerd/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5263,
+                      "sha256":  "656371E6AA55E315EA02E4304228F5C1151023F68AF8058AD60984B90E00A9AD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workerd/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4781,
+                      "sha256":  "ED3107537E54D440445408131B89DB5F81F869902BADE11CDA7978F31234F74A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workerd/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4938,
+                      "sha256":  "DC293C43C732ADF6E3EDFEAF72510904C7E8D097CA26C8B168748DD3D57E4408"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workerd/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2789,
+                      "sha256":  "DAED9E582EFF91B2C29DC77701C7C18A3D92FDE0DC6883B2913DF26094C0C597"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5158,
+                      "sha256":  "96DAFB63543F3A52A791BA56B0C3FB45EFD7BEF5B31331CE520CB999B8956C8D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4349,
+                      "sha256":  "E7C5FB85F60A8E79D1E84225E3282797850CE5EDD31C4D09D70969C0C325878E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers/frameworks.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4276,
+                      "sha256":  "520538D460FA6A11360163E3ED0725D840946C776FEB9E00BD0BAFD9F1CFF699"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4924,
+                      "sha256":  "5DC63EE4570E2C4ED3817A5F9318454CAF3A1602C91CD1AE334E98486FE3B2C1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5447,
+                      "sha256":  "F408D6DB9C13EF192511B506B7F83B15DF1A0E736C9D10215FCC1C0C0B3BA439"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3451,
+                      "sha256":  "4E00DF1C6D64CD393C909430769C183B7027B4FE1DB0C2DBB31090987BAFF14C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-ai/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2715,
+                      "sha256":  "2B6093736B90376CF9089726EDDC580F77D9F719BE5031A1552CD05A4F3E991C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-ai/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1989,
+                      "sha256":  "ACFE8100A30A006B2B35BA9F81897130402825B062A087984258FA597EA8FA1A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-ai/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2693,
+                      "sha256":  "10FE3B26750C2FC92FF6CCDEFC1200352CDAE88C573071CD7735D0A84FF925DA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-ai/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3063,
+                      "sha256":  "1EBFD949690BD1E8150435C1BD1BF7B5CD3E6AB35EEC5442F7AF8BF39EA80198"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-ai/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6042,
+                      "sha256":  "E1F1FAE0A795CBF975D4751E36F28A2B9EB48AD9CD10A9EDF48CC9211581C241"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-for-platforms/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5515,
+                      "sha256":  "6BC581BF87E21DD9764B88E7658B8CCE841491943BD67B0AB8C37E1FCB2B9835"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-for-platforms/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3892,
+                      "sha256":  "21E9034F5B014589E05E98EB5FA368E1C4FE4F287215C4B8F38CE12B95FD588A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-for-platforms/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5440,
+                      "sha256":  "98904178EC81E30E0503AE512CEDF76E0D8BDCC517009984B474A6008243E18F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-for-platforms/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5587,
+                      "sha256":  "08EA9E56309BF663FCA61A9BB6E5115D23758FCDE7112D482944AC510AE43643"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-for-platforms/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3913,
+                      "sha256":  "8C1B123A124F0DA9DA6EE5944723F6A1FDF39BF753C8BBF5AAE23AEAB4DE6000"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-playground/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2265,
+                      "sha256":  "10CA3F561C09227408451EAD3809331429E5DEB29D3EB2AF48CE984DAE8959FD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-playground/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4479,
+                      "sha256":  "CE0183C32A0DF67AE263F8FBBE459B0DFB6247ADFF5E869C0B1B4D06AE1F6300"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-playground/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2060,
+                      "sha256":  "478B65B6A1827A2C95789DFE6038C16837A7DD463B6B943C630AFEA63A7454BD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-playground/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3303,
+                      "sha256":  "C95D27741ECCCBAD12386FF4FA9DAE6C8FF21438BF83F3EDFD177EC156A8DA69"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-playground/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4033,
+                      "sha256":  "88428C57B687C3C6CA23CE95559D0217DCC218A806172DDD70D0C86DB0ED5231"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-vpc/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5321,
+                      "sha256":  "60BAE66D5674A5E54A0077168ADFBC5C44A9C87050149381B119941BB4C45F41"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-vpc/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3898,
+                      "sha256":  "0A3F90CAF7B17158687C6F4CE5A6E2F292C19255EB2BF766D7EEC96DE926104B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-vpc/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4477,
+                      "sha256":  "70E2D004800E75CCDBBDCC37623B97D9F5B4592183AAE1421E21BAD19E111D80"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-vpc/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6011,
+                      "sha256":  "87DC009BC45B057408DFBEAACE374FF169295BBA7D9D4D40FA973945848C9ECC"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workers-vpc/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5484,
+                      "sha256":  "6BFAB65387D76709296161A0206A1A943F773374C1FB8FA435853693B16902DF"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workflows/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7744,
+                      "sha256":  "A91D6CD8713C0A472C560FCFB7C308B2E3883594B1DCB77442769EB06C5716E5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workflows/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3871,
+                      "sha256":  "3B6B44DED7B2C065658726F55BEA95068AA06184B2CF2C1C1929D80E14B316AD"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workflows/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4564,
+                      "sha256":  "2E810201A6F5B4E96451926ABB92ECBDFEE8C30650745FDC3D7DD0933B4CC4CB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workflows/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6669,
+                      "sha256":  "7B39CCE4FBE3A7363ADD0E299276EE9FD68E58855A1C099AD8AE20FFEC54AE5B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/workflows/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2871,
+                      "sha256":  "46E74E07CD72D650F100C0360BC060DA94C899948E8E89F2D5EAC215CC2CC615"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/wrangler/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4624,
+                      "sha256":  "0872BC513368C167EFBF8BC16024140963F44FD2CDC8777CD615B15831997D53"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/wrangler/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4720,
+                      "sha256":  "25A61168938F398EAC23E686FF0558C3B82FC03E4BDA43E9A8B856DD02CA2791"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/wrangler/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5950,
+                      "sha256":  "6A77032704538305C87AFC98F8E7296B145141C322A1F401B99C5B2024CAEBAA"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/wrangler/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4876,
+                      "sha256":  "EEF3FA927FEA3594313D72C0107B6552E65C0A86AD0324558D73E579BBD74772"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/wrangler/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4460,
+                      "sha256":  "67BAB7FD889E3296FA48F88398F52B44E0E52F159AB1442ECD594059F3F741F1"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/zaraz/api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3197,
+                      "sha256":  "6B28A3E1525D46AAD707B1BF4EDD2739DF9F48AE880F71A705448270B42F8B9E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/zaraz/configuration.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1811,
+                      "sha256":  "6F3666AC64D1B36B4A708B3DEA9D3B1D9679B34C58A00E3CA8E254EDD602418A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/zaraz/gotchas.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2001,
+                      "sha256":  "30378F48FDE6E866780466228A3E698005A9CE23A24188C8ED520195B03EAC3E"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/zaraz/IMPLEMENTATION_SUMMARY.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3494,
+                      "sha256":  "EBA1671FC4BA17FAE19D1FF2D1B312D5042B5821E7A4DBC2F6367A4FA8BD5506"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/zaraz/patterns.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2133,
+                      "sha256":  "2EA1D00FE81B1E881C00090FD18C96D8C78EBB41FCC55F540B68150320D90D17"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/references/zaraz/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3909,
+                      "sha256":  "929BEE8E3EFFFAD15B1A2EE2E20FF87B5D89CC724B4F450F07F6EF15CAF4B2F9"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  8991,
+                      "sha256":  "89BCCCBB0B6DC77BEC5E348F54A5ED8F1943D6CE56C33231A71FD2CD6BB05714"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-email-service/references/cli-and-mcp.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  4039,
+                      "sha256":  "906AA333331E080A275A4BA3D4C342281B655AFCEF25A2081D197A396A3DA913"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-email-service/references/deliverability.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  9145,
+                      "sha256":  "174FF9CAFE8E87C98FAF2E25B30ACB8889CD108CAABE55B71C0DB2BCB23077A7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-email-service/references/rest-api.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6014,
+                      "sha256":  "EDC9DA52397ED70DB9A0A520D5D7D075D6ACD396FD8637E34C6DC1252A3303E7"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-email-service/references/routing.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7462,
+                      "sha256":  "DB54EF436D72BFA1454A6DA95BE6A33B29B94266A1E8D1BFFE86FFE0E007565C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-email-service/references/sending.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  9530,
+                      "sha256":  "E7164E0A96C11FCCCB0C684695E3C475A81E4F210891B83503BDDA392232F47F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-email-service/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7956,
+                      "sha256":  "A62531900A08F9F6C352061D42E8B10A35009F5E1C6F91BBF18752FEEDAD5A79"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-one/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  22293,
+                      "sha256":  "605336F84979367B6235A57DA8EA43E4F3B856A97EFD2C95D9E7F90E41BF17EC"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/cloudflare-one-migrations/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  12363,
+                      "sha256":  "50ED246B92A3F82C7AFAC864201093269FAD8DE24E4CE7EA18929103A26ADAD8"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/durable-objects/references/rules.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  8483,
+                      "sha256":  "92F12B305DF75710FED778C22880CA7DE73797F8F4FBBC4CFFCF3E6C8AC919E5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/durable-objects/references/testing.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  6541,
+                      "sha256":  "08C4064E090FF1A8692543C38FC694C42622F59A27390AF26C5825B3970F7F02"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/durable-objects/references/workers.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7543,
+                      "sha256":  "3149C3EE371B5DBF3A84DAC7D5BB42C4C6553762480741F6D2808E4CA20FD932"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/durable-objects/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5867,
+                      "sha256":  "CD6797CB18F3AE8F721DFD2E5CB27B73A0AA8636683F1A38163DAB2FD51A8DFB"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/sandbox-sdk/references/api-quick-ref.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3220,
+                      "sha256":  "A4E33B6A4543AFF84A4CEE75FB6B3B26BF96340C7026266A5FC4DF3AA699F08C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/sandbox-sdk/references/examples.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  1570,
+                      "sha256":  "EC3F87081255BAE25AA9DA4D1AE4E27A6C0DC2AF88E7AEC8C97E605645FA0A89"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/sandbox-sdk/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5771,
+                      "sha256":  "0F3501E6510921401BE3F54BCB24D2A432A1B5C63AF8F719EDED3A087AD88EA9"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/README.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3757,
+                      "sha256":  "E5C50413B3DB0FC2E1BF5AE0147B093F36ED9A66567C5E39F6BD93B2C972F440"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/references/astro.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5929,
+                      "sha256":  "6E2FAEBA9BF9AD24C062C6A723DC37C74644E5843DD7A06164999240E83D7A96"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/references/hugo.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  3852,
+                      "sha256":  "5BC91DCA7264DE9BCB163D4C8E21A20D64AFCAD7BECDD69926F9C7A09D1BB05C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/references/nextjs-app.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7643,
+                      "sha256":  "A8E10A569937EFD076C3F32F37B48A8083C8C52918C9AA309B770D35D5A03273"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/references/nextjs-pages.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2737,
+                      "sha256":  "F6FA729155FA682F6C77B157CBB75492CAF172F7451BCC889BC417441A3F02A5"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/references/sveltekit.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5513,
+                      "sha256":  "DA8DBE10014A0A94D25C51E80010FFD4FB5F0719CAA7226C42B9DACB3AE8933A"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/references/vanilla-html.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  5756,
+                      "sha256":  "BB01CA94B0E942C0E329C2FCAF50D0C5FF846F1AE166AA6D654D4C962D48FA9D"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/scripts/auth-probe.sh",
+                      "component":  "codex-user-skills",
+                      "bytes":  11270,
+                      "sha256":  "A54D7AB1F6E6AC98A6AEB45498D7BB3568D173669D2D3A7C6A08B56ED2C20182"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/scripts/persist-skill.sh",
+                      "component":  "codex-user-skills",
+                      "bytes":  3576,
+                      "sha256":  "4FEA0BCDA9FDED16DD63F77DAD196474D3C15C1FE93AC4718B50517FA834330C"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/scripts/validate.sh",
+                      "component":  "codex-user-skills",
+                      "bytes":  4438,
+                      "sha256":  "45AF59068104650AC8B247CF2059D985FA17960D9C2F3D867287FC296771DE81"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/scripts/widget-create.sh",
+                      "component":  "codex-user-skills",
+                      "bytes":  4149,
+                      "sha256":  "EBC3EF13EF99F4F6F93400CE66FFC3848C1913AAC0CB0876470C6378CF1D9FED"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  28708,
+                      "sha256":  "0D8DF415C594C96CA5A4D393B70681D95D92365465E0EB14AF3AB2EAA76D800B"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/turnstile-spin/tests/validation.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  2916,
+                      "sha256":  "E92FEDB23A709B104877733365162BDDB2D2BE7C8A25C1DEC9483BBEDDDAE46F"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/web-perf/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  8198,
+                      "sha256":  "94C5CB37766676A8321A82861D2AC1072D3DD0EF612F0C946792014AD48FB0C2"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/workers-best-practices/references/review.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  8145,
+                      "sha256":  "3E32DA345BE0906D020E5235D01F2B6398A41216900B5370A267E3F17757ADE0"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/workers-best-practices/references/rules.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  16483,
+                      "sha256":  "B0273B18C7FA40FADF33262E7DA7C8F2A52F2F1240CE66D590E4C31663261380"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/workers-best-practices/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  7092,
+                      "sha256":  "099432FF265FF6080327EF0B392C118B835D2A5BDA98A7DE07E1AFD115ED6458"
+                  },
+                  {
+                      "path":  "payload/codex-home/skills/wrangler/SKILL.md",
+                      "component":  "codex-user-skills",
+                      "bytes":  18359,
+                      "sha256":  "42ABE11BA6C0CB0C135DEED1D591D844838FE0B61FC8C6D675A832435508A61B"
+                  },
+                  {
+                      "path":  "payload/project/.agents/context_health.ps1",
+                      "component":  "project-control-plane",
+                      "bytes":  315,
+                      "sha256":  "BAC8CF90E060E09C16D0A0C9DBFD9378399C9B42E18BE0FE86B7091BF0E664E5"
+                  },
+                  {
+                      "path":  "payload/project/.agents/git-guard.ps1",
+                      "component":  "project-control-plane",
+                      "bytes":  1921,
+                      "sha256":  "E51578D5F5B6610D57F033974347A627A30AC23525925B43E50B010A0AEC58BC"
+                  },
+                  {
+                      "path":  "payload/project/.agents/git-hooks/pre-commit",
+                      "component":  "project-control-plane",
+                      "bytes":  165,
+                      "sha256":  "7FDD466DD867826C9B595BA9435A9567BE197AF5F555A640D46F5AA260F377C9"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/agents/openai.yaml",
+                      "component":  "project-skills",
+                      "bytes":  445,
+                      "sha256":  "DD288D0FB87074FD1985D9BA8C8F11666909566A6539E9184D1DCA0C2C3454F9"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/references/checkpoint.md",
+                      "component":  "project-skills",
+                      "bytes":  1674,
+                      "sha256":  "C5EE9EB7DD055E80281B7AB1AE2200C7E85946F197496899F5D0975CA4631B29"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/references/desktop-rollover.md",
+                      "component":  "project-skills",
+                      "bytes":  6429,
+                      "sha256":  "FBA686A6A46F7C8B0D1B324D17638CA456E95CC2242BC3A858AF41495F26A928"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/references/durable-orchestrator.md",
+                      "component":  "project-skills",
+                      "bytes":  2893,
+                      "sha256":  "26E07510AEED93D20DFC2EE9295A95AD720BB4181F95557DB89B1028BC46B40E"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/scripts/contextctl.py",
+                      "component":  "project-skills",
+                      "bytes":  106224,
+                      "sha256":  "0A1E7FBA70B51391536889D6E01166A0697CDDCE785D9F501D12705DD939A256"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/scripts/rollover_stop_hook.py",
+                      "component":  "project-skills",
+                      "bytes":  55068,
+                      "sha256":  "F25CFFAFF6CAF1E7163E4D6C99A3C901CE768457964C2B933778FD1B5795645C"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/scripts/test_contextctl.py",
+                      "component":  "project-skills",
+                      "bytes":  117164,
+                      "sha256":  "9525D312712A0D95A810AD74594FB23CF9383A4B2B43D51CA5701D50AAB2F03C"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/scripts/test_rollover_stop_hook.py",
+                      "component":  "project-skills",
+                      "bytes":  54246,
+                      "sha256":  "43F45051C0EC5F0F59AB45DC133306391C20DADA58CBE9A1544FE5C4F11BA318"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/scripts/test_skill_authority.py",
+                      "component":  "project-skills",
+                      "bytes":  1452,
+                      "sha256":  "1C64533492D1C8B72B778228251F56D224EAABBA4F6946AD1320A40A048969E1"
+                  },
+                  {
+                      "path":  "payload/project/.agents/skills/context-guardian/SKILL.disabled.md",
+                      "component":  "project-skills",
+                      "bytes":  5998,
+                      "sha256":  "50651324CD0B8478B9FE6C8CBD0CF7679E78B45E544FB8809EB2889D0C4AED2C"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/bootstrap.ps1",
+                      "component":  "project-tools",
+                      "bytes":  19474,
+                      "sha256":  "35564B8AF0F0CAEB64FEE08E1CFE0BD55252D18D74216BF28F1C8D9D7BF13375"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/bootstrap-legacy.ps1",
+                      "component":  "project-tools",
+                      "bytes":  1750,
+                      "sha256":  "369078B1DDCB521F9B3A9331642885185A4239A0064A0B5F993B1A26110A3EC2"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/claude_ui.py",
+                      "component":  "project-tools",
+                      "bytes":  35817,
+                      "sha256":  "AF6FE124812BDF68FB10A12029B9C729CB28785F77193745DF6D632730B3AF11"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/codex-continuous.cmd",
+                      "component":  "project-tools",
+                      "bytes":  105,
+                      "sha256":  "4EA4DFF4B406D71A1D2484BDCD299DAC73745247EE50BB21267B502CDFD8A395"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/codex-continuous.ps1",
+                      "component":  "project-tools",
+                      "bytes":  270,
+                      "sha256":  "13933F833C49504DC5DF9456286D1837BE3F4C9FE8A6393C144F066317F0240E"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/continuous_cli.py",
+                      "component":  "project-tools",
+                      "bytes":  361827,
+                      "sha256":  "5BD9BBDF4D5F25195ABFB33318D56AE11E06C1AF68F7734D20469D603708AFF6"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/empty-mcp.json",
+                      "component":  "project-tools",
+                      "bytes":  23,
+                      "sha256":  "D8E397AF03B5B032F21D0AA967086F0C78B33C87B76F2E9898AE0A144DF7DE02"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/test_claude_ui.py",
+                      "component":  "project-tools",
+                      "bytes":  12869,
+                      "sha256":  "7BD6B379D53772EAF73F328E4A4FF16FBB4508BD218408D0BA47954D631A4C56"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-continuous/test_continuous_cli.py",
+                      "component":  "project-tools",
+                      "bytes":  260361,
+                      "sha256":  "7E7AB23FBBF393BA30FF64950FE5FF35FAABDB756567DAA567C0535839C8C989"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/pyproject.toml",
+                      "component":  "project-tools",
+                      "bytes":  578,
+                      "sha256":  "FBEF2CB07A036EECED07F43CBDE2DE4562F3B4C03D34FC71F99F4B272C2832BC"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/README.md",
+                      "component":  "project-tools",
+                      "bytes":  4675,
+                      "sha256":  "D9FE050ED8B8EE17B25B1FA5B262E6221B4EE56050DE00C7F8716EE162749FC6"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/requirements.lock",
+                      "component":  "project-tools",
+                      "bytes":  486,
+                      "sha256":  "EE781E4BEA6FF1D62E571894FDC2BE0687DD4D977B85EBC4FC69E1AED81EAF89"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/scripts/bootstrap.ps1",
+                      "component":  "project-tools",
+                      "bytes":  10215,
+                      "sha256":  "BAC12D50D634E615DD7EFE6D1CA31E784F9F7611DD25CB28ACFA4D80AC582FC3"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/scripts/start-local.ps1",
+                      "component":  "project-tools",
+                      "bytes":  10831,
+                      "sha256":  "713B967CF62608E56264E70E8519DD930D7E926F622B70833892E6EA26748DFA"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/scripts/stop-local.ps1",
+                      "component":  "project-tools",
+                      "bytes":  6758,
+                      "sha256":  "148AED756472C67F65F510190CAD3A28C19C07B202923CF137D080F7CEDB5D62"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/scripts/verify.ps1",
+                      "component":  "project-tools",
+                      "bytes":  12903,
+                      "sha256":  "6F072E5B9C8B51B4C7E58FD2253DE2CCBF4BEDFBF0A075FADFDBEF1532E5E4F3"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_durable_orchestrator.egg-info/dependency_links.txt",
+                      "component":  "project-tools",
+                      "bytes":  1,
+                      "sha256":  "01BA4719C80B6FE911B091A7C05124B64EEECE964E09C058EF8F9805DACA546B"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_durable_orchestrator.egg-info/entry_points.txt",
+                      "component":  "project-tools",
+                      "bytes":  126,
+                      "sha256":  "02EE4A2EDCCAFE60515EEB01035059BC83B23F06184450C4353D9D1C8599FFE1"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_durable_orchestrator.egg-info/PKG-INFO",
+                      "component":  "project-tools",
+                      "bytes":  240,
+                      "sha256":  "894179D31EC06E6F996164091F95839EED2D39B411AFF968724B4EAF20DD7BB1"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_durable_orchestrator.egg-info/requires.txt",
+                      "component":  "project-tools",
+                      "bytes":  41,
+                      "sha256":  "005B759EF056D8983F40A13CE39476E34DF86295DC5EC84D4F4122D5F7DAAB43"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_durable_orchestrator.egg-info/SOURCES.txt",
+                      "component":  "project-tools",
+                      "bytes":  439,
+                      "sha256":  "BC608357C67B25DF889FB9EF06813D000102557E01564A7726FB8291AA81A795"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_durable_orchestrator.egg-info/top_level.txt",
+                      "component":  "project-tools",
+                      "bytes":  19,
+                      "sha256":  "AE6FF6C3859AA2A19639235B8A4A02ED854A4B550FB250B0DB91EA89E27B488F"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/__init__.py",
+                      "component":  "project-tools",
+                      "bytes":  358,
+                      "sha256":  "8B4969B99130A6CCF7B3A69ACA22FD1E751DBC4CAF932903165E1D219AD6B627"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/activities.py",
+                      "component":  "project-tools",
+                      "bytes":  2813,
+                      "sha256":  "184F8A670C4ABB5AAD9D2D34EB348D2E760B077A39D52E0E35B47921BC9BA53E"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/cli.py",
+                      "component":  "project-tools",
+                      "bytes":  13287,
+                      "sha256":  "A0D6A2D3D653240FE8C0D374D31B8452DEA0BBD7D26FDF5B06874F4A1B2CF82E"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/codex_adapter.py",
+                      "component":  "project-tools",
+                      "bytes":  30783,
+                      "sha256":  "A75FBE7FBFBD95B273A055CC15474D083340BFE2E1A2A8C265E5E95D116049F7"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/command_outbox.py",
+                      "component":  "project-tools",
+                      "bytes":  18270,
+                      "sha256":  "999A5051387E6204247B3D4867EF94DDF248A97C2A34434D70E8C961B834E6F9"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/contracts.py",
+                      "component":  "project-tools",
+                      "bytes":  1739,
+                      "sha256":  "770ABB4EDFDF3378D16D4D4C346472190A726BCC34063C6E868FF7473C5EB6DC"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/domain.py",
+                      "component":  "project-tools",
+                      "bytes":  22781,
+                      "sha256":  "5DED1A59F22EDF81CBB13695BE9D35F13DB4D8764674CCBCAE0B34CCF54AABF6"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/interactive_frontend.py",
+                      "component":  "project-tools",
+                      "bytes":  19011,
+                      "sha256":  "ED197D4421E061232B7B8899AB7C21CC21AF1B5FB4FA71978E9192010760CD6E"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/interactive_temporal.py",
+                      "component":  "project-tools",
+                      "bytes":  15659,
+                      "sha256":  "34E501456195FFA05DC88B241DC106CAFD58980445C144BEEFDD48E886662958"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/local_runtime.py",
+                      "component":  "project-tools",
+                      "bytes":  20602,
+                      "sha256":  "574B7B096B13FAB5038C8BD00178FDAEB4E8B8971023957E25BA2A6BFDF150A6"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/payload_security.py",
+                      "component":  "project-tools",
+                      "bytes":  20572,
+                      "sha256":  "C0359DFBEC89F2BC117D373D59CC2530AECFA065455BFC43805F7F8B43B9C902"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/runtime_probe.py",
+                      "component":  "project-tools",
+                      "bytes":  3535,
+                      "sha256":  "05A8317D4EEE090407478AF7D328989B021054CA2F60C354D4FDA0F98D4EB7DF"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/temporal_workflow.py",
+                      "component":  "project-tools",
+                      "bytes":  9665,
+                      "sha256":  "CDBF36C06875C47481289867B3230310C9AC5587CFD0E397985DD594C4B32312"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/src/codex_orchestrator/worker.py",
+                      "component":  "project-tools",
+                      "bytes":  5855,
+                      "sha256":  "781167E7BA414B8BD802026C8CA4FE5AA555861314979E10171D1484F0DCB9E6"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_codex_adapter.py",
+                      "component":  "project-tools",
+                      "bytes":  24797,
+                      "sha256":  "347CD5313B99E3974B040AA2CC9FE8FEFB1DD41FECCA483C1867782897247619"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_command_outbox.py",
+                      "component":  "project-tools",
+                      "bytes":  6551,
+                      "sha256":  "36706D45581C0CA72A40E8530443E635A000B975F70FA7687978C4F9B065FDF1"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_domain.py",
+                      "component":  "project-tools",
+                      "bytes":  22356,
+                      "sha256":  "50381FFC637B619EB3235C2959CEC053AA62592761646B5AE25D2615BA944D8D"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_interactive_frontend.py",
+                      "component":  "project-tools",
+                      "bytes":  11032,
+                      "sha256":  "BB2EC25A2DFA0A937B480C5C5C685E17D09C95E9BBEC3FEB90C6F5BE95F7499E"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_interactive_temporal.py",
+                      "component":  "project-tools",
+                      "bytes":  14425,
+                      "sha256":  "90B93B41CA596FFB1C4AD6FEAC85245FD0754509D20C1CF21FFDEBF274FECCF5"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_local_runtime.py",
+                      "component":  "project-tools",
+                      "bytes":  12403,
+                      "sha256":  "9ADFE8EC92B2167432CB580ECC49D13F7C7CC9CCE88C70741A22DC757543FEC7"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_payload_security.py",
+                      "component":  "project-tools",
+                      "bytes":  17169,
+                      "sha256":  "1886D1637ADF13444D8D41D71E623353A5B60486443A2B062400D97D69D4D4CE"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_serialization_contract.py",
+                      "component":  "project-tools",
+                      "bytes":  5525,
+                      "sha256":  "82F72266B2A07401A3A1B2DF221593648EC848917A81F05377403CBC0DFE4986"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/codex-orchestrator/tests/test_temporal_workflow.py",
+                      "component":  "project-tools",
+                      "bytes":  7072,
+                      "sha256":  "EF752D7C1B36A25A50263833202AF535FBCC9FA6052D03E0C63DC21B96C0ED69"
+                  },
+                  {
+                      "path":  "payload/project/.codex/config.toml",
+                      "component":  "project-codex",
+                      "bytes":  162,
+                      "sha256":  "B341BC21CC527AD4EB6931F68A2D5B2422E9B915BBDC7ED81E1F9175181CA966"
+                  },
+                  {
+                      "path":  "payload/project/.codex/hooks.json",
+                      "component":  "project-codex",
+                      "bytes":  485,
+                      "sha256":  "03A84A2F6EA971861AA37408447B9BAE300A2608483E554CB522677D0480023F"
+                  },
+                  {
+                      "path":  "payload/project/.codex/hooks/post-compact.mjs",
+                      "component":  "project-codex",
+                      "bytes":  6753,
+                      "sha256":  "F1C234FE46B144D5A833B48489B9134DA212D9737F050A65A5BC68430221CA73"
+                  },
+                  {
+                      "path":  "payload/project/.github/workflows/context-control.yml",
+                      "component":  "project-control-plane",
+                      "bytes":  1275,
+                      "sha256":  "0B03975680B6A7D1F9B41FC3E6ECC8D8AF08F6309E97754D142A825713F2D225"
+                  },
+                  {
+                      "path":  "payload/project/.gitignore",
+                      "component":  "project-control-plane",
+                      "bytes":  1557,
+                      "sha256":  "17FA7B96C96966B7DFE1CC2B8ABF5B9FE7CD03351EEEF416683823D618D1FDF8"
+                  },
+                  {
+                      "path":  "payload/project/AGENTS.md",
+                      "component":  "project-control-plane",
+                      "bytes":  2003,
+                      "sha256":  "578AAA5FCF78FDCEAEEFF2E90A6FB55F6BF660347EBE55D66E2B04961990951C"
+                  }
+              ]
+}

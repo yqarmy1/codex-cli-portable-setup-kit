@@ -1,0 +1,11 @@
+# Public starter rules
+#
+# The public setup kit deliberately installs no pre-approved command prefixes.
+# Codex can create user-level rules when you review and accept an approval
+# suggestion in the TUI. You can also add narrowly scoped prefix_rule entries
+# here after testing them with:
+#
+#   codex execpolicy check --pretty --rules "$HOME/.codex/rules/default.rules" -- <command>
+#
+# Keep machine-specific paths, hostnames, account identifiers, and credentials
+# out of reusable rule files.

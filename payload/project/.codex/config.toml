@@ -1,0 +1,6 @@
+[features]
+apps = true
+# Project-local PostCompact recording is enabled; no Stop or policy hooks are configured.
+hooks = true
+plugins = true
+remote_plugin = true

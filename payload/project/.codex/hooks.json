@@ -1,0 +1,19 @@
+{
+  "description": "Record native Codex compaction checkpoints for this project.",
+  "hooks": {
+    "PostCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .codex/hooks/post-compact.mjs",
+            "commandWindows": "node \".codex\\hooks\\post-compact.mjs\"",
+            "timeout": 30,
+            "statusMessage": "Recording context checkpoint"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+project_root="$(git rev-parse --show-toplevel)"
+exec powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$project_root/.agents/git-guard.ps1"

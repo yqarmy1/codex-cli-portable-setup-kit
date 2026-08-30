@@ -1,0 +1,45 @@
+# Public portable baseline. Machine-bound sessions, authentication, trust
+# records, and desktop runtime paths are regenerated on the target computer.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+model = "gpt-5.6-sol"
+model_instructions_file = "./instructions/portable-agent-instructions.md"
+model_reasoning_effort = "high"
+model_verbosity = "medium"
+
+[features]
+hooks = false
+js_repl = false
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = false
+followUpQueueMode = "queue"
+appearanceTheme = "dark"
+localeOverride = "en-US"
+
+[windows]
+sandbox = "elevated"
+
+[tui]
+status_line = ["model-with-reasoning", "context-remaining", "current-dir"]
+
+[plugins."documents@openai-primary-runtime"]
+enabled = false
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = false
+[plugins."presentations@openai-primary-runtime"]
+enabled = false
+[plugins."pdf@openai-primary-runtime"]
+enabled = false
+[plugins."template-creator@openai-primary-runtime"]
+enabled = false
+[plugins."browser@openai-bundled"]
+enabled = true
+[plugins."visualize@openai-bundled"]
+enabled = true
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
