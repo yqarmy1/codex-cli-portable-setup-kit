@@ -54,7 +54,11 @@ foreach ($requiredText in @(
   '## Rollback',
   '## Security model',
   '## Official Codex documentation',
-  'community-maintained'
+  'community-maintained',
+  '## Acknowledgements',
+  'LINUX DO community',
+  'https://linux.do/t/topic/2607878',
+  'Jia-Ethan/codex-keysmith'
 )) {
   Assert-PublicRelease -Condition $readme.Contains($requiredText) -Message "README is missing required text: $requiredText"
 }

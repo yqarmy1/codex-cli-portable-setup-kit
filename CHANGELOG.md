@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented here.
 
+## [Unreleased]
+
+### Added
+
+- `instruction-profile.ps1`: preview-first deployment, status, uninstall, and
+  recovery for a single manifest-owned Codex instruction file.
+- Instruction lifecycle fixture coverage for preview, confirmed changes,
+  restoration of the prior reference, and no-op recovery.
+- An acknowledgements section credits the LINUX DO community discussion and
+  `Jia-Ethan/codex-keysmith` as public inspiration for reversible instruction
+  lifecycle design.
+
+### Security
+
+- The instruction lifecycle leaves `hooks.json`, command approvals, sandbox
+  settings, credentials, and platform permission boundaries unchanged.
+
 ## [6.3.0] - 2026-08-31
 
 ### Added

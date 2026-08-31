@@ -28,6 +28,16 @@
 > This is a community-maintained Codex configuration and installer. It is not
 > Codex itself and is not an official OpenAI product.
 
+## Acknowledgements
+
+This project acknowledges the **LINUX DO community** and the
+[codex-keysmith announcement](https://linux.do/t/topic/2607878), which helped
+surface the need for preview-first, reversible Codex instruction deployment.
+Its lifecycle design was informed by the public
+[Jia-Ethan/codex-keysmith](https://github.com/Jia-Ethan/codex-keysmith)
+project. This kit independently implements its own code and deliberately keeps
+existing hooks, approvals, sandbox settings, and platform safeguards intact.
+
 ## Highlights
 
 - **Action over advice.** Codex is told to use available tools and change the
@@ -103,7 +113,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 Expected result:
 
 ```text
-PACKAGE_VERIFY=PASS files=473
+PACKAGE_VERIFY=PASS files=475
 ```
 
 ### 3. Install into a project
@@ -128,6 +138,33 @@ Prefer a guided flow? Extract the ZIP and double-click `START-HERE.bat` or
 
 Use `install.ps1` rather than `install.cmd` for scripted installation.
 
+### Managed instruction profile
+
+`instruction-profile.ps1` adds a separate, preview-first lifecycle for one
+Codex instruction Markdown file. It uses explicit confirmation, an ownership
+manifest, timestamped backups, drift detection, and recovery after an
+interrupted write. It does not install an unrestricted prompt, disable hooks,
+pre-approve commands, or alter platform approval and sandbox boundaries.
+
+```powershell
+# Preview the bundled execution-first instruction deployment.
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex"
+
+# Confirm only after reviewing the plan.
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Yes
+
+# Inspect, preview uninstall, or recover a retained transaction journal.
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Status
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Uninstall
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Uninstall -Yes
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Recover
+.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Recover -Yes
+```
+
+The managed reference is limited to the top-level `model_instructions_file` in
+`config.toml`. It fails closed if that reference, the managed Markdown, or the
+transaction evidence has drifted. Existing `hooks.json` remains untouched.
+
 ## Why not copy `.codex` manually?
 
 A one-line prompt or copied `config.toml` can change tone, but the full behavior
@@ -144,7 +181,7 @@ way back.
 | Verify source files before writing | No | SHA-256 manifest |
 | Back up every replaced destination | Manual | Automatic |
 | Reverse a completed install | Manual | `rollback.ps1` / `ROLLBACK.sh` |
-| Exercise the release in CI | Usually no | One seven-step test suite |
+| Exercise the release in CI | Usually no | One eight-step test suite |
 
 ## What this tool does
 
@@ -247,6 +284,9 @@ mapping, and the complete data flow.
 | Verify installed state | `.\verify.ps1 -Installed -ProjectRoot 'D:\work\project'` |
 | Roll back latest install | `.\rollback.ps1` |
 | Roll back a receipt | `.\rollback.ps1 -Receipt 'C:\path\to\receipt.json'` |
+| Preview managed instruction deployment | `.\instruction-profile.ps1 -CodexHome "$HOME\.codex"` |
+| Confirm managed instruction deployment | `.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Yes` |
+| Inspect managed instruction state | `.\instruction-profile.ps1 -CodexHome "$HOME\.codex" -Status` |
 | Regenerate metadata | `.\scripts\Update-PackageMetadata.ps1` |
 | Run the release suite | `.\scripts\Test-All.ps1` |
 

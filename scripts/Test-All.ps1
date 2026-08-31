@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
   [string]$RepoRoot = '',
-  [string]$PythonExe = 'python'
+  [string]$PythonExe = ''
 )
 
 Set-StrictMode -Version Latest
@@ -9,6 +9,11 @@ $ErrorActionPreference = 'Stop'
 $scriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 if ([string]::IsNullOrWhiteSpace($RepoRoot)) { $RepoRoot = Split-Path -Parent $scriptDirectory }
 $RepoRoot = [IO.Path]::GetFullPath($RepoRoot)
+if ([string]::IsNullOrWhiteSpace($PythonExe)) {
+  if (Get-Command python -ErrorAction SilentlyContinue) { $PythonExe = 'python' }
+  elseif (Get-Command py -ErrorAction SilentlyContinue) { $PythonExe = 'py' }
+  else { throw 'Python is required for the package test suite, but neither python nor py is available.' }
+}
 $passed = 0
 
 function Invoke-TestStep {
@@ -47,6 +52,9 @@ Invoke-TestStep 'public-release' {
 }
 Invoke-TestStep 'rollback-fixture' {
   & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $RepoRoot 'tests\Test-Rollback.ps1')
+}
+Invoke-TestStep 'instruction-profile' {
+  & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $RepoRoot 'tests\Test-InstructionProfile.ps1') -RepoRoot $RepoRoot
 }
 Invoke-TestStep 'context-guardian' {
   Push-Location -LiteralPath (Join-Path $RepoRoot 'payload\project\.agents\skills\context-guardian\scripts')

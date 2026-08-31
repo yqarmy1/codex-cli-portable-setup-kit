@@ -39,7 +39,10 @@ try {
     $start.RedirectStandardOutput = $true
     $start.RedirectStandardError = $true
     $process = [Diagnostics.Process]::Start($start)
-    $process.StandardInput.Write($eventJson)
+    # Hook events are UTF-8 JSON. Write raw UTF-8 bytes because Windows
+    # PowerShell's ProcessStartInfo cannot configure StandardInputEncoding.
+    $eventBytes = [Text.UTF8Encoding]::new($false).GetBytes($eventJson)
+    $process.StandardInput.BaseStream.Write($eventBytes, 0, $eventBytes.Length)
     $process.StandardInput.Close()
     $hookOutput = $process.StandardOutput.ReadToEnd()
     $hookError = $process.StandardError.ReadToEnd()
@@ -62,7 +65,10 @@ try {
   if ($bashPath) {
     $rollbackEntry = 'ROLLBACK.sh'
     $shellPath = (Join-Path $kit 'ROLLBACK.sh').Replace('\', '/')
-    $rollbackOutput = & $bashPath $shellPath -Receipt $receipt -CodexHome $codexHome
+    # Git Bash started directly from PowerShell may not add its POSIX utility
+    # directory to PATH. A login shell exercises the documented shell entry
+    # point with dirname available, while preserving the supplied arguments.
+    $rollbackOutput = & $bashPath -lc 'exec "$@"' bash $shellPath '-Receipt' $receipt '-CodexHome' $codexHome
   } else {
     $rollbackOutput = & (Join-Path $kit 'rollback.ps1') -Receipt $receipt -CodexHome $codexHome
   }
