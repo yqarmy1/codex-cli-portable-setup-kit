@@ -71,6 +71,10 @@ $attributes = Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8
 Assert-PublicRelease -Condition $attributes.Contains('* -text') -Message 'Git attributes must preserve exact bytes so MANIFEST.sha256 survives archives and clones.'
 Assert-PublicRelease -Condition (-not $attributes.Contains('eol=')) -Message 'Git attributes must not rewrite line endings covered by MANIFEST.sha256.'
 
+$workflowPath = Join-Path $RepoRoot '.github/workflows/verify.yml'
+$workflow = Get-Content -LiteralPath $workflowPath -Raw -Encoding UTF8
+Assert-PublicRelease -Condition $workflow.Contains("python-version: '3.11'") -Message 'CI must use the Python 3.11 runtime required by the pinned orchestrator probe.'
+
 $configPath = Join-Path $RepoRoot 'payload/codex-home/config.portable.toml'
 $config = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8
 Assert-PublicRelease -Condition $config.Contains('approval_policy = "on-request"') -Message 'Portable config must default to approval_policy="on-request".'
