@@ -1,140 +1,88 @@
-# Codex CLI Portable Setup Kit
+<h1 align="center">Codex CLI Portable Setup Kit</h1>
 
-> Reproduce a tested Codex CLI working environment on another Windows computer
-> or in another repository, with integrity checks, transactional backups,
-> verification, and rollback.
+<p align="center">
+  <strong>Reproduce your Codex CLI setup anywhere.</strong><br>
+  Config, instructions, skills, hooks, and project automation - installed with
+  SHA-256 verification, transactional backups, and one-command rollback.
+</p>
 
-This community-maintained setup kit packages portable Codex configuration,
-project instructions, hooks, local automation tools, and reusable skills into a
-single Windows installer. It is designed for developers who have already tuned
-a Codex workflow and want a repeatable way to install the same **portable
-behavior** elsewhere without copying sessions, authentication, caches, or other
-machine-bound state.
+<p align="center">
+  <a href="https://github.com/2akouwu/codex-cli-portable-setup-kit/actions/workflows/verify.yml"><img alt="Verification" src="https://github.com/2akouwu/codex-cli-portable-setup-kit/actions/workflows/verify.yml/badge.svg"></a>
+  <a href="https://github.com/2akouwu/codex-cli-portable-setup-kit/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/2akouwu/codex-cli-portable-setup-kit?display_name=tag&sort=semver"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/github/license/2akouwu/codex-cli-portable-setup-kit"></a>
+  <img alt="Windows 10 and 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows">
+  <img alt="PowerShell 5.1 and 7" src="https://img.shields.io/badge/PowerShell-5.1%20%7C%207-5391FE?logo=powershell">
+</p>
 
-This repository is not Codex itself and is not an official OpenAI product.
+<p align="center">
+  <a href="#quick-start">Quick start</a> |
+  <a href="#highlights">Highlights</a> |
+  <a href="#how-it-works">How it works</a> |
+  <a href="#security-model">Security</a> |
+  <a href="docs/PROMOTION_PLAYBOOK.md">Launch playbook</a>
+</p>
 
-![Codex CLI Portable Setup Kit social preview](docs/assets/social-preview.png)
+![Codex CLI Portable Setup Kit preview](docs/assets/social-preview.png)
 
-## What this tool does
+> [!NOTE]
+> This is a community-maintained setup kit. It is not Codex itself and is not an
+> official OpenAI product.
 
-The kit performs five jobs:
+## Highlights
 
-1. **Validates the package before changing the computer.** Every tracked payload
-   file is checked against `MANIFEST.sha256`.
-2. **Backs up every destination it will replace.** Existing user and project
-   files are copied to a timestamped backup directory.
-3. **Installs a portable Codex environment.** It places configuration,
-   instructions, skills, hooks, and project automation in their target locations.
-4. **Adapts paths to the target machine.** Project-root and user-home placeholders
-   are resolved during installation, and the project is added as a trusted Codex
-   configuration layer.
-5. **Produces a rollback receipt.** A failed installation rolls back
-   automatically; a successful installation can be reverted later with
-   `rollback.ps1` or `ROLLBACK.sh`.
-
-The result is a reproducible Codex workspace with project-aware instructions,
-context checkpoints, Git safeguards, reusable skills, and optional plugin setup.
-
-## Who this is for
-
-Use this kit when you want to:
-
-- bootstrap a new Windows development computer with the same Codex conventions;
-- give a repository the same project instructions, hooks, and local agent tools;
-- move a Codex workflow without moving login credentials or conversation data;
-- test a standardized team setup in an isolated project;
-- keep installation and rollback evidence instead of copying dotfiles manually.
-
-It is not a cloud sync service, credential migrator, package manager replacement,
-or substitute for reviewing the configuration you install.
-
-## What gets installed
-
-| Scope | Destination | Installed content | Purpose |
-|---|---|---|---|
-| Codex user | `%CODEX_HOME%` or `~/.codex` | `config.toml`, `AGENTS.md`, portable agent instructions, starter rules, skills | Shared model, UI, instruction, tool, and skill defaults |
-| Agent user | `~/.agents` | User-level skills | Makes selected reusable skills available outside one repository |
-| Project | The explicit `-ProjectRoot` | `AGENTS.md`, `.codex`, `.agents`, `.gitignore`, context workflow | Adds repository-specific instructions, hooks, context tools, and Git guard |
-| Git repository | Local Git config | `core.hooksPath=.agents/git-hooks` | Activates the packaged pre-commit guard for that repository |
-| Codex CLI | Global npm installation, only if needed | Compatibility-pinned `@openai/codex` | Makes Codex available when it is missing |
-| Optional plugins | Current Codex installation | Browser, Visualize, and Sites when available | Extends the installed environment without making plugin failure fatal |
-
-### Included project automation
-
-- **PostCompact checkpoint hook** — records a bounded checkpoint after Codex
-  compacts a conversation and returns a clear handoff message.
-- **Context Guardian** — validates and manages bounded recovery state for long
-  tasks without treating stale state as a new request.
-- **Codex Continuous** — a local continuous CLI client with model selection,
-  interruption handling, checkpoints, and completion classification.
-- **Codex Orchestrator** — local orchestration primitives and verification tools
-  for durable or interactive Codex workflows.
-- **Git guard and pre-commit hook** — protects the root control-plane repository
-  from accidental runtime, private, and generated artifacts.
-- **Reusable skills** — Cloudflare, Workers, Agents SDK, Durable Objects,
-  sandboxing, Turnstile, Wrangler, email, and web-performance workflows.
-
-## How installation works
-
-```text
-ZIP or clone
-    |
-    v
-ProjectRoot validation
-    |
-    v
-SHA-256 manifest verification
-    |
-    v
-Timestamped backup + operation journal
-    |
-    v
-User files -> skills -> project files -> path substitution
-    |
-    v
-Project trust + Git hooksPath + optional plugins
-    |
-    v
-receipt.json + last-receipt.txt
-```
-
-`install.ps1` records each file operation before replacing its destination. If a
-later step fails, the operation list is replayed in reverse and the previous Git
-hook binding is restored. On success, the same operation list is saved in the
-receipt for a later explicit rollback.
-
-See [Architecture](docs/ARCHITECTURE.md) for the component and data-flow details.
+- **One portable package.** Move Codex configuration, `AGENTS.md`, skills,
+  hooks, local tools, and project conventions together.
+- **Verified before write.** Every packaged payload file is checked against
+  `MANIFEST.sha256` before the installer changes a destination.
+- **Transactional by default.** Existing files are backed up and each operation
+  is journaled before replacement.
+- **Rollback is a first-class command.** Restore replaced files, remove files
+  added by the installer, and recover the previous Git hook binding.
+- **Machine paths adapt automatically.** Portable placeholders become the
+  selected project root and user home during installation.
+- **Public-ready defaults.** The package excludes credentials and runtime data,
+  uses `on-request` approval with `workspace-write`, and ships no silent allow
+  rules.
+- **Natural interaction.** The English agent instructions do not force a
+  repetitive `Current / Result / Next` prefix into normal responses.
+- **Tested as a release artifact.** Package integrity, public-release rules,
+  Python components, installed-state checks, and rollback fixtures run as one
+  verification suite.
 
 ## Quick start
 
-### Prerequisites
+### 1. Download and extract
 
-- Windows 10 or Windows 11
-- Windows PowerShell 5.1 or PowerShell 7
-- Git, if the target is a Git repository
-- Node.js/npm only when Codex CLI is not already installed
-- A target project directory that already exists
+Download the [latest release ZIP](https://github.com/2akouwu/codex-cli-portable-setup-kit/releases/latest)
+and extract the complete directory. Do not run individual files from inside the
+ZIP viewer.
 
-### Recommended: explicit PowerShell installation
+### 2. Verify the package
 
-1. Download the latest release ZIP and extract the entire archive.
-2. Open PowerShell in the extracted directory.
-3. Run:
+Open PowerShell in the extracted directory:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\verify.ps1
+```
+
+Expected result:
+
+```text
+PACKAGE_VERIFY=PASS files=472
+```
+
+### 3. Install into a project
+
+```powershell
 .\install.ps1 -ProjectRoot 'D:\work\your-project'
 ```
 
-The installer refuses to use its own package directory as the project root.
+The target directory must already exist. The installer refuses to use its own
+package directory as the project root.
 
-### Explorer: double-click installation
-
-Extract the entire ZIP, then double-click `install.cmd` or `START-HERE.bat`.
-Enter or drag the target project directory into the PowerShell prompt. The
-launcher writes the complete output to `install-last.log` and keeps the window
-open so the exit result remains visible.
+Prefer a guided flow? Extract the ZIP and double-click `START-HERE.bat` or
+`install.cmd`, then enter or drag the target project directory into the prompt.
 
 ### Unattended installation
 
@@ -144,8 +92,116 @@ open so the exit result remains visible.
   -SkipPlugins
 ```
 
-Do not pass the project path to `install.cmd`; use `install.ps1` for scripted
-installation.
+Use `install.ps1` rather than `install.cmd` for scripted installation.
+
+## Why not copy `.codex` manually?
+
+Copying dotfiles works until a path changes, an existing file is overwritten, or
+you need to prove exactly what was installed. This kit turns that informal copy
+operation into a repeatable migration.
+
+| Capability | Manual copy | Portable Setup Kit |
+|---|---:|---:|
+| Verify source files before writing | No | SHA-256 manifest |
+| Back up every replaced destination | Manual | Automatic |
+| Adapt user and project paths | Search and replace | Installer substitution |
+| Configure project trust and Git hooks | Manual | Included |
+| Preserve an operation receipt | No | JSON receipt + pointer |
+| Reverse a completed install | Manual | `rollback.ps1` / `ROLLBACK.sh` |
+| Exercise the release in CI | Usually no | One seven-step test suite |
+
+## What this tool does
+
+The kit has one job: reproduce the **portable behavior** of a tuned Codex CLI
+workspace without copying machine-bound state.
+
+It performs five ordered operations:
+
+1. **Validate** the package structure and SHA-256 manifest.
+2. **Back up** every existing destination that will be replaced.
+3. **Install** Codex user configuration, instructions, skills, hooks, and project
+   automation.
+4. **Adapt** portable paths, establish the project configuration layer, and bind
+   the packaged Git hook when the target is a Git repository.
+5. **Record** a rollback receipt that can restore the pre-install state.
+
+Use it to bootstrap a second Windows development computer, standardize a team
+repository, reproduce a tested agent workflow in a disposable project, or keep
+auditable install and rollback evidence instead of maintaining a handwritten
+dotfile checklist.
+
+The package intentionally does not act as cloud sync, copy authentication,
+migrate conversations, or replace npm and Git.
+
+## What gets installed
+
+| Scope | Destination | Installed content | Purpose |
+|---|---|---|---|
+| Codex user | `%CODEX_HOME%` or `~/.codex` | `config.toml`, `AGENTS.md`, portable instructions, starter rules, skills | Shared model, UI, instruction, tool, and skill defaults |
+| Agent user | `~/.agents` | User-level skills | Makes selected reusable skills available outside one repository |
+| Project | Explicit `-ProjectRoot` | `AGENTS.md`, `.codex`, `.agents`, `.gitignore`, context workflow | Adds repository instructions, hooks, context tools, and Git guard |
+| Git repository | Local Git config | `core.hooksPath=.agents/git-hooks` | Activates the packaged pre-commit guard for that repository |
+| Codex CLI | Global npm installation, only when needed | Compatibility-pinned `@openai/codex` | Makes Codex available when it is missing |
+| Optional plugins | Current Codex installation | Browser, Visualize, and Sites when available | Extends the environment without making plugin failure fatal |
+
+### Included project automation
+
+- **PostCompact checkpoint hook** records a bounded checkpoint after Codex
+  compacts a conversation and returns a clear handoff message.
+- **Context Guardian** validates and manages bounded recovery state for long
+  tasks without treating stale state as a new request.
+- **Codex Continuous** provides a local continuous CLI client with model
+  selection, interruption handling, checkpoints, and completion classification.
+- **Codex Orchestrator** packages local orchestration primitives and verification
+  tools for durable or interactive Codex workflows.
+- **Git guard and pre-commit hook** keep runtime, private, and generated artifacts
+  out of the root control-plane repository.
+- **Reusable skills** cover Cloudflare, Workers, Agents SDK, Durable Objects,
+  sandboxing, Turnstile, Wrangler, email, and web-performance workflows.
+
+## How it works
+
+```text
+release ZIP or clone
+        |
+        v
+project-root validation
+        |
+        v
+SHA-256 manifest verification
+        |
+        v
+timestamped backup + operation journal
+        |
+        v
+user files -> skills -> project files -> path substitution
+        |
+        v
+project trust + Git hooksPath + optional plugins
+        |
+        v
+receipt.json + last-receipt.txt
+```
+
+`install.ps1` records each file operation before replacing its destination. If a
+later step fails, the operation list is replayed in reverse and the previous Git
+hook binding is restored. On success, the same operation list is saved in the
+receipt for a later explicit rollback.
+
+See [Architecture](docs/ARCHITECTURE.md) for component boundaries, destination
+mapping, and the complete data flow.
+
+## Command reference
+
+| Goal | Command |
+|---|---|
+| Verify extracted package | `.\verify.ps1` |
+| Install interactively | `.\install.ps1 -ProjectRoot 'D:\work\project'` |
+| Verify installed state | `.\verify.ps1 -Installed -ProjectRoot 'D:\work\project'` |
+| Roll back latest install | `.\rollback.ps1` |
+| Roll back a receipt | `.\rollback.ps1 -Receipt 'C:\path\to\receipt.json'` |
+| Regenerate metadata | `.\scripts\Update-PackageMetadata.ps1` |
+| Run the release suite | `.\scripts\Test-All.ps1` |
 
 ## Installer options
 
@@ -154,15 +210,15 @@ installation.
 | `-ProjectRoot` | Safely detected only from clear project markers | Target repository or project directory |
 | `-CodexHome` | `%CODEX_HOME%` or `~/.codex` | Target Codex user directory |
 | `-AgentsHome` | `~/.agents` | Target user-agent directory |
-| `-ReceiptPath` | Timestamped backup directory | Explicit receipt destination for automation/tests |
+| `-ReceiptPath` | Timestamped backup directory | Explicit receipt destination for automation and tests |
 | `-CodexVersion` | `0.147.0` | Codex CLI version to install when required |
 | `-UpgradeCodex` | Off | Reinstalls Codex at `-CodexVersion` even when Codex exists |
 | `-SkipPlugins` | Off | Skips optional Browser, Visualize, and Sites plugin attempts |
-| `-SkipCodexCheck` | Off | Skips Codex discovery/install; intended for controlled fixtures |
+| `-SkipCodexCheck` | Off | Skips Codex discovery and installation for controlled fixtures |
 
 The bundled `codex-continuous` compatibility matrix was validated with
-`openai-codex` SDK `0.144.4` and Codex CLI `0.146.0`/`0.147.0`. A newer CLI can
-be selected explicitly after validating that pair:
+`openai-codex` SDK `0.144.4` and Codex CLI `0.146.0` / `0.147.0`. Select a newer
+CLI explicitly after testing that pair:
 
 ```powershell
 .\install.ps1 `
@@ -173,40 +229,37 @@ be selected explicitly after validating that pair:
 
 ## Verification
 
-Verify the extracted package before installation:
+Verify an extracted release:
 
 ```powershell
 .\verify.ps1
 ```
 
-Verify an installed project and user environment:
+Verify the installed project and user environment:
 
 ```powershell
 .\verify.ps1 -Installed -ProjectRoot 'D:\work\your-project'
 ```
 
-Or use the double-click-friendly wrapper:
-
-```text
-verify.cmd "D:\work\your-project"
-```
-
-For development and release checks:
+Run the full development and release suite:
 
 ```powershell
-.\tests\Test-PublicRelease.ps1
-.\tests\Test-Rollback.ps1
+.\scripts\Test-All.ps1
 ```
+
+The suite checks package metadata, the package manifest, public-release rules,
+an install/rollback fixture, Context Guardian, Codex Continuous, and Codex
+Orchestrator.
 
 ## Rollback
 
-Rollback uses the latest receipt pointer by default:
+Restore the latest installation receipt:
 
 ```powershell
 .\rollback.ps1
 ```
 
-You can target a specific receipt:
+Restore a specific receipt:
 
 ```powershell
 .\rollback.ps1 -Receipt 'C:\path\to\receipt.json'
@@ -224,19 +277,18 @@ before installation, and restores or unsets the repository's previous
 
 ## Security model
 
-The public edition defaults to:
+The public edition starts with reviewable defaults:
 
 ```toml
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 ```
 
-The public starter rules file contains no pre-approved command prefixes. Review
-new rules before accepting them, and test a rule with `codex execpolicy check`.
-The installer verifies its manifest before writing, blocks path traversal in the
-manifest, records reversible operations, and excludes machine-bound runtime data.
+The public starter rules contain no pre-approved command prefixes. The installer
+verifies its manifest before writing, blocks manifest path traversal, records
+reversible operations, and excludes machine-bound runtime data.
 
-The kit does **not** include or migrate:
+The release does not include or migrate:
 
 - Codex authentication or OAuth data;
 - sessions, history, logs, caches, or SQLite databases;
@@ -253,15 +305,15 @@ Read [SECURITY.md](SECURITY.md) before publishing a customized fork.
    classifier fixtures with Unicode escapes when multilingual behavior is tested.
 3. Regenerate `PAYLOAD_INDEX.json` and `MANIFEST.sha256`:
 
-```powershell
-.\scripts\Update-PackageMetadata.ps1
-```
+   ```powershell
+   .\scripts\Update-PackageMetadata.ps1
+   ```
 
 4. Run the complete verification command:
 
-```powershell
-.\scripts\Test-All.ps1
-```
+   ```powershell
+   .\scripts\Test-All.ps1
+   ```
 
 5. Test installation and rollback in a disposable fixture before publishing.
 
@@ -275,7 +327,7 @@ Read [SECURITY.md](SECURITY.md) before publishing a customized fork.
 |-- rollback.ps1                Receipt-based rollback engine
 |-- ROLLBACK.sh                 Git Bash rollback entry point
 |-- payload/
-|   |-- codex-home/             Codex user configuration, instructions, rules, skills
+|   |-- codex-home/             Codex configuration, instructions, rules, skills
 |   |-- agents-home/            User-level agent skills
 |   `-- project/                Project instructions, hooks, tools, and workflows
 |-- tests/                      Installer and release tests
@@ -293,13 +345,14 @@ Read [SECURITY.md](SECURITY.md) before publishing a customized fork.
 - [Build skills](https://learn.chatgpt.com/docs/build-skills)
 - [Build plugins](https://learn.chatgpt.com/docs/build-plugins)
 
-## Contributing and promotion
+## Community
 
-- Read [CONTRIBUTING.md](CONTRIBUTING.md) to propose code or payload changes.
-- Use the ready-to-post launch copy and 48-hour distribution plan in
-  [docs/PROMOTION_PLAYBOOK.md](docs/PROMOTION_PLAYBOOK.md).
-- See [CHANGELOG.md](CHANGELOG.md) for release history.
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing code or payload
+  changes.
+- Use the ready-to-post copy and 48-hour distribution plan in the
+  [Promotion playbook](docs/PROMOTION_PLAYBOOK.md).
+- Review [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).

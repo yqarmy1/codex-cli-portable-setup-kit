@@ -1,10 +1,13 @@
 [CmdletBinding()]
 param(
-  [string]$RepoRoot = (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path))
+  [string]$RepoRoot = ''
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($RepoRoot)) {
+  $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSCommandPath)
+}
 $RepoRoot = [IO.Path]::GetFullPath($RepoRoot)
 $failures = [Collections.Generic.List[string]]::new()
 
@@ -34,18 +37,33 @@ foreach ($relative in $requiredFiles) {
 $readmePath = Join-Path $RepoRoot 'README.md'
 $readme = Get-Content -LiteralPath $readmePath -Raw -Encoding UTF8
 foreach ($requiredText in @(
-  '# Codex CLI Portable Setup Kit',
-  '## What this tool does',
-  '## Who this is for',
-  '## What gets installed',
-  '## How installation works',
+  '<h1 align="center">Codex CLI Portable Setup Kit</h1>',
+  'Reproduce your Codex CLI setup anywhere.',
+  'actions/workflows/verify.yml/badge.svg',
+  '## Highlights',
   '## Quick start',
+  '## Why not copy `.codex` manually?',
+  '## What gets installed',
+  '## How it works',
   '## Rollback',
   '## Security model',
   '## Official Codex documentation',
   'community-maintained'
 )) {
   Assert-PublicRelease -Condition $readme.Contains($requiredText) -Message "README is missing required text: $requiredText"
+}
+Assert-PublicRelease -Condition ($readme.IndexOf('## Quick start') -lt $readme.IndexOf('## How it works')) -Message 'README must put the working quick start before implementation detail.'
+
+$promotionPath = Join-Path $RepoRoot 'docs/PROMOTION_PLAYBOOK.md'
+$promotion = Get-Content -LiteralPath $promotionPath -Raw -Encoding UTF8
+foreach ($requiredText in @(
+  '## High-star project narrative',
+  '### GitHub About description',
+  'One outcome. Three proof points. One call to action.',
+  '## Fifteen-minute launch checklist',
+  '## 48-hour launch plan'
+)) {
+  Assert-PublicRelease -Condition $promotion.Contains($requiredText) -Message "Promotion playbook is missing required text: $requiredText"
 }
 
 $configPath = Join-Path $RepoRoot 'payload/codex-home/config.portable.toml'

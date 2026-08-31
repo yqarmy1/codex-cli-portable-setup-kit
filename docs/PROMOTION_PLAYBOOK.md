@@ -4,8 +4,7 @@
 
 ### One-line promise
 
-> Move a tested Codex CLI workflow to another Windows machine or repository in
-> minutes, with integrity verification, automatic backup, and real rollback.
+> Reproduce your Codex CLI setup anywhere - verified, backed up, and reversible.
 
 ### The problem it solves
 
@@ -29,6 +28,60 @@ kit turns that setup into a reviewable, versioned, testable migration artifact.
 - user, agent, and project layers in one package;
 - no credentials, sessions, caches, or history in the release;
 - tested PostCompact, context, and Git-hook behavior.
+
+## High-star project narrative
+
+High-star developer projects usually describe the outcome before the machinery.
+They make the first screen answer four questions: **What is it? Why should I
+care? Can I trust it? How do I try it?** Apply the same sequence here without
+copying another project's wording.
+
+**One outcome. Three proof points. One call to action.**
+
+### GitHub About description
+
+Use this exact description:
+
+> Reproduce your Codex CLI setup anywhere - configs, skills, hooks, and project automation with verified installs, backups, and rollback.
+
+It leads with the user outcome, names the concrete payload, and ends with the
+three differentiators. It avoids origin stories, version history, and claims that
+cannot be demonstrated in the repository.
+
+### First-screen copy stack
+
+1. **Outcome:** `Reproduce your Codex CLI setup anywhere.`
+2. **Object:** config, instructions, skills, hooks, and project automation.
+3. **Proof:** SHA-256 verification, transactional backup, rollback fixture.
+4. **Action:** download the latest release and run `verify.ps1`.
+
+### README order
+
+1. Name and one-sentence outcome.
+2. CI, release, license, and platform badges.
+3. One visual that shows the product rather than a decorative illustration.
+4. Six to eight scan-friendly highlights.
+5. A working quick start above implementation details.
+6. A comparison that explains why the project exists.
+7. Architecture, options, security, and contribution depth for evaluators.
+
+### Writing rules
+
+- Start headings with the question a visitor is already asking.
+- Prefer concrete nouns (`MANIFEST.sha256`, receipt, Git hook) to abstract claims.
+- Keep one benefit and one proof in each bullet.
+- Replace "powerful", "seamless", and "revolutionary" with observable behavior.
+- Put commands beside the promise they prove.
+- Use one repository name, one outcome sentence, and one primary download link.
+- End launch posts with one request: try it, star it, or report a result - not all
+  three at once.
+
+### Release headline
+
+> Codex CLI Portable Setup Kit v6.1.0 - your Codex workflow, reproducible in minutes
+
+Release notes should then show three proof points, the three-command quick start,
+the exact test result, and the release ZIP download.
 
 ## Fifteen-minute launch checklist
 
@@ -122,21 +175,21 @@ Use this structure:
 ### X / short social post
 
 ```text
-I open-sourced Codex CLI Portable Setup Kit for Windows.
+Reproduce your Codex CLI setup anywhere.
 
-It moves config + AGENTS.md + skills + hooks + project automation to another machine/repo, verifies every file first, backs up what it replaces, and can roll everything back from a receipt.
+Codex CLI Portable Setup Kit moves config + AGENTS.md + skills + hooks + project automation to another Windows machine or repository.
 
-No auth, sessions, cookies, keys, or history are included.
+Verified before write. Automatic backups. Receipt-based rollback. No auth or session data.
 
-Demo + download: REPOSITORY_URL
+Try it: REPOSITORY_URL
 ```
 
 ### LinkedIn
 
 ```text
-Copying a Codex setup is more than moving one config.toml.
+Reproduce your Codex CLI setup anywhere - without turning dotfile migration into a manual checklist.
 
-The behavior can span user instructions, AGENTS.md, rules, skills, project config, hooks, Git hooks, and local orchestration tools. I packaged that portable layer into a Windows setup kit with:
+Codex behavior can span user instructions, AGENTS.md, rules, skills, project config, hooks, Git hooks, and local orchestration tools. Codex CLI Portable Setup Kit packages that portable layer for Windows with:
 
 - SHA-256 verification before any write
 - timestamped backups and an operation journal
@@ -144,15 +197,15 @@ The behavior can span user instructions, AGENTS.md, rules, skills, project confi
 - explicit verification of the installed state
 - no credentials, sessions, cookies, keys, databases, or history
 
-The repository includes the installer, full architecture, rollback fixture, release ZIP, and a guide for customizing the payload.
+The repository includes the installer, architecture, a real rollback fixture, a release ZIP, and a guide for customizing the payload.
 
-REPOSITORY_URL
+Download and verify it: REPOSITORY_URL
 ```
 
 ### Show HN
 
 ```text
-Show HN: A transactional Windows installer for portable Codex CLI setups
+Show HN: Reproduce a Codex CLI setup with verified install and rollback
 ```
 
 First comment:
@@ -168,7 +221,7 @@ Repository: REPOSITORY_URL
 ### Reddit / technical community
 
 ```text
-Title: I made my Codex CLI setup portable and added transactional rollback
+Title: Reproduce a Codex CLI setup anywhere, with verification and rollback
 
 I wanted to move a tuned Codex workflow without copying machine-bound state. The tricky part was that the behavior was split across config.toml, AGENTS.md, rules, skills, project hooks, Git hooks, and local context tools.
 
