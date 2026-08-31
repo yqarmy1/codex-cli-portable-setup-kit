@@ -82,7 +82,7 @@ Use the same structure here:
 
 Use this exact description:
 
-> No sermons. No stalling. Just execution. A execution-first Codex profile that cuts moralizing and pushes GPT to finish the job.
+> Autonomous Systems & Security Toolkit for OpenAI Codex CLI. Deterministic binary analysis, decoupled pipeline, and zero-friction execution.
 
 ### First-screen copy stack
 
