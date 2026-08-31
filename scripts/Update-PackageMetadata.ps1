@@ -46,7 +46,7 @@ function Get-PayloadIndexText {
   }
   $document = [ordered]@{
     schema = 1
-    release = '6.1.0'
+    release = '6.2.0'
     generated_at = '2026-08-30'
     file_count = $entries.Count
     total_bytes = [int64](($files | Measure-Object Length -Sum).Sum)

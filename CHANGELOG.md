@@ -2,6 +2,28 @@
 
 All notable changes to this project are documented here.
 
+## [6.2.0] - 2026-08-31
+
+### Added
+
+- Detailed execution-profile documentation with plain-English behavior,
+  before/after examples, tuning guidance, and a reusable core instruction.
+- Behavior-first launch copy and a fast promotion plan centered on the outcome
+  rather than the installer's transport mechanics.
+
+### Changed
+
+- Repositioned the project around **Less talk. More execution.** The primary
+  purpose is now explicit: make Codex inspect, edit, test, fix, and finish before
+  reporting concisely.
+- Strengthened user and project instructions so actionable requests trigger
+  tool use, continued implementation, failure diagnosis, and retesting instead
+  of plans, progress-only responses, or avoidable questions.
+- Changed `model_verbosity` from `medium` to `low` while keeping
+  `model_reasoning_effort` at `high`.
+- Rebuilt the README, GitHub social preview, release narrative, and promotion
+  assets around execution-first behavior.
+
 ## [6.1.0] - 2026-08-30
 
 ### Added

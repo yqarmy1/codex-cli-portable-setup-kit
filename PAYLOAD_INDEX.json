@@ -1,9 +1,9 @@
 {
     "schema":  1,
-    "release":  "6.1.0",
+    "release":  "6.2.0",
     "generated_at":  "2026-08-30",
     "file_count":  442,
-    "total_bytes":  3162174,
+    "total_bytes":  3163715,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/find-skills/SKILL.md",
@@ -20,14 +20,14 @@
                   {
                       "path":  "payload/codex-home/config.portable.toml",
                       "component":  "codex-user",
-                      "bytes":  1234,
-                      "sha256":  "25C0BC45A1B702D49380FE5E0A1B99ABE37E4393DE82CF0B8A1B7309A07B9070"
+                      "bytes":  1231,
+                      "sha256":  "556C3D03296D187F6BA09700473E2A89C794EE99D3D8ECBF861C574ABC88A50E"
                   },
                   {
                       "path":  "payload/codex-home/instructions/portable-agent-instructions.md",
                       "component":  "codex-user",
-                      "bytes":  1876,
-                      "sha256":  "0B323E579454B7875F15CF1FC002800D48E6BD0182DBBD5764D6210000F98435"
+                      "bytes":  2905,
+                      "sha256":  "0DB462D4A54D57EB34DB90E7EB36BF8ACDDA25E3EF13E5401921ED0390FECF41"
                   },
                   {
                       "path":  "payload/codex-home/rules/default.rules.template",
@@ -2654,8 +2654,8 @@
                   {
                       "path":  "payload/project/AGENTS.md",
                       "component":  "project-control-plane",
-                      "bytes":  2003,
-                      "sha256":  "578AAA5FCF78FDCEAEEFF2E90A6FB55F6BF660347EBE55D66E2B04961990951C"
+                      "bytes":  2518,
+                      "sha256":  "7C7E2E4F0D464A40FCF7BF117C3D9948389F4EC59808AEA7326EE419205DDECC"
                   }
               ]
 }

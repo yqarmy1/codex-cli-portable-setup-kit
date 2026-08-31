@@ -1,9 +1,9 @@
 <h1 align="center">Codex CLI Portable Setup Kit</h1>
 
 <p align="center">
-  <strong>Reproduce your Codex CLI setup anywhere.</strong><br>
-  Config, instructions, skills, hooks, and project automation - installed with
-  SHA-256 verification, transactional backups, and one-command rollback.
+  <strong>Less talk. More execution.</strong><br>
+  An execution-first Codex profile that pushes GPT to inspect, edit, test, fix, and finish
+  the real task before giving you a concise result.
 </p>
 
 <p align="center">
@@ -15,39 +15,71 @@
 </p>
 
 <p align="center">
+  <a href="#what-this-profile-changes">What changes</a> |
   <a href="#quick-start">Quick start</a> |
-  <a href="#highlights">Highlights</a> |
-  <a href="#how-it-works">How it works</a> |
+  <a href="docs/EXECUTION_PROFILE.md">How the profile works</a> |
   <a href="#security-model">Security</a> |
   <a href="docs/PROMOTION_PLAYBOOK.md">Launch playbook</a>
 </p>
 
-![Codex CLI Portable Setup Kit preview](docs/assets/social-preview.png)
+![Less talk. More execution.](docs/assets/social-preview.png)
 
 > [!NOTE]
-> This is a community-maintained setup kit. It is not Codex itself and is not an
-> official OpenAI product.
+> This is a community-maintained Codex configuration and installer. It is not
+> Codex itself and is not an official OpenAI product.
 
 ## Highlights
 
-- **One portable package.** Move Codex configuration, `AGENTS.md`, skills,
-  hooks, local tools, and project conventions together.
-- **Verified before write.** Every packaged payload file is checked against
-  `MANIFEST.sha256` before the installer changes a destination.
-- **Transactional by default.** Existing files are backed up and each operation
-  is journaled before replacement.
-- **Rollback is a first-class command.** Restore replaced files, remove files
-  added by the installer, and recover the previous Git hook binding.
-- **Machine paths adapt automatically.** Portable placeholders become the
-  selected project root and user home during installation.
-- **Public-ready defaults.** The package excludes credentials and runtime data,
-  uses `on-request` approval with `workspace-write`, and ships no silent allow
-  rules.
-- **Natural interaction.** The English agent instructions do not force a
-  repetitive `Current / Result / Next` prefix into normal responses.
-- **Tested as a release artifact.** Package integrity, public-release rules,
-  Python components, installed-state checks, and rollback fixtures run as one
-  verification suite.
+- **Action over advice.** Codex is told to use available tools and change the
+  real target instead of replying with a tutorial you still have to execute.
+- **Completion over commentary.** It keeps moving through inspect, edit, test,
+  diagnose, fix, and retest instead of stopping at a plan or progress report.
+- **Investigate before interrupting.** It checks files, tests, history, and local
+  context before asking questions that the workspace can answer.
+- **Quiet execution.** `model_verbosity = "low"` and concise reporting rules cut
+  routine narration while preserving results, paths, commands, and evidence.
+- **Verification before claims.** The profile asks Codex to run the relevant
+  checks and read their literal result before saying the work is finished.
+- **Long-task continuity.** PostCompact checkpoints, Context Guardian, Codex
+  Continuous, and Orchestrator components help unfinished work retain a bounded
+  handoff and resume from verified state.
+- **Useful tools already connected.** Browser, Visualize, Sites, skills, project
+  hooks, and OpenAI documentation support are packaged as one working profile.
+- **Safe, reversible delivery.** SHA-256 checks, transactional backups, receipts,
+  and tested rollback make the profile practical to install and remove.
+
+## What this profile changes
+
+This project is **not mainly a migration utility**. Portability is the delivery
+mechanism. The product is a tuned operating style for Codex. **Do the work, then report the result.**
+
+| Common assistant behavior | This execution-first profile |
+|---|---|
+| Explains which commands you should run | Runs the relevant commands with tools |
+| Stops after writing a plan | Continues into implementation when the next action is available |
+| Announces every small step | Keeps interim narration brief |
+| Asks before looking at the workspace | Inspects files, tests, and context first |
+| Says a change should work | Executes tests and reads the result |
+| Hands a failed check back to you | Diagnoses, fixes, and reruns it |
+| Loses the thread after compaction | Writes bounded checkpoints for validated continuation |
+
+The behavior comes from several layers working together:
+
+1. **High reasoning effort** gives difficult coding and debugging tasks more
+   problem-solving budget.
+2. **Low response verbosity** reduces routine explanation; it does not reduce
+   the configured reasoning effort.
+3. **Execution instructions** explicitly prefer tool calls, real edits,
+   verification, and continued work over advice, plans, or promises.
+4. **Project rules and skills** give Codex repository-specific workflows and
+   reusable procedures.
+5. **Hooks and continuity tools** preserve compact task state when work spans a
+   long context or needs a validated handoff.
+6. **Installer verification and rollback** deliver those layers repeatably
+   without making the behavior profile the user's next manual setup project.
+
+Read [How the execution profile works](docs/EXECUTION_PROFILE.md) for each
+setting, concrete before/after examples, tuning options, and limits.
 
 ## Quick start
 
@@ -69,7 +101,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 Expected result:
 
 ```text
-PACKAGE_VERIFY=PASS files=472
+PACKAGE_VERIFY=PASS files=473
 ```
 
 ### 3. Install into a project
@@ -96,42 +128,44 @@ Use `install.ps1` rather than `install.cmd` for scripted installation.
 
 ## Why not copy `.codex` manually?
 
-Copying dotfiles works until a path changes, an existing file is overwritten, or
-you need to prove exactly what was installed. This kit turns that informal copy
-operation into a repeatable migration.
+A one-line prompt or copied `config.toml` can change tone, but the full behavior
+also depends on instructions, project rules, skills, hooks, feature flags, and
+continuity tools. This kit installs that tested stack together and gives you a
+way back.
 
-| Capability | Manual copy | Portable Setup Kit |
+| Capability | One prompt or manual copy | Portable Setup Kit |
 |---|---:|---:|
+| Prefer execution over explanation | Inconsistent | User + project instructions |
+| Keep routine output concise | Prompt-dependent | `model_verbosity = "low"` |
+| Inspect, edit, test, and retry | Ad hoc | Explicit execution loop |
+| Preserve long-task handoff state | Usually no | Hooks + context tools |
 | Verify source files before writing | No | SHA-256 manifest |
 | Back up every replaced destination | Manual | Automatic |
-| Adapt user and project paths | Search and replace | Installer substitution |
-| Configure project trust and Git hooks | Manual | Included |
-| Preserve an operation receipt | No | JSON receipt + pointer |
 | Reverse a completed install | Manual | `rollback.ps1` / `ROLLBACK.sh` |
 | Exercise the release in CI | Usually no | One seven-step test suite |
 
 ## What this tool does
 
-The kit has one job: reproduce the **portable behavior** of a tuned Codex CLI
-workspace without copying machine-bound state.
+The tool's primary job is to install an **execution-first Codex profile**. In
+plain English, it pushes GPT to spend more of the interaction doing useful work
+and less of it explaining, narrating, asking avoidable questions, or stopping
+before the result is verified.
 
-It performs five ordered operations:
+For an actionable repository task, the intended loop is:
 
-1. **Validate** the package structure and SHA-256 manifest.
-2. **Back up** every existing destination that will be replaced.
-3. **Install** Codex user configuration, instructions, skills, hooks, and project
-   automation.
-4. **Adapt** portable paths, establish the project configuration layer, and bind
-   the packaged Git hook when the target is a Git repository.
-5. **Record** a rollback receipt that can restore the pre-install state.
+1. **Inspect** the real files, tests, call sites, and local evidence.
+2. **Execute** the requested changes with available tools.
+3. **Verify** the behavior using the most relevant checks.
+4. **Recover and retry** when a check exposes an unfinished result.
+5. **Report concisely** with the result, changed paths, and proof that matters.
 
-Use it to bootstrap a second Windows development computer, standardize a team
-repository, reproduce a tested agent workflow in a disposable project, or keep
-auditable install and rollback evidence instead of maintaining a handwritten
-dotfile checklist.
+The installer is the transport layer. It validates the package, backs up existing
+files, installs the profile across user and project scopes, adapts portable
+paths, and records a rollback receipt. It intentionally leaves authentication,
+sessions, conversation history, and machine-bound runtime data alone.
 
-The package intentionally does not act as cloud sync, copy authentication,
-migrate conversations, or replace npm and Git.
+Use it when you want Codex to behave more like a hands-on engineer and less like
+an assistant that gives you another checklist.
 
 ## What gets installed
 

@@ -2,12 +2,27 @@
 
 ## Purpose
 
-The Codex CLI Portable Setup Kit turns a curated Codex user and project setup
-into a verifiable Windows migration package. It separates portable behavior from
-machine-bound runtime state, applies the portable layer transactionally, and
-records enough information to restore the pre-install state.
+The product is an execution-first behavior profile for Codex. It combines model
+settings, user instructions, project rules, tools, and continuation components
+to favor real inspection, edits, tests, fixes, and concise verified results over
+advice or progress-only responses.
+
+The Windows installer is the delivery architecture. It separates that portable
+behavior from machine-bound runtime state, applies the profile transactionally,
+and records enough information to restore the pre-install state.
 
 ## Components
+
+### Behavior stack
+
+| Layer | Responsibility |
+|---|---|
+| `config.portable.toml` | Selects the model, high reasoning effort, low output verbosity, plugins, and documentation MCP |
+| `portable-agent-instructions.md` | Defines the inspect, execute, verify, fix, and concise-report loop |
+| Project `AGENTS.md` | Reinforces execution discipline and repository evidence rules |
+| Skills and plugins | Supply reusable workflows and additional tools for doing the work directly |
+| PostCompact and context components | Record bounded checkpoints and classify unfinished long-running work |
+| Manifest, journal, and receipt | Verify and deliver the behavior stack with a reversible transaction |
 
 ### Entry points
 

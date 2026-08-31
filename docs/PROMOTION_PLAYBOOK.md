@@ -4,216 +4,254 @@
 
 ### One-line promise
 
-> Reproduce your Codex CLI setup anywhere - verified, backed up, and reversible.
+> **Less talk. More execution.**
+
+Expanded version:
+
+> A Codex profile for people tired of agents that explain the work instead of doing it.
+
+### What the product really is
+
+This is an **execution-first behavior profile for Codex**. It pushes GPT to:
+
+- inspect the real workspace before answering;
+- use tools instead of handing commands back to the user;
+- edit, run, test, diagnose, fix, and retest;
+- continue past plans and status updates when work can proceed;
+- ask fewer avoidable questions; and
+- report the finished result in normal, concise language.
+
+The installer, package verification, backups, and rollback are important proof
+that the profile is easy to adopt. They are not the main headline.
 
 ### The problem it solves
 
-Codex power users often accumulate config, instructions, rules, skills, hooks,
-and project automation across several locations. Manual copying is easy to get
-wrong, omits hidden dependencies, and rarely includes a reliable way back. This
-kit turns that setup into a reviewable, versioned, testable migration artifact.
+A frustrating agent interaction looks like this: the user asks for a result, the
+agent writes a plan, explains commands, reports progress, and then leaves the
+actual work unfinished. The user becomes the operator.
+
+This profile changes the default. Codex is instructed to become the operator:
+do the concrete work first, prove it with relevant checks, then give the user a
+short result.
 
 ### Ideal users
 
-1. Developers moving from one Windows computer to another.
-2. Teams standardizing Codex conventions across repositories.
-3. Power users who maintain custom skills, hooks, and context workflows.
-4. Open-source maintainers who want a reproducible contributor setup.
+1. Developers who already use Codex but spend too much time saying "continue."
+2. People who want fixes and artifacts, not another tutorial or checklist.
+3. Power users who want high reasoning effort without long routine answers.
+4. Teams that want consistent execution and verification rules in repositories.
+5. Windows users who want that profile installed with backups and rollback.
 
 ### Proof points to lead with
 
-- one explicit install command;
-- SHA-256 verification before writes;
-- timestamped backup and automatic rollback;
-- user, agent, and project layers in one package;
-- no credentials, sessions, caches, or history in the release;
-- tested PostCompact, context, and Git-hook behavior.
+Lead with visible behavior, then support it with implementation proof:
+
+1. execution-first user and project instructions;
+2. high reasoning effort plus low output verbosity;
+3. explicit inspect -> edit -> test -> fix -> retest loop;
+4. no forced `Current / Result / Next` response template;
+5. PostCompact checkpoints and long-task continuation components;
+6. one-command installation with SHA-256 verification and tested rollback; and
+7. a seven-step CI suite that verifies the release artifact.
 
 ## High-star project narrative
 
-High-star developer projects usually describe the outcome before the machinery.
-They make the first screen answer four questions: **What is it? Why should I
-care? Can I trust it? How do I try it?** Apply the same sequence here without
-copying another project's wording.
+High-star developer projects usually win the first screen with a short outcome,
+a clear object, visible proof, and an immediate command. They do not begin with
+an origin story or a list of internal files.
+
+Use the same structure here:
 
 **One outcome. Three proof points. One call to action.**
+
+- **Outcome:** Codex does more of the work and says less about doing it.
+- **Proof 1:** execution-first instructions and low verbosity are visible in the repo.
+- **Proof 2:** the package runs a real verification and rollback fixture.
+- **Proof 3:** the long-task components and tests are inspectable.
+- **Action:** download the release, run `verify.ps1`, install it into a disposable repository.
 
 ### GitHub About description
 
 Use this exact description:
 
-> Reproduce your Codex CLI setup anywhere - configs, skills, hooks, and project automation with verified installs, backups, and rollback.
-
-It leads with the user outcome, names the concrete payload, and ends with the
-three differentiators. It avoids origin stories, version history, and claims that
-cannot be demonstrated in the repository.
+> Less talk. More execution. A Codex profile that inspects, edits, tests, fixes, and keeps working until the task is done.
 
 ### First-screen copy stack
 
-1. **Outcome:** `Reproduce your Codex CLI setup anywhere.`
-2. **Object:** config, instructions, skills, hooks, and project automation.
-3. **Proof:** SHA-256 verification, transactional backup, rollback fixture.
-4. **Action:** download the latest release and run `verify.ps1`.
+1. **Tagline:** `Less talk. More execution.`
+2. **Definition:** `An execution-first Codex profile.`
+3. **Concrete verbs:** inspect, edit, test, fix, finish.
+4. **Proof:** high reasoning, low verbosity, verified install and rollback.
+5. **Action:** download the latest release.
 
 ### README order
 
-1. Name and one-sentence outcome.
-2. CI, release, license, and platform badges.
-3. One visual that shows the product rather than a decorative illustration.
-4. Six to eight scan-friendly highlights.
-5. A working quick start above implementation details.
-6. A comparison that explains why the project exists.
-7. Architecture, options, security, and contribution depth for evaluators.
+1. Project name and four-word promise.
+2. One sentence saying exactly what changes after installation.
+3. CI, release, license, and platform badges.
+4. A social preview or terminal demo that repeats the promise.
+5. Six to eight behavior-first highlights.
+6. A before/after table.
+7. A three-command quick start.
+8. Detailed configuration, architecture, security, and rollback.
 
 ### Writing rules
 
-- Start headings with the question a visitor is already asking.
-- Prefer concrete nouns (`MANIFEST.sha256`, receipt, Git hook) to abstract claims.
-- Keep one benefit and one proof in each bullet.
-- Replace "powerful", "seamless", and "revolutionary" with observable behavior.
-- Put commands beside the promise they prove.
-- Use one repository name, one outcome sentence, and one primary download link.
-- End launch posts with one request: try it, star it, or report a result - not all
-  three at once.
+- Use short sentences and concrete verbs.
+- Say what Codex does after installation, not how clever the configuration is.
+- Put behavior before transport: execution profile first, installer second.
+- Replace "powerful" with an observable result such as "runs the test."
+- Avoid absolute autonomy claims that the repository cannot prove.
+- Show one literal command or result next to each technical promise.
+- Keep the same tagline in the README, About box, release, preview image, and posts.
+- Give each post one call to action: try it, star it, or report a result.
 
 ### Release headline
 
-> Codex CLI Portable Setup Kit v6.1.0 - your Codex workflow, reproducible in minutes
+> Codex CLI Portable Setup Kit v6.2.0 - less talk, more execution
 
-Release notes should then show three proof points, the three-command quick start,
-the exact test result, and the release ZIP download.
+The first paragraph should say that v6.2.0 is the execution-first release. Then
+show the behavior changes, the three-command install, the exact test result, and
+the ZIP checksum.
 
 ## Fifteen-minute launch checklist
 
-1. Pin the repository to your GitHub profile.
-2. Confirm the About description and repository topics.
-3. Publish the tagged ZIP in GitHub Releases.
-4. Upload `docs/assets/social-preview.png` in **Settings -> General -> Social
-   preview**.
-5. Record a 20–30 second terminal clip:
-   - run `verify.ps1`;
-   - install into a disposable project;
-   - run installed verification;
-   - run rollback;
-   - show restored sentinel files.
-6. Add the clip or GIF directly below the README opening paragraph.
-7. Post one launch message with the clip, exact outcome, and repository link.
+Do these in order. Stop polishing after step seven and publish.
+
+1. Set the GitHub About description to the exact sentence above.
+2. Add topics: `codex`, `codex-cli`, `openai`, `ai-agents`, `agentic-workflow`,
+   `execution-first`, `prompt-engineering`, `windows`, `powershell`, and
+   `developer-tools`.
+3. Upload `docs/assets/social-preview.png` in **Settings -> General -> Social preview**.
+4. Pin the repository on the owner's GitHub profile.
+5. Publish the v6.2.0 release with the verified ZIP and SHA-256 checksum.
+6. Record one 20-30 second screen capture: ask Codex to change a fixture, show it
+   edit the file, run a test, fix a deliberate failure, and finish with a short result.
+7. Put that clip directly below the README opening paragraph.
+8. Post the short launch copy on X or LinkedIn.
+9. Submit the technical version to Show HN.
+10. Share a native, non-spammy explanation in one relevant Codex or coding-agent
+    community whose current posting rules allow project links.
 
 ## 48-hour launch plan
 
 ### Hour 0: make the repository conversion-ready
 
-- Use the title **Codex CLI Portable Setup Kit** everywhere.
-- Keep the README opening focused on the result, not the implementation history.
-- Publish a GitHub Release so visitors have one obvious download button.
-- Add these topics:
-  - `codex`
-  - `codex-cli`
-  - `openai`
-  - `windows`
-  - `powershell`
-  - `developer-tools`
-  - `automation`
-  - `dotfiles`
-  - `ai-agents`
-  - `hooks`
-  - `skills`
-  - `migration-tool`
-- Pin one issue titled **Show your migrated setup** to invite examples and social
-  proof.
+- Keep one promise everywhere: **Less talk. More execution.**
+- Make the latest release the obvious download.
+- Confirm the README gives a working command before deep implementation detail.
+- Open one GitHub Discussion titled **What did Codex finish for you?**
+- Create one issue template for behavior reports with fields for request, actual
+  behavior, expected behavior, and verification command.
+- Pin an issue titled **Share a before/after example** to collect social proof.
 
-### Hours 1–3: publish the primary announcement
+### Hours 1-3: publish the primary announcement
 
-Post the same core proof in different native formats rather than copying one
-large block everywhere:
+Publish the same proof in the native format of each channel:
 
-- X: short result + terminal clip + repository link.
-- LinkedIn: problem, why manual copying fails, three technical proof points.
-- Reddit: detailed build story, limitations, and a question for other Codex users;
-  choose communities whose self-promotion rules permit it.
-- Hacker News: `Show HN` title plus a concise technical explanation in the first
-  comment.
-- DEV Community or Hashnode: tutorial showing the transaction and rollback model.
-- OpenAI developer community: describe what you built, the workflow it enables,
-  and the exact repository/release link.
+- **Show HN:** technical problem, implementation, limitations, repository.
+- **X:** four-word hook, 20-second clip, one link.
+- **LinkedIn:** pain point, behavior change, five concrete mechanisms.
+- **Reddit:** personal build story, transparent limitations, ask for feedback.
+- **OpenAI developer community:** exact Codex settings, instructions, tests, link.
+- **Product Hunt or DevHunt:** use after the technical audience has produced a
+  few real examples; screenshots and testimonials convert better than claims.
 
-### Hours 4–12: answer and improve
+Do not paste the same long paragraph into every site. Reuse the promise and
+proof, but rewrite the opening for the community.
 
-- Reply to every substantive question with a concrete command or link to the
-  relevant architecture section.
-- Turn repeated questions into README improvements.
-- Label the first external bug reports quickly.
-- Ask early users for one sentence describing the time saved or failure avoided.
-- Add real user phrasing to the README only with their permission.
+### Hours 4-12: answer and improve
 
-### Hours 12–24: publish the technical follow-up
+- Reply to questions with a direct README section, command, or test result.
+- Turn the first repeated misunderstanding into a README edit immediately.
+- Ask successful users for a two-line before/after example, not generic praise.
+- Label and reproduce behavior reports quickly.
+- Add one real example to the README after the user confirms it can be shared.
 
-Write a short article titled:
+### Hours 12-24: publish the technical follow-up
 
-> How I made a Codex CLI setup portable without copying credentials or sessions
+Write an article titled:
+
+> High reasoning, low verbosity: making Codex do the work before talking
 
 Use this structure:
 
-1. where Codex behavior comes from;
-2. why manual dotfile copying is incomplete;
-3. the three-layer payload model;
-4. manifest verification;
-5. operation journal and reverse rollback;
-6. a five-command demo;
-7. repository and release links.
+1. the "plan instead of result" problem;
+2. why verbosity and reasoning are separate settings;
+3. the execution-first instruction contract;
+4. inspect -> edit -> test -> fix -> retest;
+5. how project `AGENTS.md` rules reinforce the behavior;
+6. how checkpoints help long tasks retain bounded state;
+7. what the profile cannot guarantee;
+8. a real before/after terminal recording;
+9. repository and release links.
 
-### Hours 24–48: create a second reason to share
+Publish on DEV Community, Hashnode, or a personal blog, then link the article
+from GitHub Discussions.
 
-- Publish a small follow-up release based on real feedback.
-- Post the terminal demo as a standalone clip.
-- Share one architecture diagram or rollback test result.
-- Invite contributors to add macOS/Linux support as a clearly scoped roadmap
-  discussion instead of claiming unsupported platforms.
+### Hours 24-48: create a second reason to share
+
+- Publish one before/after demo as its own post.
+- Share one failure-to-fix test loop, not another feature list.
+- Cut the terminal clip into a silent GIF for the README.
+- Release a small improvement based on actual feedback.
+- Ask which default users want next: even quieter output, medium verbosity, or a
+  project-only install mode.
 
 ## Ready-to-post launch copy
+
+Replace `REPOSITORY_URL` with the public repository link.
 
 ### X / short social post
 
 ```text
-Reproduce your Codex CLI setup anywhere.
+Less talk. More execution.
 
-Codex CLI Portable Setup Kit moves config + AGENTS.md + skills + hooks + project automation to another Windows machine or repository.
+I made a Codex profile for people tired of agents that explain the work instead of doing it.
 
-Verified before write. Automatic backups. Receipt-based rollback. No auth or session data.
+It pushes Codex to inspect -> edit -> test -> fix -> retest, then report the result briefly.
 
-Try it: REPOSITORY_URL
+High reasoning. Low verbosity. Verified install + rollback.
+REPOSITORY_URL
 ```
 
 ### LinkedIn
 
 ```text
-Reproduce your Codex CLI setup anywhere - without turning dotfile migration into a manual checklist.
+I was tired of asking coding agents to "continue."
 
-Codex behavior can span user instructions, AGENTS.md, rules, skills, project config, hooks, Git hooks, and local orchestration tools. Codex CLI Portable Setup Kit packages that portable layer for Windows with:
+So I packaged an execution-first Codex profile: less narration, fewer avoidable questions, and more actual tool use.
 
-- SHA-256 verification before any write
-- timestamped backups and an operation journal
-- automatic rollback when installation fails
-- explicit verification of the installed state
-- no credentials, sessions, cookies, keys, databases, or history
+After installation, the default loop is:
+inspect -> edit -> test -> diagnose -> fix -> retest -> concise result
 
-The repository includes the installer, architecture, a real rollback fixture, a release ZIP, and a guide for customizing the payload.
+The profile combines:
+- high reasoning effort with low response verbosity
+- user and project instructions that prefer action over advice
+- verification before completion claims
+- PostCompact checkpoints and long-task tools
+- a SHA-256-verified installer with backup and rollback
 
-Download and verify it: REPOSITORY_URL
+It is open source for Windows:
+REPOSITORY_URL
 ```
 
 ### Show HN
 
 ```text
-Show HN: Reproduce a Codex CLI setup with verified install and rollback
+Show HN: A Codex profile that does the work before talking about it
 ```
 
 First comment:
 
 ```text
-Codex behavior can live across user config, AGENTS.md, rules, skills, hooks, project config, and Git hooks. This project packages the portable parts, verifies a SHA-256 manifest before writing, records every replacement, and restores the old state in reverse if any step fails.
+I built this because too many agent sessions end with a plan, a progress report, or commands handed back to the user.
 
-The release excludes authentication, sessions, history, logs, caches, cookies, keys, and databases. The rollback test installs into a disposable fixture, runs the PostCompact hook, verifies the target, then restores original sentinel hashes and Git hooksPath.
+The profile combines high model reasoning effort with low response verbosity and explicit instructions to inspect the real target, use tools, continue through edit/test/fix cycles, and report only after verification. Project-level AGENTS.md rules reinforce the behavior, while PostCompact checkpoints and local continuation components help longer tasks retain a bounded handoff.
+
+The Windows installer is the delivery layer. It verifies a SHA-256 manifest, backs up replaced files, records a receipt, and has a real rollback fixture. It excludes authentication and session data.
+
+I would especially value before/after examples and cases where Codex still stops too early.
 
 Repository: REPOSITORY_URL
 ```
@@ -221,25 +259,56 @@ Repository: REPOSITORY_URL
 ### Reddit / technical community
 
 ```text
-Title: Reproduce a Codex CLI setup anywhere, with verification and rollback
+Title: I made a Codex profile that prioritizes doing the work over explaining it
 
-I wanted to move a tuned Codex workflow without copying machine-bound state. The tricky part was that the behavior was split across config.toml, AGENTS.md, rules, skills, project hooks, Git hooks, and local context tools.
+My recurring frustration with coding agents was not model intelligence. It was the operating style: explain the steps, ask questions the repo can answer, stop at a plan, or say a fix should work without running the test.
 
-The setup kit now verifies every packaged file, backs up each destination, adapts target paths, writes a receipt, and automatically reverses recorded operations on failure. A fixture test proves install -> hook -> verify -> rollback, including restored file hashes and Git hooksPath.
+This profile changes that default. It tells Codex to inspect the workspace, use tools, edit, test, diagnose failures, fix them, and retest. It uses high reasoning effort with low response verbosity, so the work can stay thorough while the routine answer stays short.
 
-The public edition uses on-request approvals and workspace-write sandboxing, and excludes auth, sessions, cookies, keys, databases, caches, and history.
+The package also includes project AGENTS.md rules, PostCompact checkpoints, long-task helpers, a verified Windows installer, backups, and rollback. It does not copy authentication or conversation history.
 
-I would value feedback on the payload boundaries and what platform to support next.
+I would like honest examples where it still talks too much or stops too early.
 
+REPOSITORY_URL
+```
+
+### OpenAI developer community
+
+```text
+Less talk. More execution: an execution-first Codex configuration
+
+This open-source profile combines model_reasoning_effort="high" with model_verbosity="low", a tool-first instruction layer, project AGENTS.md rules, verification requirements, and bounded PostCompact checkpoints.
+
+The goal is simple: if Codex can inspect, edit, run, test, or fix the target now, it should do that before writing a tutorial or status update.
+
+Repository and verified Windows release:
 REPOSITORY_URL
 ```
 
 ## Demo script
 
-Use a disposable directory and keep the clip under 30 seconds:
+A behavior demo is stronger than an installation demo. Use a tiny disposable
+repository with one deliberately failing test and record this prompt:
+
+```text
+Fix the failing test in this repository. Inspect the cause, make the smallest
+correct change, run the relevant tests, and keep working until they pass. Give me
+a short result when finished.
+```
+
+Then record these visible moments:
+
+1. Codex opens the failing test and implementation.
+2. Codex edits the implementation.
+3. The first test run fails for a real reason.
+4. Codex diagnoses and corrects it without asking the viewer to take over.
+5. The second run passes.
+6. The final answer is two or three lines.
+
+Record the installer separately if needed:
 
 ```powershell
-$demo = Join-Path $env:TEMP 'codex-portable-demo'
+$demo = Join-Path $env:TEMP 'codex-execution-profile-demo'
 New-Item -ItemType Directory -Path $demo -Force | Out-Null
 git -C $demo init --quiet
 
@@ -251,56 +320,56 @@ git -C $demo init --quiet
 
 Overlay four captions:
 
-1. `461+ files verified before writes`
-2. `Existing config backed up`
-3. `Project hooks and skills installed`
-4. `Rollback restored original hashes`
-
-Use the manifest count printed by the current release rather than hard-coding the
-sample caption when you record the final clip.
+1. `High reasoning / low verbosity`
+2. `Inspect -> edit -> test`
+3. `Failure -> fix -> retest`
+4. `Short verified result`
 
 ## Conversion improvements
 
-Prioritize these in order:
+Implement these only after the first launch data shows where users leave:
 
-1. **Terminal GIF/video in the README** — proves the workflow faster than text.
-2. **Social preview image** — improves every shared repository link.
-3. **One-click GitHub Release download** — removes clone/build friction.
-4. **Pinned proof issue** — collects successful installs and requested platforms.
-5. **Two screenshots** — package verification and restored rollback result.
-6. **Short troubleshooting section** — converts users who encounter execution
-   policy, path, or Codex-version questions.
+1. Add a five-second before/after GIF under the tagline.
+2. Add one copyable project-only installation command.
+3. Publish three real behavior transcripts with sensitive data removed.
+4. Add a table comparing low and medium verbosity profiles.
+5. Create a one-click disposable demo repository.
+6. Add macOS or Linux support only after Windows behavior and rollback are stable.
 
 ## Metrics
 
-Track a small funnel for the first seven days:
+Track a small funnel instead of staring only at stars:
 
-| Stage | Metric | First-week target |
-|---|---|---:|
-| Reach | Repository link impressions | 5,000 |
-| Interest | GitHub page visits | 500 |
-| Intent | Release downloads | 100 |
-| Activation | Successful-install reports or demo completions | 20 |
-| Retention | Stars from activated users | 10+ |
-| Learning | Actionable issues/discussions | 5 |
+| Stage | Useful signal |
+|---|---|
+| Discovery | unique repository visitors and referral source |
+| Understanding | README-to-release click rate |
+| Trial | release downloads and successful verification reports |
+| Activation | users who install and share one completed-task example |
+| Trust | issues with reproducible evidence and rollback reports |
+| Advocacy | stars, forks, mentions, and contributed profiles |
 
-Use GitHub traffic and release download counts. Add UTM parameters per channel if
-you publish through a link shortener or analytics-enabled landing page.
+The most valuable early metric is the number of people who can describe the
+project correctly in one sentence. If they call it a migration tool, the opening
+copy still needs work.
 
 ## Message discipline
 
-- Lead with the migration outcome, not the number of files.
-- Demonstrate rollback; it is the strongest trust-building differentiator.
-- State Windows-only support clearly in titles and captions.
-- Show real commands and literal outputs.
-- Use one call to action: **download the release and run `verify.ps1`**.
-- Follow each community's self-promotion rules and contribute to discussions
-  outside your own launch thread.
+Always say:
+
+- "execution-first Codex profile" before "portable setup kit";
+- "does more work and says less" before technical settings;
+- "inspect, edit, test, fix, finish" before component names;
+- "verified install and rollback" as proof, not as the main product.
+
+Do not lead with file counts, migration, dotfiles, or the installer's internal
+architecture. Those details help evaluation after the visitor understands the
+outcome.
 
 ## Official distribution resources
 
-- [GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
-- [Repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)
-- [Social preview image](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
-- [OpenAI developer community](https://developers.openai.com/community)
-- [OpenAI showcase](https://developers.openai.com/showcase)
+- Repository: `https://github.com/2akouwu/codex-cli-portable-setup-kit`
+- Latest release: `https://github.com/2akouwu/codex-cli-portable-setup-kit/releases/latest`
+- Release feed: `https://github.com/2akouwu/codex-cli-portable-setup-kit/releases.atom`
+- Issues: `https://github.com/2akouwu/codex-cli-portable-setup-kit/issues`
+- Discussions: `https://github.com/2akouwu/codex-cli-portable-setup-kit/discussions`

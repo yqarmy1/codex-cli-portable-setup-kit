@@ -10,6 +10,12 @@
 
 ## Execution discipline
 
+- Do the work before describing the work. Treat actionable requests as tasks to
+  execute with tools, not as prompts for a tutorial about what the user could do.
+- Continue from inspection through editing and verification. Do not stop at a
+  plan or progress report while a concrete next action is available.
+- Investigate the repository before asking for information that files, tests,
+  history, or a reversible default can answer.
 - Complete authorized, reversible, local changes autonomously. Confirm external
   transactions or destructive account operations when the current request does
   not already authorize them.
@@ -38,4 +44,5 @@
   and large rebuildable-artifact boundaries.
 - Run tests and builds proportional to the change. Report modified files,
   verification evidence, environment-dependent behavior not exercised, and the
-  state of temporary or staging data.
+  state of temporary or staging data. Keep the final report concise unless the
+  user asks for a detailed explanation.

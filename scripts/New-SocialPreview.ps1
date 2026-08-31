@@ -70,22 +70,22 @@ try {
 
   $promptFont = [Drawing.Font]::new('Consolas', 18, [Drawing.FontStyle]::Regular, [Drawing.GraphicsUnit]::Pixel)
   $promptBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 107, 231, 194))
-  $graphics.DrawString('PS> portable-codex setup', $promptFont, $promptBrush, 108, 148)
+  $graphics.DrawString('PS> codex --execution-first', $promptFont, $promptBrush, 108, 148)
   $promptFont.Dispose(); $promptBrush.Dispose()
 
   $titleFont = [Drawing.Font]::new('Segoe UI Semibold', 49, [Drawing.FontStyle]::Bold, [Drawing.GraphicsUnit]::Pixel)
   $titleBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 243, 249, 255))
-  $graphics.DrawString('Codex CLI', $titleFont, $titleBrush, 106, 206)
-  $graphics.DrawString('Portable Setup Kit', $titleFont, $titleBrush, 106, 265)
+  $graphics.DrawString('LESS TALK.', $titleFont, $titleBrush, 106, 206)
+  $graphics.DrawString('MORE EXECUTION.', $titleFont, $titleBrush, 106, 265)
   $titleFont.Dispose(); $titleBrush.Dispose()
 
   $tagFont = [Drawing.Font]::new('Segoe UI', 22, [Drawing.FontStyle]::Regular, [Drawing.GraphicsUnit]::Pixel)
   $tagBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 161, 189, 211))
-  $graphics.DrawString('Reproduce a tested Codex workspace.', $tagFont, $tagBrush, 110, 345)
-  $graphics.DrawString('Integrity, backups, and real rollback.', $tagFont, $tagBrush, 110, 377)
+  $graphics.DrawString('An execution-first Codex profile.', $tagFont, $tagBrush, 110, 345)
+  $graphics.DrawString('Inspect. Edit. Test. Fix. Finish.', $tagFont, $tagBrush, 110, 377)
   $tagFont.Dispose(); $tagBrush.Dispose()
 
-  $labels = @('VERIFY', 'BACK UP', 'ROLL BACK')
+  $labels = @('INSPECT', 'EXECUTE', 'VERIFY')
   for ($i = 0; $i -lt $labels.Count; $i++) {
     $chip = [Drawing.RectangleF]::new(108 + ($i * 190), 449, 164, 54)
     $chipPath = New-RoundedRectanglePath -Rectangle $chip -Radius 16
@@ -144,7 +144,7 @@ try {
 
   $smallFont = [Drawing.Font]::new('Consolas', 17, [Drawing.FontStyle]::Regular, [Drawing.GraphicsUnit]::Pixel)
   $smallBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 151, 190, 213))
-  $graphics.DrawString('Windows  |  PowerShell  |  MIT', $smallFont, $smallBrush, 885, 570)
+  $graphics.DrawString('Codex execution-first profile', $smallFont, $smallBrush, 885, 570)
   $smallFont.Dispose(); $smallBrush.Dispose()
 
   $bitmap.Save($OutputPath, [Drawing.Imaging.ImageFormat]::Png)

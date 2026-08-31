@@ -27,6 +27,7 @@ $requiredFiles = @(
   'CHANGELOG.md',
   'PAYLOAD_INDEX.json',
   'docs/ARCHITECTURE.md',
+  'docs/EXECUTION_PROFILE.md',
   'docs/PROMOTION_PLAYBOOK.md',
   '.github/workflows/verify.yml'
 )
@@ -38,9 +39,13 @@ $readmePath = Join-Path $RepoRoot 'README.md'
 $readme = Get-Content -LiteralPath $readmePath -Raw -Encoding UTF8
 foreach ($requiredText in @(
   '<h1 align="center">Codex CLI Portable Setup Kit</h1>',
-  'Reproduce your Codex CLI setup anywhere.',
+  'Less talk. More execution.',
+  'inspect, edit, test, fix, and finish',
   'actions/workflows/verify.yml/badge.svg',
   '## Highlights',
+  '## What this profile changes',
+  'Action over advice',
+  'Do the work, then report the result.',
   '## Quick start',
   '## Why not copy `.codex` manually?',
   '## What gets installed',
@@ -60,11 +65,19 @@ foreach ($requiredText in @(
   '## High-star project narrative',
   '### GitHub About description',
   'One outcome. Three proof points. One call to action.',
+  'Less talk. More execution.',
+  'A Codex profile for people tired of agents that explain the work instead of doing it.',
+  'Show HN: A Codex profile that does the work before talking about it',
   '## Fifteen-minute launch checklist',
   '## 48-hour launch plan'
 )) {
   Assert-PublicRelease -Condition $promotion.Contains($requiredText) -Message "Promotion playbook is missing required text: $requiredText"
 }
+
+$architecturePath = Join-Path $RepoRoot 'docs/ARCHITECTURE.md'
+$architecture = Get-Content -LiteralPath $architecturePath -Raw -Encoding UTF8
+Assert-PublicRelease -Condition $architecture.Contains('execution-first behavior profile') -Message 'Architecture must describe the execution-first behavior profile as the product.'
+Assert-PublicRelease -Condition (-not $architecture.Contains('verifiable Windows migration package')) -Message 'Architecture still presents migration as the product.'
 
 $attributesPath = Join-Path $RepoRoot '.gitattributes'
 $attributes = Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8
@@ -75,17 +88,36 @@ $workflowPath = Join-Path $RepoRoot '.github/workflows/verify.yml'
 $workflow = Get-Content -LiteralPath $workflowPath -Raw -Encoding UTF8
 Assert-PublicRelease -Condition $workflow.Contains("python-version: '3.11'") -Message 'CI must use the Python 3.11 runtime required by the pinned orchestrator probe.'
 
+$metadataScriptPath = Join-Path $RepoRoot 'scripts/Update-PackageMetadata.ps1'
+$metadataScript = Get-Content -LiteralPath $metadataScriptPath -Raw -Encoding UTF8
+Assert-PublicRelease -Condition $metadataScript.Contains("release = '6.2.0'") -Message 'Package metadata generator must target release 6.2.0.'
+$changelog = Get-Content -LiteralPath (Join-Path $RepoRoot 'CHANGELOG.md') -Raw -Encoding UTF8
+Assert-PublicRelease -Condition $changelog.Contains('## [6.2.0] - 2026-08-31') -Message 'Changelog is missing release 6.2.0.'
+
 $configPath = Join-Path $RepoRoot 'payload/codex-home/config.portable.toml'
 $config = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8
 Assert-PublicRelease -Condition $config.Contains('approval_policy = "on-request"') -Message 'Portable config must default to approval_policy="on-request".'
 Assert-PublicRelease -Condition $config.Contains('sandbox_mode = "workspace-write"') -Message 'Portable config must default to sandbox_mode="workspace-write".'
 Assert-PublicRelease -Condition $config.Contains('localeOverride = "en-US"') -Message 'Portable config must default to the English locale.'
+Assert-PublicRelease -Condition $config.Contains('model_verbosity = "low"') -Message 'Execution-first profile must use low model verbosity.'
 
 $instructionsPath = Join-Path $RepoRoot 'payload/codex-home/instructions/portable-agent-instructions.md'
 Assert-PublicRelease -Condition (Test-Path -LiteralPath $instructionsPath -PathType Leaf) -Message 'English portable agent instructions are missing.'
 Assert-PublicRelease -Condition (-not (Test-Path -LiteralPath (Join-Path $RepoRoot 'payload/codex-home/instructions/gpt-5.6-sol-unrestricted-v45.md'))) -Message 'Legacy unrestricted agent instructions must not ship in the public edition.'
 $instructions = $(if (Test-Path -LiteralPath $instructionsPath -PathType Leaf) { Get-Content -LiteralPath $instructionsPath -Raw -Encoding UTF8 } else { '' })
 Assert-PublicRelease -Condition (-not $instructions.Contains('Current: TARGET / RESULT / NEXT')) -Message 'Agent instructions still force the Current/Result/Next response prefix.'
+foreach ($requiredText in @(
+  'Treat actionable requests as work to perform, not advice to describe.',
+  'Use tools to inspect, edit, run, and verify the real target.',
+  'Do not stop at a plan, progress update, or promise',
+  'Keep interim narration brief'
+)) {
+  Assert-PublicRelease -Condition $instructions.Contains($requiredText) -Message "Portable instructions are missing execution-first behavior: $requiredText"
+}
+
+$projectAgentsPath = Join-Path $RepoRoot 'payload/project/AGENTS.md'
+$projectAgents = Get-Content -LiteralPath $projectAgentsPath -Raw -Encoding UTF8
+Assert-PublicRelease -Condition $projectAgents.Contains('Do the work before describing the work.') -Message 'Project AGENTS.md is missing the execution-first rule.'
 
 $rulesPath = Join-Path $RepoRoot 'payload/codex-home/rules/default.rules.template'
 $rules = Get-Content -LiteralPath $rulesPath -Raw -Encoding UTF8
