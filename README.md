@@ -29,6 +29,13 @@
 > This is a community-maintained Codex configuration and installer. It is not
 > Codex itself and is not an official OpenAI product.
 
+## Setup Kit Family
+
+| Project | Target Agent Tool | Primary Deployment Surface | Core Capabilities |
+|---|---|---|---|
+| 🟢 **[codex-cli-portable-setup-kit](https://github.com/2akouwu/codex-cli-portable-setup-kit)** | OpenAI Codex CLI | Global `~/.codex` + `AGENTS.md` | `TURBO.cmd` zero-friction execution, `re-toolkit`, Two-Stage Decoupled Pipeline |
+| 🟣 **[claude-code-portable-setup-kit](https://github.com/2akouwu/claude-code-portable-setup-kit)** | Anthropic Claude Code | Workspace `CLAUDE.md` + `.agents/` | `CLAUDE_TURBO.cmd` autonomous execution, `re-toolkit`, Two-Stage Decoupled Pipeline |
+
 ## Highlights
 
 - **Action over advice.** Codex is told to use available tools and change the
