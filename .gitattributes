@@ -1,15 +1,5 @@
-* text=auto
-*.ps1 text eol=crlf
-*.cmd text eol=crlf
-*.bat text eol=crlf
-*.sh text eol=lf
-*.py text eol=lf
-*.mjs text eol=lf
-*.md text eol=lf
-*.json text eol=lf
-*.toml text eol=lf
-*.yaml text eol=lf
-*.yml text eol=lf
-*.sha256 text eol=lf
+# MANIFEST.sha256 verifies raw bytes. Keep archives and fresh clones byte-stable.
+* -text
+
 *.png binary
 *.zip binary

@@ -66,6 +66,11 @@ foreach ($requiredText in @(
   Assert-PublicRelease -Condition $promotion.Contains($requiredText) -Message "Promotion playbook is missing required text: $requiredText"
 }
 
+$attributesPath = Join-Path $RepoRoot '.gitattributes'
+$attributes = Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8
+Assert-PublicRelease -Condition $attributes.Contains('* -text') -Message 'Git attributes must preserve exact bytes so MANIFEST.sha256 survives archives and clones.'
+Assert-PublicRelease -Condition (-not $attributes.Contains('eol=')) -Message 'Git attributes must not rewrite line endings covered by MANIFEST.sha256.'
+
 $configPath = Join-Path $RepoRoot 'payload/codex-home/config.portable.toml'
 $config = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8
 Assert-PublicRelease -Condition $config.Contains('approval_policy = "on-request"') -Message 'Portable config must default to approval_policy="on-request".'
