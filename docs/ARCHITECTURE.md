@@ -33,7 +33,6 @@ and records enough information to restore the pre-install state.
 | `install.ps1` | Validates, backs up, installs, adapts, records, and automatically rolls back on failure |
 | `verify.ps1` / `verify.cmd` | Verifies the package manifest or an installed environment |
 | `rollback.ps1` / `ROLLBACK.sh` | Replays a successful installation receipt in reverse |
-| `instruction-profile.ps1` | Manages one instruction Markdown and its top-level `model_instructions_file` reference with an ownership manifest and recovery journal |
 
 ### Payload layers
 
@@ -134,21 +133,6 @@ The JSON receipt stores:
 
 `last-receipt.txt` points to the latest successful receipt.
 
-### Managed instruction profile
-
-`instruction-profile.ps1` is intentionally separate from the broad installer.
-It manages only a named Markdown file below `<CODEX_HOME>/instructions/` and
-the corresponding top-level `model_instructions_file` reference. Before a
-confirmed deploy or uninstall it writes a small transaction journal and copies
-the pre-operation files into a timestamped backup directory. `-Status` is
-read-only; `-Recover` restores the exact pre-operation files only when every
-managed path still matches the journal's before or after digest. Any other
-change is a conflict and no file is modified.
-
-The command does not move or disable `hooks.json`, add approval allowlists, or
-modify sandbox settings. Those boundaries remain the responsibility of Codex
-and its hosting environment.
-
 ## Failure transaction
 
 Any exception inside the install block starts `Restore-InstallState`:
@@ -222,6 +206,5 @@ code, tests, and skill documentation. It excludes:
 | Public release | `.\tests\Test-PublicRelease.ps1` | English/public-data/default checks |
 | Config | `.\tests\Test-Config.ps1` | Portable config fields and strict load when Codex is available |
 | Install/rollback | `.\tests\Test-Rollback.ps1` | Fixture install, hook runtime, installed verification, content restoration, Git hook restoration |
-| Instruction lifecycle | `.\tests\Test-InstructionProfile.ps1` | Preview, confirmed deploy, status, preview uninstall, confirmed uninstall, and empty recovery |
 | Bundled Python tools | `python -m unittest ...` | Context and orchestration behavior |
 | Full release | `.\scripts\Test-All.ps1` | Aggregated result and exit status |
