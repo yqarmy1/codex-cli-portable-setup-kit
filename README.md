@@ -13,6 +13,7 @@
   <img alt="Windows 10 and 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows">
   <img alt="PowerShell 5.1 and 7" src="https://img.shields.io/badge/PowerShell-5.1%20%7C%207-5391FE?logo=powershell">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python">
+  <a href="https://linux.do"><img alt="LINUX DO" src="https://img.shields.io/badge/Community-LINUX%20DO-FF7700?logo=linux&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -249,6 +250,11 @@ The release does not include or migrate:
 - [Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Build skills](https://learn.chatgpt.com/docs/build-skills)
 - [Build plugins](https://learn.chatgpt.com/docs/build-plugins)
+
+## Community & Acknowledgements
+
+- Recognized and supported by the [LINUX DO](https://linux.do) community.
+- See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ## License
 
