@@ -3,7 +3,7 @@
     "release":  "6.1.0",
     "generated_at":  "2026-08-30",
     "file_count":  442,
-    "total_bytes":  3162140,
+    "total_bytes":  3162174,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/find-skills/SKILL.md",
@@ -2402,8 +2402,8 @@
                   {
                       "path":  "payload/project/.agents/tools/codex-continuous/test_continuous_cli.py",
                       "component":  "project-tools",
-                      "bytes":  260361,
-                      "sha256":  "7E7AB23FBBF393BA30FF64950FE5FF35FAABDB756567DAA567C0535839C8C989"
+                      "bytes":  260395,
+                      "sha256":  "B4C739426EF38C35C9E8091CA70CE2F0A2F0B17F127DDA3178C6AEC25C9F310F"
                   },
                   {
                       "path":  "payload/project/.agents/tools/codex-orchestrator/pyproject.toml",

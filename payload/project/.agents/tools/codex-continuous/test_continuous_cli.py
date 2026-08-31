@@ -1356,7 +1356,7 @@ class RolloverJournalTests(unittest.TestCase):
                 task_id: str,
                 receipt: dict[str, Any],
             ) -> str:
-                self.assertEqual(project_root, project)
+                self.assertTrue(os.path.samefile(project_root, project))
                 self.assertEqual(task_id, "target-task")
                 self.assertEqual(receipt["source_task_id"], "source-task")
                 receipt_path.unlink()
@@ -1426,7 +1426,7 @@ class RolloverJournalTests(unittest.TestCase):
                 task_id: str,
                 receipt: dict[str, Any],
             ) -> str:
-                self.assertEqual(project_root, project)
+                self.assertTrue(os.path.samefile(project_root, project))
                 self.assertEqual(task_id, "target-task")
                 self.assertEqual(receipt["source_task_id"], "source-task")
                 receipt_path.unlink()
