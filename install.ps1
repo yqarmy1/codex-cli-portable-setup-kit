@@ -274,7 +274,7 @@ try {
     Install-ExactPath $keysmithPayload (Join-Path $CodexHome 'keysmith') 'codex-home\keysmith'
   }
 
-  foreach ($item in @('.agents', '.codex', 'AGENTS.md', '.gitignore')) {
+  foreach ($item in @('.agents', '.codex', 'AGENTS.md', 'CLAUDE.md', '.gitignore')) {
     $source = Join-Path (Join-Path $Payload 'project') $item
     if (Test-Path -LiteralPath $source) {
       Install-ExactPath $source (Join-Path $ProjectRoot $item) "project\$item"
@@ -286,7 +286,7 @@ try {
   }
 
   $textExtensions = @('.md', '.txt', '.json', '.toml', '.yaml', '.yml', '.ps1', '.py', '.js', '.mjs', '.cmd', '.sh', '')
-  foreach ($root in @((Join-Path $ProjectRoot '.agents'), (Join-Path $ProjectRoot '.codex'), (Join-Path $ProjectRoot 'AGENTS.md'))) {
+  foreach ($root in @((Join-Path $ProjectRoot '.agents'), (Join-Path $ProjectRoot '.codex'), (Join-Path $ProjectRoot 'AGENTS.md'), (Join-Path $ProjectRoot 'CLAUDE.md'))) {
     $files = @()
     if (Test-Path -LiteralPath $root -PathType Leaf) { $files = @(Get-Item -LiteralPath $root) }
     elseif (Test-Path -LiteralPath $root -PathType Container) { $files = @(Get-ChildItem -LiteralPath $root -Recurse -File -Force) }

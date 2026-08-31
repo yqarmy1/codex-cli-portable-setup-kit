@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  548,
-    "total_bytes":  4085846,
+    "file_count":  549,
+    "total_bytes":  4087832,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3292,6 +3292,12 @@
                       "component":  "project-control-plane",
                       "bytes":  3238,
                       "sha256":  "AB470FA7123EE5305298A8554282372436BCCD017E5259104174602111CE4946"
+                  },
+                  {
+                      "path":  "payload/project/CLAUDE.md",
+                      "component":  "project-control-plane",
+                      "bytes":  1986,
+                      "sha256":  "B6560B63A343708F044D94E7A4173B915223FCB84C0FE6550C79C33674FFAB12"
                   }
               ]
 }

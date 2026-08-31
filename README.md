@@ -38,6 +38,7 @@
 - **Zero-Friction Elevated Execution (`TURBO Mode`).** Pre-approves runtime tools, configures Windows elevated sandboxing, enables non-interactive autonomy (`approval_policy = "never"`), and marks workspaces as fully trusted.
 - **Native Configuration Inheritance.** Dynamically inherits user settings from `~/.codex/config.toml` without reinventing custom configuration formats.
 - **Fault-Tolerant Tool Fallback.** Automatically leverages high-performance C extensions (Capstone, Frida) when available, while seamlessly degrading to native pure-Python engines when missing.
+- **Unified Multi-Agent Compatibility.** Ships native out-of-the-box instructions for both OpenAI Codex CLI (`AGENTS.md`) and Anthropic Claude Code (`CLAUDE.md`).
 - **Transactional Verification & Rollback.** SHA-256 manifest checks, transactional backups, receipts, and one-click rollback (`rollback.ps1` / `ROLLBACK.sh`).
 
 ## What this profile changes
@@ -162,7 +163,7 @@ way back.
 |---|---|---|---|
 | Codex user | `%CODEX_HOME%` or `~/.codex` | `config.toml`, `AGENTS.md`, portable instructions, starter rules, skills | Shared model, UI, instruction, tool, and skill defaults |
 | Agent user | `~/.agents` | User-level agent skills | Makes selected reusable skills available outside one repository |
-| Project | Explicit `-ProjectRoot` | `AGENTS.md`, `.codex`, `.agents`, `.gitignore`, context workflow, `re-toolkit` | Adds repository instructions, hooks, context tools, binary analysis suite, and Git guard |
+| Project | Explicit `-ProjectRoot` | `AGENTS.md`, `CLAUDE.md`, `.codex`, `.agents`, `.gitignore`, context workflow, `re-toolkit` | Adds repository instructions for Codex and Claude Code, hooks, context tools, binary analysis suite, and Git guard |
 | Git repository | Local Git config | `core.hooksPath=.agents/git-hooks` | Activates the packaged pre-commit guard for that repository |
 | Codex CLI | Global npm installation, only when needed | Compatibility-pinned `@openai/codex` | Makes Codex available when it is missing |
 | Optional plugins | Current Codex installation | Browser, Visualize, and Sites when available | Extends the environment without making plugin failure fatal |
