@@ -81,7 +81,7 @@ try {
 
   $tagFont = [Drawing.Font]::new('Segoe UI', 22, [Drawing.FontStyle]::Regular, [Drawing.GraphicsUnit]::Pixel)
   $tagBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 161, 189, 211))
-  $graphics.DrawString('Jailbreak the workflow, not the model.', $tagFont, $tagBrush, 110, 345)
+  $graphics.DrawString('Streamline the workflow. Maximize execution.', $tagFont, $tagBrush, 110, 345)
   $graphics.DrawString('Anti-lecture Codex profile.', $tagFont, $tagBrush, 110, 377)
   $tagFont.Dispose(); $tagBrush.Dispose()
 

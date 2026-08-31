@@ -40,7 +40,7 @@ $readme = Get-Content -LiteralPath $readmePath -Raw -Encoding UTF8
 foreach ($requiredText in @(
   '<h1 align="center">Codex CLI Portable Setup Kit</h1>',
   'No sermons. No stalling. Just execution.',
-  'Jailbreak the workflow, not the model.',
+  'Streamline the workflow. Maximize execution.',
   'anti-lecture Codex profile',
   'actions/workflows/verify.yml/badge.svg',
   '## Highlights',
@@ -67,9 +67,9 @@ foreach ($requiredText in @(
   '### GitHub About description',
   'One outcome. Three proof points. One call to action.',
   'No sermons. No stalling. Just execution.',
-  'Jailbreak the workflow, not the model.',
-  'jailbreak-inspired Codex profile',
-  'Show HN: No-sermons mode for Codex - jailbreak the workflow, not the model',
+  'Streamline the workflow. Maximize execution.',
+  'execution-first Codex profile',
+  'Show HN: No-sermons mode for Codex - streamline the workflow and maximize execution',
   '## Fifteen-minute launch checklist',
   '## 48-hour launch plan'
 )) {

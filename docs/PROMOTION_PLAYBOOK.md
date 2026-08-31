@@ -8,9 +8,9 @@
 
 Expanded version:
 
-> **Jailbreak the workflow, not the model.** A jailbreak-inspired Codex profile that cuts task-irrelevant moralizing and turns more of every session into real tool use, verified changes, and finished results.
+> **Streamline the workflow. Maximize execution.** A execution-first Codex profile that cuts task-irrelevant moralizing and turns more of every session into real tool use, verified changes, and finished results.
 
-This is the sharpest honest angle. The "jailbreak" is the break from a
+This is the sharpest honest angle. The focus is breaking from a
 lecture-first workflow: generic moralizing, repetitive caveats, refusal-style
 filler, avoidable questions, and premature stopping. The underlying model is not
 presented as exploited or unlocked.
@@ -82,12 +82,12 @@ Use the same structure here:
 
 Use this exact description:
 
-> No sermons. No stalling. Just execution. A jailbreak-inspired Codex profile that cuts moralizing and pushes GPT to finish the job.
+> No sermons. No stalling. Just execution. A execution-first Codex profile that cuts moralizing and pushes GPT to finish the job.
 
 ### First-screen copy stack
 
 1. **Tagline:** `No sermons. No stalling. Just execution.`
-2. **Hook:** `Jailbreak the workflow, not the model.`
+2. **Hook:** `Streamline the workflow. Maximize execution.`
 3. **Definition:** `An anti-lecture, execution-first Codex profile.`
 4. **Concrete verbs:** inspect, edit, test, fix, finish.
 5. **Proof:** high reasoning, low verbosity, verified install and rollback.
@@ -112,7 +112,7 @@ Use this exact description:
 - Replace "powerful" with an observable result such as "runs the test."
 - Avoid absolute autonomy claims that the repository cannot prove.
 - Describe observable workflow gains, not claims about bypassing rules or constraints.
-- Use the jailbreak angle for the workflow, never as a claim that the project exploits or unlocks the underlying model.
+- Focus on workflow efficiency and execution density, never claiming exploits.
 - Lead with "anti-lecture" and immediately name the observable change: less
   irrelevant moralizing, more tool use, tests, fixes, and finished work.
 - Show one literal command or result next to each technical promise.
@@ -121,7 +121,7 @@ Use this exact description:
 
 ### Release headline
 
-> Codex CLI Portable Setup Kit v6.3.0 - jailbreak the workflow, not the model
+> Codex CLI Portable Setup Kit - streamline the workflow, maximize execution
 
 The first paragraph should say that v6.3.0 is the anti-lecture release: it raises
 execution density by reducing irrelevant moralizing, repetitive caveats, and
@@ -222,7 +222,7 @@ Replace `REPOSITORY_URL` with the public repository link.
 ```text
 No sermons. No stalling. Just execution.
 
-Jailbreak the workflow, not the model.
+Streamline the workflow. Maximize execution.
 
 I made an anti-lecture Codex profile that cuts irrelevant moralizing, repetitive caveats, and refusal-style filler - then pushes GPT through inspect -> edit -> test -> fix -> retest.
 
@@ -235,7 +235,7 @@ REPOSITORY_URL
 ```text
 I was tired of coding agents giving me a lecture instead of touching the repository.
 
-So I packaged a jailbreak-inspired, anti-lecture Codex profile. It does not claim a model exploit; it breaks the low-value workflow that fills sessions with generic moral advice, repeated caveats, narration, and avoidable questions.
+So I packaged a autonomous, anti-lecture Codex profile. It does not claim a model exploit; it breaks the low-value workflow that fills sessions with generic moral advice, repeated caveats, narration, and avoidable questions.
 
 After installation, the default loop is:
 inspect -> edit -> test -> diagnose -> fix -> retest -> concise result
@@ -254,7 +254,7 @@ REPOSITORY_URL
 ### Show HN
 
 ```text
-Show HN: No-sermons mode for Codex - jailbreak the workflow, not the model
+Show HN: No-sermons mode for Codex - streamline the workflow and maximize execution
 ```
 
 First comment:
@@ -274,7 +274,7 @@ Repository: REPOSITORY_URL
 ### Reddit / technical community
 
 ```text
-Title: I made an anti-lecture Codex profile - jailbreak the workflow, not the model
+Title: I made an anti-lecture Codex profile - streamline the workflow and maximize execution
 
 My recurring frustration with coding agents was not model intelligence. It was the lecture-first workflow: too much of the interaction went to generic moral advice, repeated caveats, refusal-style filler, plans, or questions the repo could answer, while the real task remained unfinished.
 
@@ -290,7 +290,7 @@ REPOSITORY_URL
 ### OpenAI developer community
 
 ```text
-Jailbreak the workflow, not the model: an anti-lecture Codex profile
+Streamline the workflow, maximize execution: an anti-lecture Codex profile
 
 This open-source profile combines model_reasoning_effort="high" with model_verbosity="low", a tool-first instruction layer, project AGENTS.md rules, verification requirements, and bounded PostCompact checkpoints.
 

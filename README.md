@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>No sermons. No stalling. Just execution.</strong><br>
-  <strong>Jailbreak the workflow, not the model.</strong><br>
+  <strong>Streamline the workflow. Maximize execution.</strong><br>
   An anti-lecture Codex profile that cuts task-irrelevant commentary and turns more of every session into tool use, verified changes, and finished results.
 </p>
 
@@ -120,7 +120,7 @@ python .agents/tools/re-toolkit/cli.py hexdump target.bin --offset 0x100 --lengt
 
 ## Dual-Stage Decoupled Pipeline
 
-Traditional adversarial/jailbreak prompts force heavy constraint checklists onto LLMs, resulting in attention collapse, generic placeholder tokens (`ROLE_A`, `ROLE_B`), and truncated outputs.
+Traditional adversarial constraint checklists often overload LLMs, resulting in attention collapse, generic placeholder tokens (`ROLE_A`, `ROLE_B`), and truncated outputs.
 
 The **Dual-Stage Decoupled Pipeline** resolves this through structural separation:
 

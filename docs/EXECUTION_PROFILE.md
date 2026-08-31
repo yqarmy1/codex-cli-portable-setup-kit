@@ -152,7 +152,7 @@ unlimited background worker. Actual execution still depends on the tools exposed
 by the host, the current permissions, model availability, context limits, and
 whether a step requires a user-only decision or an external confirmation.
 
-That is the boundary behind the phrase **"jailbreak the workflow, not the
+That is the boundary behind the phrase **"streamline the workflow, maximize
 model"**: the package changes Codex's operating style and installed instructions;
 it does not claim a vulnerability in the underlying model.
 

@@ -23,7 +23,7 @@ All notable changes to this project are documented here.
 ### Changed
 
 - Reframed the README, execution-profile guide, GitHub About copy, and promotion
-  templates around the **Jailbreak the workflow, not the model** hook: less
+  templates around the **Streamline the workflow, maximize execution** hook: less
   task-irrelevant moralizing, more tool use, verified changes, and finished results.
 - Reinforced the same task-relevance rule at both Codex user and project scopes.
 
