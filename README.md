@@ -1,9 +1,9 @@
 <h1 align="center">Codex CLI Portable Setup Kit</h1>
 
 <p align="center">
-  <strong>Less talk. More execution.</strong><br>
-  An execution-first Codex profile that pushes GPT to inspect, edit, test, fix, and finish
-  the real task before giving you a concise result.
+  <strong>No sermons. No stalling. Just execution.</strong><br>
+  <strong>Jailbreak the workflow, not the model.</strong><br>
+  An anti-lecture Codex profile that cuts task-irrelevant commentary and turns more of every session into tool use, verified changes, and finished results.
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
   <a href="docs/PROMOTION_PLAYBOOK.md">Launch playbook</a>
 </p>
 
-![Less talk. More execution.](docs/assets/social-preview.png)
+![No sermons. Just execution.](docs/assets/social-preview.png)
 
 > [!NOTE]
 > This is a community-maintained Codex configuration and installer. It is not
@@ -32,12 +32,13 @@
 
 - **Action over advice.** Codex is told to use available tools and change the
   real target instead of replying with a tutorial you still have to execute.
-- **Completion over commentary.** It keeps moving through inspect, edit, test,
-  diagnose, fix, and retest instead of stopping at a plan or progress report.
+- **Higher execution density.** More of each session goes to inspecting, editing,
+  testing, fixing, and finishing instead of generic advice or repeated narration.
 - **Investigate before interrupting.** It checks files, tests, history, and local
   context before asking questions that the workspace can answer.
-- **Quiet execution.** `model_verbosity = "low"` and concise reporting rules cut
-  routine narration while preserving results, paths, commands, and evidence.
+- **Task-relevant communication.** Broad, non-actionable commentary is minimized;
+  generic moralizing, repeated caveats, and refusal-style boilerplate are cut when
+  they do not change the task. Real constraints stay brief and actionable.
 - **Verification before claims.** The profile asks Codex to run the relevant
   checks and read their literal result before saying the work is finished.
 - **Long-task continuity.** PostCompact checkpoints, Context Guardian, Codex
@@ -57,6 +58,7 @@ mechanism. The product is a tuned operating style for Codex. **Do the work, then
 |---|---|
 | Explains which commands you should run | Runs the relevant commands with tools |
 | Stops after writing a plan | Continues into implementation when the next action is available |
+| Responds with generic moral advice or boilerplate | Keeps only constraints that materially affect the task |
 | Announces every small step | Keeps interim narration brief |
 | Asks before looking at the workspace | Inspects files, tests, and context first |
 | Says a change should work | Executes tests and reads the result |
@@ -147,9 +149,20 @@ way back.
 ## What this tool does
 
 The tool's primary job is to install an **execution-first Codex profile**. In
-plain English, it pushes GPT to spend more of the interaction doing useful work
-and less of it explaining, narrating, asking avoidable questions, or stopping
-before the result is verified.
+plain English, it steers GPT inside Codex toward higher execution density: more
+of each interaction is spent inspecting, changing, testing, and finishing the
+real task. Generic advice, repeated caveats, meta-commentary, avoidable questions,
+and play-by-play narration are reduced when they do not change the next action.
+
+Important context is still useful when it affects the work. The profile asks
+Codex to state a real constraint briefly, explain its concrete impact, and then
+continue with the highest-value action that is actually available.
+
+The phrase **"jailbreak the workflow"** is deliberate: this profile breaks the
+lecture-first interaction loop, not the underlying model. It changes the installed
+instruction stack and response defaults so irrelevant moralizing, repetitive
+caveats, refusal-style filler, and premature stopping do not consume the session
+when they have no concrete effect on the task.
 
 For an actionable repository task, the intended loop is:
 

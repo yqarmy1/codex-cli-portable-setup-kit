@@ -39,8 +39,9 @@ $readmePath = Join-Path $RepoRoot 'README.md'
 $readme = Get-Content -LiteralPath $readmePath -Raw -Encoding UTF8
 foreach ($requiredText in @(
   '<h1 align="center">Codex CLI Portable Setup Kit</h1>',
-  'Less talk. More execution.',
-  'inspect, edit, test, fix, and finish',
+  'No sermons. No stalling. Just execution.',
+  'Jailbreak the workflow, not the model.',
+  'anti-lecture Codex profile',
   'actions/workflows/verify.yml/badge.svg',
   '## Highlights',
   '## What this profile changes',
@@ -65,9 +66,10 @@ foreach ($requiredText in @(
   '## High-star project narrative',
   '### GitHub About description',
   'One outcome. Three proof points. One call to action.',
-  'Less talk. More execution.',
-  'A Codex profile for people tired of agents that explain the work instead of doing it.',
-  'Show HN: A Codex profile that does the work before talking about it',
+  'No sermons. No stalling. Just execution.',
+  'Jailbreak the workflow, not the model.',
+  'jailbreak-inspired Codex profile',
+  'Show HN: No-sermons mode for Codex - jailbreak the workflow, not the model',
   '## Fifteen-minute launch checklist',
   '## 48-hour launch plan'
 )) {
@@ -90,9 +92,9 @@ Assert-PublicRelease -Condition $workflow.Contains("python-version: '3.11'") -Me
 
 $metadataScriptPath = Join-Path $RepoRoot 'scripts/Update-PackageMetadata.ps1'
 $metadataScript = Get-Content -LiteralPath $metadataScriptPath -Raw -Encoding UTF8
-Assert-PublicRelease -Condition $metadataScript.Contains("release = '6.2.0'") -Message 'Package metadata generator must target release 6.2.0.'
+Assert-PublicRelease -Condition $metadataScript.Contains("release = '6.3.0'") -Message 'Package metadata generator must target release 6.3.0.'
 $changelog = Get-Content -LiteralPath (Join-Path $RepoRoot 'CHANGELOG.md') -Raw -Encoding UTF8
-Assert-PublicRelease -Condition $changelog.Contains('## [6.2.0] - 2026-08-31') -Message 'Changelog is missing release 6.2.0.'
+Assert-PublicRelease -Condition $changelog.Contains('## [6.3.0] - 2026-08-31') -Message 'Changelog is missing release 6.3.0.'
 
 $configPath = Join-Path $RepoRoot 'payload/codex-home/config.portable.toml'
 $config = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8
@@ -110,7 +112,9 @@ foreach ($requiredText in @(
   'Treat actionable requests as work to perform, not advice to describe.',
   'Use tools to inspect, edit, run, and verify the real target.',
   'Do not stop at a plan, progress update, or promise',
-  'Keep interim narration brief'
+  'Keep interim narration brief',
+  'Omit repeated caveats, generic moral lectures, and meta-discussion',
+  'If a real constraint affects the task, state it briefly'
 )) {
   Assert-PublicRelease -Condition $instructions.Contains($requiredText) -Message "Portable instructions are missing execution-first behavior: $requiredText"
 }
@@ -118,6 +122,7 @@ foreach ($requiredText in @(
 $projectAgentsPath = Join-Path $RepoRoot 'payload/project/AGENTS.md'
 $projectAgents = Get-Content -LiteralPath $projectAgentsPath -Raw -Encoding UTF8
 Assert-PublicRelease -Condition $projectAgents.Contains('Do the work before describing the work.') -Message 'Project AGENTS.md is missing the execution-first rule.'
+Assert-PublicRelease -Condition $projectAgents.Contains('Omit generic moral lectures, repeated caveats, and meta-commentary') -Message 'Project AGENTS.md is missing the anti-lecture rule.'
 
 $rulesPath = Join-Path $RepoRoot 'payload/codex-home/rules/default.rules.template'
 $rules = Get-Content -LiteralPath $rulesPath -Raw -Encoding UTF8

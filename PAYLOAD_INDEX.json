@@ -1,9 +1,9 @@
 {
     "schema":  1,
-    "release":  "6.2.0",
-    "generated_at":  "2026-08-30",
+    "release":  "6.3.0",
+    "generated_at":  "2026-08-31",
     "file_count":  442,
-    "total_bytes":  3163715,
+    "total_bytes":  3164308,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/find-skills/SKILL.md",
@@ -26,8 +26,8 @@
                   {
                       "path":  "payload/codex-home/instructions/portable-agent-instructions.md",
                       "component":  "codex-user",
-                      "bytes":  2905,
-                      "sha256":  "0DB462D4A54D57EB34DB90E7EB36BF8ACDDA25E3EF13E5401921ED0390FECF41"
+                      "bytes":  3239,
+                      "sha256":  "34B115EE1EECD1F0D5068D134B1125CB79B2B1B5AC7D3E06B193C5CC08EFA22A"
                   },
                   {
                       "path":  "payload/codex-home/rules/default.rules.template",
@@ -2654,8 +2654,8 @@
                   {
                       "path":  "payload/project/AGENTS.md",
                       "component":  "project-control-plane",
-                      "bytes":  2518,
-                      "sha256":  "7C7E2E4F0D464A40FCF7BF117C3D9948389F4EC59808AEA7326EE419205DDECC"
+                      "bytes":  2777,
+                      "sha256":  "173080F0123DFE98A7C28D653F4609AD2C7C82A563CD97E3F6A01D177F503EA9"
                   }
               ]
 }

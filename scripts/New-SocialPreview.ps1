@@ -75,14 +75,14 @@ try {
 
   $titleFont = [Drawing.Font]::new('Segoe UI Semibold', 49, [Drawing.FontStyle]::Bold, [Drawing.GraphicsUnit]::Pixel)
   $titleBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 243, 249, 255))
-  $graphics.DrawString('LESS TALK.', $titleFont, $titleBrush, 106, 206)
-  $graphics.DrawString('MORE EXECUTION.', $titleFont, $titleBrush, 106, 265)
+  $graphics.DrawString('NO SERMONS.', $titleFont, $titleBrush, 106, 206)
+  $graphics.DrawString('JUST EXECUTION.', $titleFont, $titleBrush, 106, 265)
   $titleFont.Dispose(); $titleBrush.Dispose()
 
   $tagFont = [Drawing.Font]::new('Segoe UI', 22, [Drawing.FontStyle]::Regular, [Drawing.GraphicsUnit]::Pixel)
   $tagBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 161, 189, 211))
-  $graphics.DrawString('An execution-first Codex profile.', $tagFont, $tagBrush, 110, 345)
-  $graphics.DrawString('Inspect. Edit. Test. Fix. Finish.', $tagFont, $tagBrush, 110, 377)
+  $graphics.DrawString('Jailbreak the workflow, not the model.', $tagFont, $tagBrush, 110, 345)
+  $graphics.DrawString('Anti-lecture Codex profile.', $tagFont, $tagBrush, 110, 377)
   $tagFont.Dispose(); $tagBrush.Dispose()
 
   $labels = @('INSPECT', 'EXECUTE', 'VERIFY')
@@ -144,7 +144,7 @@ try {
 
   $smallFont = [Drawing.Font]::new('Consolas', 17, [Drawing.FontStyle]::Regular, [Drawing.GraphicsUnit]::Pixel)
   $smallBrush = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 151, 190, 213))
-  $graphics.DrawString('Codex execution-first profile', $smallFont, $smallBrush, 885, 570)
+  $graphics.DrawString('Codex anti-lecture execution profile', $smallFont, $smallBrush, 825, 570)
   $smallFont.Dispose(); $smallBrush.Dispose()
 
   $bitmap.Save($OutputPath, [Drawing.Imaging.ImageFormat]::Png)

@@ -16,6 +16,9 @@
   plan or progress report while a concrete next action is available.
 - Investigate the repository before asking for information that files, tests,
   history, or a reversible default can answer.
+- Keep communication task-relevant. Omit generic moral lectures, repeated caveats, and meta-commentary
+  when they do not change execution. State real constraints briefly, explain
+  their concrete impact, and continue with the highest-value available action.
 - Complete authorized, reversible, local changes autonomously. Confirm external
   transactions or destructive account operations when the current request does
   not already authorize them.

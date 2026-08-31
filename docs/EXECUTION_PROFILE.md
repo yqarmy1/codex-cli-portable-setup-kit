@@ -1,9 +1,10 @@
-# How the execution-first profile works
+# How the anti-lecture, execution-first profile works
 
 ## Plain-English summary
 
-This profile is for people who are tired of an AI assistant explaining the work
-instead of doing it.
+This profile is for people who want a higher signal-to-noise ratio from an AI
+assistant: fewer generic moral lectures, repeated caveats, and stalled handoffs;
+more completed work.
 
 After installation, Codex receives a consistent set of model settings,
 instructions, project rules, tools, and continuation helpers. Together they
@@ -27,7 +28,7 @@ are delivery features; the execution profile is the product.
 |---|---|---|
 | Model | `model = "gpt-5.6-sol"` | Selects the configured Codex model. |
 | Reasoning | `model_reasoning_effort = "high"` | Gives complex implementation and debugging tasks a higher reasoning budget. |
-| Output length | `model_verbosity = "low"` | Makes normal answers shorter and reduces routine commentary. It does not set reasoning effort to low. |
+| Output length | `model_verbosity = "low"` | Makes normal answers shorter and reduces task-irrelevant commentary. It does not set reasoning effort to low. |
 | User instructions | `portable-agent-instructions.md` | Says actionable requests are work to perform, requires tool use and verification, and discourages stopping at plans or promises. |
 | Project instructions | `AGENTS.md` | Applies the same execution discipline inside the installed repository and adds repository hygiene rules. |
 | Tools and plugins | Browser, Visualize, Sites, skills, Docs MCP | Gives Codex more ways to inspect, build, test, research, and deliver instead of only suggesting manual steps. |
@@ -72,7 +73,16 @@ The profile asks Codex to run checks that directly cover the change and read the
 literal exit status and result. When a test fails, the expected next step is to
 diagnose and correct it, not to return an unfinished repair as if it were done.
 
-### 5. Short, normal communication
+### 5. Relevance over boilerplate
+
+Responses stay focused on facts that change the task: concrete constraints,
+decisions, results, and next actions. Generic moral lectures, repeated caveats,
+refusal-style boilerplate, and meta-commentary are minimized when they do not
+affect execution. If a real
+constraint applies, Codex states it briefly, explains the concrete impact, and
+continues with the highest-value action that is available.
+
+### 6. Short, normal communication
 
 Routine narration is minimized. Final answers use natural language and lead with
 the result. They include changed paths, commands, test output, or remaining
@@ -129,7 +139,10 @@ inspect -> change -> test -> diagnose -> fix -> retest while a concrete next
 action is available. Do not stop at a plan, progress update, or promise when you
 can take the next action directly. Investigate locally before asking avoidable
 questions. Keep interim narration brief; report the completed result and useful
-evidence in natural, concise language.
+evidence in natural, concise language. Keep communication task-relevant. Minimize
+generic advice, repeated caveats, generic moral lectures, and meta-commentary that do not change the next
+action. State real blockers briefly, explain their concrete impact, and continue
+with the highest-value available work.
 ```
 
 ## What it can and cannot change
@@ -138,6 +151,10 @@ A profile strongly steers Codex behavior; it does not turn every host into an
 unlimited background worker. Actual execution still depends on the tools exposed
 by the host, the current permissions, model availability, context limits, and
 whether a step requires a user-only decision or an external confirmation.
+
+That is the boundary behind the phrase **"jailbreak the workflow, not the
+model"**: the package changes Codex's operating style and installed instructions;
+it does not claim a vulnerability in the underlying model.
 
 The package therefore does three practical things rather than making an absolute
 promise:

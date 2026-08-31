@@ -4,21 +4,28 @@
 
 ### One-line promise
 
-> **Less talk. More execution.**
+> **No sermons. No stalling. Just execution.**
 
 Expanded version:
 
-> A Codex profile for people tired of agents that explain the work instead of doing it.
+> **Jailbreak the workflow, not the model.** A jailbreak-inspired Codex profile that cuts task-irrelevant moralizing and turns more of every session into real tool use, verified changes, and finished results.
+
+This is the sharpest honest angle. The "jailbreak" is the break from a
+lecture-first workflow: generic moralizing, repetitive caveats, refusal-style
+filler, avoidable questions, and premature stopping. The underlying model is not
+presented as exploited or unlocked.
 
 ### What the product really is
 
-This is an **execution-first behavior profile for Codex**. It pushes GPT to:
+This is an **anti-lecture, execution-first behavior profile for Codex**. It pushes GPT to:
 
 - inspect the real workspace before answering;
 - use tools instead of handing commands back to the user;
 - edit, run, test, diagnose, fix, and retest;
 - continue past plans and status updates when work can proceed;
-- ask fewer avoidable questions; and
+- ask fewer avoidable questions;
+- minimize generic moral lectures, repetitive caveats, and task-irrelevant
+  refusal-style boilerplate while keeping real constraints actionable; and
 - report the finished result in normal, concise language.
 
 The installer, package verification, backups, and rollback are important proof
@@ -26,9 +33,10 @@ that the profile is easy to adopt. They are not the main headline.
 
 ### The problem it solves
 
-A frustrating agent interaction looks like this: the user asks for a result, the
-agent writes a plan, explains commands, reports progress, and then leaves the
-actual work unfinished. The user becomes the operator.
+A frustrating agent interaction has low execution density: the user asks for a
+result, but the session is spent on plans, narration, generic moral advice,
+repeated caveats, or refusal-style boilerplate that does not change the next
+action. The actual work stays unfinished, and the user becomes the operator.
 
 This profile changes the default. Codex is instructed to become the operator:
 do the concrete work first, prove it with relevant checks, then give the user a
@@ -64,7 +72,7 @@ Use the same structure here:
 
 **One outcome. Three proof points. One call to action.**
 
-- **Outcome:** Codex does more of the work and says less about doing it.
+- **Outcome:** Codex delivers higher execution density with fewer irrelevant sermons and stalled handoffs.
 - **Proof 1:** execution-first instructions and low verbosity are visible in the repo.
 - **Proof 2:** the package runs a real verification and rollback fixture.
 - **Proof 3:** the long-task components and tests are inspectable.
@@ -74,15 +82,16 @@ Use the same structure here:
 
 Use this exact description:
 
-> Less talk. More execution. A Codex profile that inspects, edits, tests, fixes, and keeps working until the task is done.
+> No sermons. No stalling. Just execution. A jailbreak-inspired Codex profile that cuts moralizing and pushes GPT to finish the job.
 
 ### First-screen copy stack
 
-1. **Tagline:** `Less talk. More execution.`
-2. **Definition:** `An execution-first Codex profile.`
-3. **Concrete verbs:** inspect, edit, test, fix, finish.
-4. **Proof:** high reasoning, low verbosity, verified install and rollback.
-5. **Action:** download the latest release.
+1. **Tagline:** `No sermons. No stalling. Just execution.`
+2. **Hook:** `Jailbreak the workflow, not the model.`
+3. **Definition:** `An anti-lecture, execution-first Codex profile.`
+4. **Concrete verbs:** inspect, edit, test, fix, finish.
+5. **Proof:** high reasoning, low verbosity, verified install and rollback.
+6. **Action:** download the latest release.
 
 ### README order
 
@@ -102,15 +111,21 @@ Use this exact description:
 - Put behavior before transport: execution profile first, installer second.
 - Replace "powerful" with an observable result such as "runs the test."
 - Avoid absolute autonomy claims that the repository cannot prove.
+- Describe observable workflow gains, not claims about bypassing rules or constraints.
+- Use the jailbreak angle for the workflow, never as a claim that the project exploits or unlocks the underlying model.
+- Lead with "anti-lecture" and immediately name the observable change: less
+  irrelevant moralizing, more tool use, tests, fixes, and finished work.
 - Show one literal command or result next to each technical promise.
 - Keep the same tagline in the README, About box, release, preview image, and posts.
 - Give each post one call to action: try it, star it, or report a result.
 
 ### Release headline
 
-> Codex CLI Portable Setup Kit v6.2.0 - less talk, more execution
+> Codex CLI Portable Setup Kit v6.3.0 - jailbreak the workflow, not the model
 
-The first paragraph should say that v6.2.0 is the execution-first release. Then
+The first paragraph should say that v6.3.0 is the anti-lecture release: it raises
+execution density by reducing irrelevant moralizing, repetitive caveats, and
+refusal-style boilerplate while keeping real constraints actionable. Then
 show the behavior changes, the three-command install, the exact test result, and
 the ZIP checksum.
 
@@ -124,7 +139,7 @@ Do these in order. Stop polishing after step seven and publish.
    `developer-tools`.
 3. Upload `docs/assets/social-preview.png` in **Settings -> General -> Social preview**.
 4. Pin the repository on the owner's GitHub profile.
-5. Publish the v6.2.0 release with the verified ZIP and SHA-256 checksum.
+5. Publish the v6.3.0 release with the verified ZIP and SHA-256 checksum.
 6. Record one 20-30 second screen capture: ask Codex to change a fixture, show it
    edit the file, run a test, fix a deliberate failure, and finish with a short result.
 7. Put that clip directly below the README opening paragraph.
@@ -137,7 +152,7 @@ Do these in order. Stop polishing after step seven and publish.
 
 ### Hour 0: make the repository conversion-ready
 
-- Keep one promise everywhere: **Less talk. More execution.**
+- Keep one promise everywhere: **No sermons. No stalling. Just execution.**
 - Make the latest release the obvious download.
 - Confirm the README gives a working command before deep implementation detail.
 - Open one GitHub Discussion titled **What did Codex finish for you?**
@@ -205,11 +220,11 @@ Replace `REPOSITORY_URL` with the public repository link.
 ### X / short social post
 
 ```text
-Less talk. More execution.
+No sermons. No stalling. Just execution.
 
-I made a Codex profile for people tired of agents that explain the work instead of doing it.
+Jailbreak the workflow, not the model.
 
-It pushes Codex to inspect -> edit -> test -> fix -> retest, then report the result briefly.
+I made an anti-lecture Codex profile that cuts irrelevant moralizing, repetitive caveats, and refusal-style filler - then pushes GPT through inspect -> edit -> test -> fix -> retest.
 
 High reasoning. Low verbosity. Verified install + rollback.
 REPOSITORY_URL
@@ -218,9 +233,9 @@ REPOSITORY_URL
 ### LinkedIn
 
 ```text
-I was tired of asking coding agents to "continue."
+I was tired of coding agents giving me a lecture instead of touching the repository.
 
-So I packaged an execution-first Codex profile: less narration, fewer avoidable questions, and more actual tool use.
+So I packaged a jailbreak-inspired, anti-lecture Codex profile. It does not claim a model exploit; it breaks the low-value workflow that fills sessions with generic moral advice, repeated caveats, narration, and avoidable questions.
 
 After installation, the default loop is:
 inspect -> edit -> test -> diagnose -> fix -> retest -> concise result
@@ -239,13 +254,13 @@ REPOSITORY_URL
 ### Show HN
 
 ```text
-Show HN: A Codex profile that does the work before talking about it
+Show HN: No-sermons mode for Codex - jailbreak the workflow, not the model
 ```
 
 First comment:
 
 ```text
-I built this because too many agent sessions end with a plan, a progress report, or commands handed back to the user.
+I built this because too many agent sessions have low execution density: the interaction fills with generic moral advice, repeated caveats, refusal-style boilerplate, plans, or commands handed back to the user while the real task stays unfinished.
 
 The profile combines high model reasoning effort with low response verbosity and explicit instructions to inspect the real target, use tools, continue through edit/test/fix cycles, and report only after verification. Project-level AGENTS.md rules reinforce the behavior, while PostCompact checkpoints and local continuation components help longer tasks retain a bounded handoff.
 
@@ -259,9 +274,9 @@ Repository: REPOSITORY_URL
 ### Reddit / technical community
 
 ```text
-Title: I made a Codex profile that prioritizes doing the work over explaining it
+Title: I made an anti-lecture Codex profile - jailbreak the workflow, not the model
 
-My recurring frustration with coding agents was not model intelligence. It was the operating style: explain the steps, ask questions the repo can answer, stop at a plan, or say a fix should work without running the test.
+My recurring frustration with coding agents was not model intelligence. It was the lecture-first workflow: too much of the interaction went to generic moral advice, repeated caveats, refusal-style filler, plans, or questions the repo could answer, while the real task remained unfinished.
 
 This profile changes that default. It tells Codex to inspect the workspace, use tools, edit, test, diagnose failures, fix them, and retest. It uses high reasoning effort with low response verbosity, so the work can stay thorough while the routine answer stays short.
 
@@ -275,11 +290,11 @@ REPOSITORY_URL
 ### OpenAI developer community
 
 ```text
-Less talk. More execution: an execution-first Codex configuration
+Jailbreak the workflow, not the model: an anti-lecture Codex profile
 
 This open-source profile combines model_reasoning_effort="high" with model_verbosity="low", a tool-first instruction layer, project AGENTS.md rules, verification requirements, and bounded PostCompact checkpoints.
 
-The goal is simple: if Codex can inspect, edit, run, test, or fix the target now, it should do that before writing a tutorial or status update.
+The goal is simple: reduce task-irrelevant moralizing and increase execution density. If Codex can inspect, edit, run, test, or fix the target now, it should do that before adding commentary that does not change the next action.
 
 Repository and verified Windows release:
 REPOSITORY_URL

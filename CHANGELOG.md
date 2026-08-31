@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented here.
 
+## [6.3.0] - 2026-08-31
+
+### Added
+
+- Installed high-signal communication rules that minimize broad, non-actionable
+  commentary, repeated caveats, generic moral lectures, and meta-discussion when they
+  do not change the next action.
+- Actionable constraint handling: state a real blocker briefly, explain its
+  concrete impact, and continue with the highest-value available work.
+
+### Changed
+
+- Reframed the README, execution-profile guide, GitHub About copy, and promotion
+  templates around the **Jailbreak the workflow, not the model** hook: less
+  task-irrelevant moralizing, more tool use, verified changes, and finished results.
+- Reinforced the same task-relevance rule at both Codex user and project scopes.
+
 ## [6.2.0] - 2026-08-31
 
 ### Added
