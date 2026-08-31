@@ -21,6 +21,7 @@ function Get-RelativeReleasePath {
 
 function Get-ComponentName {
   param([Parameter(Mandatory)][string]$RelativePath)
+  if ($RelativePath.StartsWith('payload/codex-home/keysmith/')) { return 'codex-user-keysmith' }
   if ($RelativePath.StartsWith('payload/codex-home/skills/')) { return 'codex-user-skills' }
   if ($RelativePath.StartsWith('payload/codex-home/')) { return 'codex-user' }
   if ($RelativePath.StartsWith('payload/agents-home/')) { return 'agent-user' }

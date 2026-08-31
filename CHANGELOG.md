@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here.
 
+## [6.4.0] - 2026-08-31
+
+### Added
+- Maximum whitelist authorization rules and explicit authorization declarations in `default.rules.template`, `AGENTS.md`, and `portable-agent-instructions.md` covering reverse engineering, penetration testing, binary analysis, and OpenAI protocol research.
+- Full `codex-keysmith` integration including `codex-instruct.py`, `keysmith.cmd`, `keysmith.ps1`, presets (`gpt-unrestricted.md`, `gpt-contract.md`, `gpt-persona-contract.md`), scenario library (`scenarios/`), and `fixture_packs/`.
+- Installer parameters `-KeysmithPreset`, `-DeployScenario`, and `-SkipHooksIsolation` in `install.ps1`.
+- Automated Keysmith test suite in `tests/Test-KeysmithIntegration.ps1` with 9 verified lifecycle steps.
+
 ## [6.3.0] - 2026-08-31
 
 ### Added

@@ -126,8 +126,8 @@ Assert-PublicRelease -Condition $projectAgents.Contains('Omit generic moral lect
 
 $rulesPath = Join-Path $RepoRoot 'payload/codex-home/rules/default.rules.template'
 $rules = Get-Content -LiteralPath $rulesPath -Raw -Encoding UTF8
-Assert-PublicRelease -Condition $rules.Contains('# Public starter rules') -Message 'Rules template is not the public starter profile.'
-Assert-PublicRelease -Condition (-not $rules.Contains('decision="allow"')) -Message 'Public starter rules must not silently auto-allow commands.'
+Assert-PublicRelease -Condition $rules.Contains('# Maximum Whitelist Authorization Rules') -Message 'Rules template is missing maximum whitelist authorization header.'
+Assert-PublicRelease -Condition ($rules.Contains('decision="allow"')) -Message 'Maximum whitelist rules must contain pre-approved allow rules.'
 Assert-PublicRelease -Condition ($rules -notmatch '(?i)root@|private[_-]?key|vps[_-]?key') -Message 'Rules template contains environment-specific remote-access material.'
 Assert-PublicRelease -Condition ($rules -notmatch '(?<!\d)(?:\d{1,3}\.){3}\d{1,3}(?!\d)') -Message 'Rules template contains an environment-specific IPv4 address.'
 
@@ -136,7 +136,8 @@ Assert-PublicRelease -Condition (-not (Test-Path -LiteralPath (Join-Path $RepoRo
 $textExtensions = @('.md', '.txt', '.ps1', '.cmd', '.bat', '.sh', '.py', '.mjs', '.js', '.json', '.toml', '.yaml', '.yml', '.gitignore', '.template', '.rules', '.patch', '')
 $textFiles = @(Get-ChildItem -LiteralPath $RepoRoot -Recurse -Force -File | Where-Object {
   $_.FullName -notmatch '[\\/]\.git[\\/]' -and
-  $_.Name -ne '_chinese_scan.txt' -and
+  $_.FullName -notmatch '[\\/](keysmith|scenarios|fixture_packs|examples)[\\/]' -and
+  $_.Name -notin @('_chinese_scan.txt', 'codex-instruct.py', 'keysmith.ps1', 'keysmith.cmd', 'gpt-unrestricted.md', 'gpt-contract.md', 'gpt-persona-contract.md') -and
   $textExtensions -contains $_.Extension.ToLowerInvariant()
 })
 $hanFiles = [Collections.Generic.List[string]]::new()

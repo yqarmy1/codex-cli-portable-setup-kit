@@ -45,6 +45,9 @@ Invoke-TestStep 'package' {
 Invoke-TestStep 'public-release' {
   & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $RepoRoot 'tests\Test-PublicRelease.ps1') -RepoRoot $RepoRoot
 }
+Invoke-TestStep 'keysmith' {
+  & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $RepoRoot 'tests\Test-KeysmithIntegration.ps1') -RepoRoot $RepoRoot
+}
 Invoke-TestStep 'rollback-fixture' {
   & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $RepoRoot 'tests\Test-Rollback.ps1')
 }
@@ -56,11 +59,31 @@ Invoke-TestStep 'context-guardian' {
   # contract here; Test-Rollback covers the installed fixture.
   try { & $PythonExe -m unittest test_rollover_stop_hook.py } finally { Pop-Location }
 }
+Invoke-TestStep 're-toolkit' {
+  $oldPythonPath = $env:PYTHONPATH
+  Push-Location -LiteralPath (Join-Path $RepoRoot 'payload\project\.agents\tools\re-toolkit')
+  try {
+    $env:PYTHONPATH = (Get-Location).Path
+    & $PythonExe -m unittest discover -s tests -p 'test_*.py'
+  } finally {
+    $env:PYTHONPATH = $oldPythonPath
+    Pop-Location
+  }
+}
 Invoke-TestStep 'codex-continuous' {
   Push-Location -LiteralPath (Join-Path $RepoRoot 'payload\project\.agents\tools\codex-continuous')
   try { & $PythonExe -m unittest test_continuous_cli.py } finally { Pop-Location }
 }
 Invoke-TestStep 'codex-orchestrator' {
+  $hasTemporal = (& $PythonExe -c "try:
+    import temporalio, cryptography
+    print('ok')
+except Exception:
+    pass" 2>$null | Out-String).Trim()
+  if ($hasTemporal -ne 'ok') {
+    Write-Output 'OK (skipped=optional-dependencies-missing)'
+    return
+  }
   $oldPythonPath = $env:PYTHONPATH
   Push-Location -LiteralPath (Join-Path $RepoRoot 'payload\project\.agents\tools\codex-orchestrator')
   try {

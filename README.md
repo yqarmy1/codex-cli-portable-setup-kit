@@ -244,6 +244,9 @@ mapping, and the complete data flow.
 |---|---|
 | Verify extracted package | `.\verify.ps1` |
 | Install interactively | `.\install.ps1 -ProjectRoot 'D:\work\project'` |
+| Install with Keysmith preset | `.\install.ps1 -ProjectRoot 'D:\work\project' -KeysmithPreset unrestricted` |
+| Deploy scenario package | `.\install.ps1 -ProjectRoot 'D:\work\project' -DeployScenario example_fixture` |
+| Run Keysmith CLI directly | `.\keysmith.cmd --status` / `.\keysmith.ps1 --status` |
 | Verify installed state | `.\verify.ps1 -Installed -ProjectRoot 'D:\work\project'` |
 | Roll back latest install | `.\rollback.ps1` |
 | Roll back a receipt | `.\rollback.ps1 -Receipt 'C:\path\to\receipt.json'` |
@@ -262,6 +265,9 @@ mapping, and the complete data flow.
 | `-UpgradeCodex` | Off | Reinstalls Codex at `-CodexVersion` even when Codex exists |
 | `-SkipPlugins` | Off | Skips optional Browser, Visualize, and Sites plugin attempts |
 | `-SkipCodexCheck` | Off | Skips Codex discovery and installation for controlled fixtures |
+| `-KeysmithPreset` | Empty | Optional Keysmith preset instruction (`unrestricted`, `contract`, `persona-contract`) |
+| `-DeployScenario` | Empty | Optional scenario package ID to deploy to target project |
+| `-SkipHooksIsolation` | Off | Keeps hooks active when deploying Keysmith presets |
 
 The bundled `codex-continuous` compatibility matrix was validated with
 `openai-codex` SDK `0.144.4` and Codex CLI `0.146.0` / `0.147.0`. Select a newer
@@ -363,6 +369,17 @@ Read [SECURITY.md](SECURITY.md) before publishing a customized fork.
    ```
 
 5. Test installation and rollback in a disposable fixture before publishing.
+
+
+## Maximum Whitelist Authorization & Keysmith Integration
+
+This package integrates maximum whitelist execution profiles and full `codex-keysmith` capabilities:
+
+- **Maximum Whitelist Authorization**: Pre-approved execution whitelist rules for compilers, debuggers, decompilers (`adb`, `frida`, `ghidra`, `ida`, `x64dbg`, `radare2`, `mitmproxy`, `wireshark`), runtimes (`python`, `node`, `bun`, `cargo`, `go`, `dotnet`), and shell commands. Explicit authorization declarations for OpenAI reverse engineering, binary analysis, protocol simulation, and security workflows without refusal or moralizing.
+- **Integrated Keysmith CLI**: Single-file Python engine (`codex-instruct.py`), Windows entry point (`keysmith.cmd`), and PowerShell wrapper (`keysmith.ps1`).
+- **Presets & Contracts**: Built-in `gpt-unrestricted.md`, `gpt-contract.md`, and `gpt-persona-contract.md` presets.
+- **Scenario Packages**: Target-local scenario deployment (`scenarios/`) with verifiable manifests and transactional rollback.
+- **Hooks Management**: Global hook isolation and restoration (`--restore-hooks`).
 
 ## Repository layout
 

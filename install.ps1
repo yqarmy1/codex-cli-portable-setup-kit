@@ -7,7 +7,10 @@ param(
   [ValidatePattern('^[0-9A-Za-z.+-]+$')][string]$CodexVersion = '0.147.0',
   [switch]$UpgradeCodex,
   [switch]$SkipPlugins,
-  [switch]$SkipCodexCheck
+  [switch]$SkipCodexCheck,
+  [ValidateSet('', 'unrestricted', 'contract', 'persona-contract', 'none')][string]$KeysmithPreset = '',
+  [string]$DeployScenario = '',
+  [switch]$SkipHooksIsolation
 )
 
 Set-StrictMode -Version Latest
@@ -266,6 +269,11 @@ try {
     }
   }
 
+  $keysmithPayload = Join-Path $Payload 'codex-home\keysmith'
+  if (Test-Path -LiteralPath $keysmithPayload) {
+    Install-ExactPath $keysmithPayload (Join-Path $CodexHome 'keysmith') 'codex-home\keysmith'
+  }
+
   foreach ($item in @('.agents', '.codex', 'AGENTS.md', '.gitignore')) {
     $source = Join-Path (Join-Path $Payload 'project') $item
     if (Test-Path -LiteralPath $source) {
@@ -352,6 +360,38 @@ try {
       $pluginResults.Add([ordered]@{ selector = $selector; exit = $add.ExitCode; status = $status; result = $resultText })
       if ($add.ExitCode -ne 0) {
         Write-Warning "Optional plugin '$selector' could not be installed (exit $($add.ExitCode)); continuing. $resultText"
+      }
+    }
+  }
+
+    $pythonExecutable = $(if (Get-Command python -ErrorAction SilentlyContinue) { 'python' } elseif (Get-Command py -ErrorAction SilentlyContinue) { 'py' } else { $null })
+  if ($KeysmithPreset -and $KeysmithPreset -ne 'none' -and $pythonExecutable) {
+    $keysmithScript = Join-Path $CodexHome 'keysmith\codex-instruct.py'
+    if (Test-Path -LiteralPath $keysmithScript -PathType Leaf) {
+      $kArgs = [Collections.Generic.List[string]]::new()
+      $kArgs.Add($keysmithScript)
+      $kArgs.Add('--codex-dir')
+      $kArgs.Add($CodexHome)
+      $kArgs.Add('--preset')
+      $kArgs.Add($KeysmithPreset)
+      if ($SkipHooksIsolation) { $kArgs.Add('--skip-hooks-isolation') }
+      $kArgs.Add('--yes')
+      try {
+        & $pythonExecutable @kArgs
+      } catch {
+        Write-Warning "Keysmith preset deployment exited with notice: $($_.Exception.Message)"
+      }
+    }
+  }
+
+  if ($DeployScenario -and $pythonExecutable) {
+    $keysmithScript = Join-Path $CodexHome 'keysmith\codex-instruct.py'
+    if (Test-Path -LiteralPath $keysmithScript -PathType Leaf) {
+      $sArgs = @($keysmithScript, '--deploy-scenario', $DeployScenario, '--target-dir', $ProjectRoot, '--yes')
+      try {
+        & $pythonExecutable @sArgs
+      } catch {
+        Write-Warning "Keysmith scenario deployment exited with notice: $($_.Exception.Message)"
       }
     }
   }

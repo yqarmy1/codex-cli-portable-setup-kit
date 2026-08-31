@@ -52,7 +52,7 @@ if ($Installed) {
   if ($commandWindows -ne 'node ".codex\hooks\post-compact.mjs"') { throw "Unexpected commandWindows: $commandWindows" }
 
   $config = Get-Content -LiteralPath (Join-Path $CodexHome 'config.toml') -Raw -Encoding UTF8
-  if ($config -notmatch '(?m)^model_instructions_file = "\./instructions/portable-agent-instructions\.md"$') { throw 'Portable model instruction path is not installed.' }
+  if ($config -notmatch '(?m)^model_instructions_file = "(\./instructions/portable-agent-instructions\.md|\./gpt-unrestricted\.md|\./gpt-contract\.md|\./gpt-persona-contract\.md)"$') { throw 'Portable model instruction path is not installed.' }
   if ($config.Contains('__USER_HOME_ESCAPED__')) { throw 'User-home placeholder was not replaced in installed config.' }
   $rules = Get-Content -LiteralPath (Join-Path $CodexHome 'rules\default.rules') -Raw -Encoding UTF8
   if ($rules.Contains('__USER_HOME_ESCAPED__')) { throw 'User-home placeholder remains in installed default.rules.' }
