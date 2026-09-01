@@ -50,6 +50,14 @@ class TestCliExtended(unittest.TestCase):
         self.assertEqual(report["type"], "Windows PE Binary (EXE/DLL/SYS)")
         self.assertIn("MyTestString", report["top_strings"])
 
+    def test_export_preset_execution(self):
+        import argparse
+        from cli import cmd_export_preset
+        # Test that cmd_export_preset runs without error in JSON mode
+        args = argparse.Namespace(target="all", json=True)
+        # Should execute cleanly
+        cmd_export_preset(args)
+
 
 if __name__ == "__main__":
     unittest.main()

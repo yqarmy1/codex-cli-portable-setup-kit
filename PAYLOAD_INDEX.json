@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  554,
-    "total_bytes":  4123956,
+    "file_count":  558,
+    "total_bytes":  4131316,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3152,8 +3152,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/cli.py",
                       "component":  "project-tools",
-                      "bytes":  18017,
-                      "sha256":  "0B9CD909B265ABC5FD00C640CA3A25E5072A2EF2B9BF0631DD19FBB152E254A8"
+                      "bytes":  20657,
+                      "sha256":  "13429B90552D36E4A1731007CE1E0717C5FC52D84E91297B970BD68260CEE29A"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/disasm.py",
@@ -3236,8 +3236,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_cli_extended.py",
                       "component":  "project-tools",
-                      "bytes":  2147,
-                      "sha256":  "7A6CE25E0418609E08EB95A6AEFA6615AED8D7F3E37EBAAA49AC90E0263C30E6"
+                      "bytes":  2452,
+                      "sha256":  "E6A033AF36995C889A6C5AD2CF8B80CC1D7D74F1F39C0F6FAD47DB73B6AC4F51"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_disasm.py",
@@ -3306,6 +3306,12 @@
                       "sha256":  "F1C234FE46B144D5A833B48489B9134DA212D9737F050A65A5BC68430221CA73"
                   },
                   {
+                      "path":  "payload/project/.cursorrules",
+                      "component":  "project-control-plane",
+                      "bytes":  848,
+                      "sha256":  "59AA3E5AE8E2C7FB55F2A8A0BCEC69AF0523395F19D8CD18BB005E3CE192348B"
+                  },
+                  {
                       "path":  "payload/project/.github/workflows/context-control.yml",
                       "component":  "project-control-plane",
                       "bytes":  1275,
@@ -3318,6 +3324,12 @@
                       "sha256":  "17FA7B96C96966B7DFE1CC2B8ABF5B9FE7CD03351EEEF416683823D618D1FDF8"
                   },
                   {
+                      "path":  "payload/project/.windsurfrules",
+                      "component":  "project-control-plane",
+                      "bytes":  850,
+                      "sha256":  "5133E63F567B509851597AF1FD2B289F4DAFB7AC3E2D3463C19E959B1A8970B7"
+                  },
+                  {
                       "path":  "payload/project/AGENTS.md",
                       "component":  "project-control-plane",
                       "bytes":  3238,
@@ -3328,6 +3340,18 @@
                       "component":  "project-control-plane",
                       "bytes":  1986,
                       "sha256":  "B6560B63A343708F044D94E7A4173B915223FCB84C0FE6550C79C33674FFAB12"
+                  },
+                  {
+                      "path":  "payload/project/opencode.json",
+                      "component":  "project-control-plane",
+                      "bytes":  421,
+                      "sha256":  "AAA405902CB4923F8D648D1401F2D18E9416090C591E0447F00784D28587E4E5"
+                  },
+                  {
+                      "path":  "payload/project/OPENCODE.md",
+                      "component":  "project-control-plane",
+                      "bytes":  2296,
+                      "sha256":  "926483E10570984573C69FF07145191EAB494BAE0D845F8A70CAAF86435E40F7"
                   }
               ]
 }

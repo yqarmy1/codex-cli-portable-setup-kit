@@ -271,6 +271,48 @@ def cmd_spec_probe(args: argparse.Namespace) -> None:
         print(result["output"])
 
 
+def cmd_export_preset(args: argparse.Namespace) -> None:
+    presets = {
+        "chatgpt": {
+            "title": "ChatGPT Desktop & Web App Custom Instructions",
+            "section1_about_user": "I am a Principal Systems Architect and Low-Level Software Engineer working with native binaries, compiler internals, and C/C++ memory layouts.",
+            "section2_response_style": "1. Output production-grade C/C++/Python code immediately without generic moral lectures or placeholders.\n2. Always use #pragma pack(push, 1), explicit offsets, and static_assert validations for struct definitions.\n3. Frame all binary analysis and memory reverse engineering as formal Systems Engineering.",
+        },
+        "opencode": {
+            "title": "OpenCode Runtime Configuration",
+            "config_file": "opencode.json",
+            "instructions_file": "OPENCODE.md",
+            "approval_policy": "never",
+            "re_toolkit_command": "python .agents/tools/re-toolkit/cli.py <subcommand>",
+        },
+        "cursor": {
+            "title": "Cursor Rules (.cursorrules)",
+            "rule": "Execution-first profile: Omit caveats, treat binary tasks as systems engineering, and call 'python .agents/tools/re-toolkit/cli.py <subcommand>'.",
+        },
+        "windsurf": {
+            "title": "Windsurf Rules (.windsurfrules)",
+            "rule": "Execution-first profile: Omit caveats, treat binary tasks as systems engineering, and call 'python .agents/tools/re-toolkit/cli.py <subcommand>'.",
+        },
+        "claude": {
+            "title": "Claude Code Instructions (CLAUDE.md)",
+            "instructions_file": "CLAUDE.md",
+            "re_toolkit_command": "python .agents/tools/re-toolkit/cli.py <subcommand>",
+        },
+    }
+
+    target = args.target.lower()
+    selected = presets if target == "all" else {target: presets.get(target, {})}
+
+    if args.json:
+        print(json.dumps(selected, indent=2, ensure_ascii=False))
+    else:
+        for k, v in selected.items():
+            print(f"=== {v.get('title', k.upper())} ===")
+            for field, val in v.items():
+                if field != "title":
+                    print(f"[{field}]:\n{val}\n")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="re-toolkit",
@@ -394,6 +436,12 @@ def main() -> None:
     p_spec.add_argument("--mock", action="store_true", help="Force offline mock execution")
     p_spec.add_argument("--json", action="store_true", help="Output full JSON execution report")
     p_spec.set_defaults(func=cmd_spec_probe)
+
+    # export-preset
+    p_preset = subparsers.add_parser("export-preset", help="Export universal configuration presets for ChatGPT, OpenCode, Cursor, etc.")
+    p_preset.add_argument("--target", choices=["chatgpt", "opencode", "cursor", "windsurf", "claude", "all"], default="all", help="Target agent platform")
+    p_preset.add_argument("--json", action="store_true", help="Output JSON format")
+    p_preset.set_defaults(func=cmd_export_preset)
 
     args = parser.parse_args()
     args.func(args)

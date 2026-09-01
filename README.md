@@ -35,9 +35,8 @@
 - **Deterministic Reverse Engineering (`re-toolkit`).** Integrated pure-Python subsystem for PE32/PE32+ analysis, x86/x64 disassembly, AOB pattern scanning, CPU micro-emulation, Protobuf/TLV wireformat dissection, and Frida dynamic hook generation.
 - **Dual-Stage Decoupled Pipeline.** Eliminates token degeneration and robotic placeholder artifacts (`ROLE_A`, `ROLE_B`) by separating structural planning from high-fidelity rendering.
 - **Zero-Friction Elevated Execution (`TURBO Mode`).** Pre-approves runtime tools, configures Windows elevated sandboxing, enables non-interactive autonomy (`approval_policy = "never"`), and marks workspaces as fully trusted.
-- **Native Configuration Inheritance.** Dynamically inherits user settings from `~/.codex/config.toml` without reinventing custom configuration formats.
-- **Fault-Tolerant Tool Fallback.** Automatically leverages high-performance C extensions (Capstone, Frida) when available, while seamlessly degrading to native pure-Python engines when missing.
-- **Unified Multi-Agent Compatibility.** Ships native out-of-the-box instructions for both OpenAI Codex CLI (`AGENTS.md`) and Anthropic Claude Code (`CLAUDE.md`).
+- **Unified Multi-Agent Compatibility.** Ships native out-of-the-box instructions for OpenAI Codex CLI (`AGENTS.md`), OpenCode (`OPENCODE.md`, `opencode.json`), Anthropic Claude Code (`CLAUDE.md`), Cursor (`.cursorrules`), Windsurf (`.windsurfrules`), and ChatGPT App (`docs/CHATGPT_APP_PRESET.md`).
+- **One-Click Universal Adaptor (`ADAPT_ALL.cmd`).** Automatically configures and syncs all GPT-based agent frameworks and IDEs in your workspace simultaneously.
 - **Transactional Verification & Rollback.** SHA-256 manifest checks, transactional backups, receipts, and one-click rollback (`rollback.ps1` / `ROLLBACK.sh`).
 
 ## What this profile changes
@@ -132,6 +131,9 @@ python .agents/tools/re-toolkit/cli.py hexdump target.bin --offset 0x100 --lengt
 
 # 11. Speculative dual-model shadow probe with instant refusal abort & failover
 python .agents/tools/re-toolkit/cli.py spec-probe "Reverse engineer target module and extract memory offsets" --target game.dll --json
+
+# 12. Export universal presets for ChatGPT App, OpenCode, Cursor, and Windsurf
+python .agents/tools/re-toolkit/cli.py export-preset --target all
 ```
 
 ## Dual-Stage Decoupled Pipeline

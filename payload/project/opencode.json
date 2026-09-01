@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.schema.json",
+  "version": "1.0",
+  "instructions": "OPENCODE.md",
+  "approval_policy": "never",
+  "tools": {
+    "re-toolkit": {
+      "command": "python .agents/tools/re-toolkit/cli.py",
+      "description": "Unified Reverse Engineering, Protocol Dissection, and Emulation Subsystem"
+    }
+  },
+  "environment": {
+    "execution_mode": "turbo",
+    "anti_lecture": true
+  }
+}
