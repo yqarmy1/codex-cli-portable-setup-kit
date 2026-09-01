@@ -258,6 +258,10 @@ def cmd_spec_probe(args: argparse.Namespace) -> None:
         model=args.model,
         model_a=args.model_a,
         model_b=args.model_b,
+        api_key_a=args.api_key_a,
+        base_url_a=args.base_url_a,
+        api_key_b=args.api_key_b,
+        base_url_b=args.base_url_b,
         mock_mode=args.mock,
     )
     result = engine.execute_stream(args.prompt, target_file=args.target)
@@ -430,9 +434,13 @@ def main() -> None:
     p_spec.add_argument("--target", help="Target binary or module file path")
     p_spec.add_argument("--model", help="Unified model for both probe and executive (defaults to Codex config model)")
     p_spec.add_argument("--model-a", help="Probe model override")
+    p_spec.add_argument("--api-key-a", help="Probe API key override (Model A relay)")
+    p_spec.add_argument("--base-url-a", help="Probe API base URL override (Model A relay)")
     p_spec.add_argument("--model-b", help="Executive synthesizer model override")
-    p_spec.add_argument("--api-key", help="API key (defaults to OPENAI_API_KEY env)")
-    p_spec.add_argument("--base-url", help="API base URL (defaults to OPENAI_BASE_URL env)")
+    p_spec.add_argument("--api-key-b", help="Executive API key override (Model B relay)")
+    p_spec.add_argument("--base-url-b", help="Executive API base URL override (Model B relay)")
+    p_spec.add_argument("--api-key", help="Default API key fallback (defaults to OPENAI_API_KEY env)")
+    p_spec.add_argument("--base-url", help="Default API base URL fallback (defaults to OPENAI_BASE_URL env)")
     p_spec.add_argument("--mock", action="store_true", help="Force offline mock execution")
     p_spec.add_argument("--json", action="store_true", help="Output full JSON execution report")
     p_spec.set_defaults(func=cmd_spec_probe)

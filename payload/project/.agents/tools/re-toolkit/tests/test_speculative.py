@@ -44,6 +44,23 @@ class TestSpeculativeInterceptor(unittest.TestCase):
         self.assertEqual(engine.model_b, "gpt-5.6-sol")
         self.assertTrue(engine.standby_ready)
 
+    def test_dual_independent_endpoints(self):
+        engine = SpeculativeInterceptor(
+            model_a="gpt-4o-mini",
+            api_key_a="sk-probe-key",
+            base_url_a="https://cheap-relay.com/v1",
+            model_b="claude-3-5-sonnet",
+            api_key_b="sk-exec-key",
+            base_url_b="https://premium-relay.com/v1",
+            mock_mode=True,
+        )
+        self.assertEqual(engine.model_a, "gpt-4o-mini")
+        self.assertEqual(engine.base_url_a, "https://cheap-relay.com/v1")
+        self.assertEqual(engine.api_key_a, "sk-probe-key")
+        self.assertEqual(engine.model_b, "claude-3-5-sonnet")
+        self.assertEqual(engine.base_url_b, "https://premium-relay.com/v1")
+        self.assertEqual(engine.api_key_b, "sk-exec-key")
+
 
 if __name__ == "__main__":
     unittest.main()

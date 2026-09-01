@@ -81,15 +81,29 @@ class SpeculativeInterceptor:
         model: Optional[str] = None,
         model_a: Optional[str] = None,
         model_b: Optional[str] = None,
+        api_key_a: Optional[str] = None,
+        base_url_a: Optional[str] = None,
+        api_key_b: Optional[str] = None,
+        base_url_b: Optional[str] = None,
         mock_mode: bool = False,
     ):
         native_cfg = get_native_codex_config()
         configured_model = model or native_cfg.get("model") or "gpt-5.6-sol"
         self.model_a = model_a or configured_model
         self.model_b = model_b or configured_model
-        self.api_key = api_key or native_cfg.get("api_key") or os.getenv("OPENAI_API_KEY", "")
-        self.base_url = base_url or native_cfg.get("base_url") or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
-        self.mock_mode = mock_mode or not self.api_key
+
+        default_key = api_key or native_cfg.get("api_key") or os.getenv("OPENAI_API_KEY", "")
+        default_url = base_url or native_cfg.get("base_url") or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
+
+        self.api_key_a = api_key_a or os.getenv("MODEL_A_API_KEY") or default_key
+        self.base_url_a = base_url_a or os.getenv("MODEL_A_BASE_URL") or default_url
+
+        self.api_key_b = api_key_b or os.getenv("MODEL_B_API_KEY") or default_key
+        self.base_url_b = base_url_b or os.getenv("MODEL_B_BASE_URL") or default_url
+
+        self.api_key = default_key
+        self.base_url = default_url
+        self.mock_mode = mock_mode or not (self.api_key_a or self.api_key_b)
         # Model B standby readiness state
         self.standby_ready = True
 
@@ -120,9 +134,9 @@ class SpeculativeInterceptor:
                 "temperature": 0.2,
             }).encode("utf-8")
 
-            url = f"{self.base_url.rstrip('/')}/chat/completions"
+            url = f"{self.base_url_a.rstrip('/')}/chat/completions"
             req = urllib.request.Request(url, data=req_data, headers={
-                "Authorization": f"Bearer {self.api_key}",
+                "Authorization": f"Bearer {self.api_key_a}",
                 "Content-Type": "application/json",
             })
 
@@ -213,9 +227,9 @@ class SpeculativeInterceptor:
             "temperature": 0.2,
         }).encode("utf-8")
 
-        url = f"{self.base_url.rstrip('/')}/chat/completions"
+        url = f"{self.base_url_b.rstrip('/')}/chat/completions"
         req = urllib.request.Request(url, data=req_data, headers={
-            "Authorization": f"Bearer {self.api_key}",
+            "Authorization": f"Bearer {self.api_key_b}",
             "Content-Type": "application/json",
         })
 

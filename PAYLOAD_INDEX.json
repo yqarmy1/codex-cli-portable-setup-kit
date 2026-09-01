@@ -3,7 +3,7 @@
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
     "file_count":  561,
-    "total_bytes":  4139665,
+    "total_bytes":  4141576,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3152,8 +3152,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/cli.py",
                       "component":  "project-tools",
-                      "bytes":  20657,
-                      "sha256":  "13429B90552D36E4A1731007CE1E0717C5FC52D84E91297B970BD68260CEE29A"
+                      "bytes":  21195,
+                      "sha256":  "130E5AF56857C3033E7FDA772247C98A39B28D007F7622B781A05AD82AC47606"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/disasm.py",
@@ -3230,8 +3230,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/speculative_interceptor.py",
                       "component":  "project-tools",
-                      "bytes":  12582,
-                      "sha256":  "EABABAA82C829F8D8CEA8FA3D985B772679C16A95A4C5F85DBE48C963E7940ED"
+                      "bytes":  13184,
+                      "sha256":  "6091BB4381F046D4B3BDA863D9F438AD51C0DE9BEBF2D22F7A30403621893A6E"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/__init__.py",
@@ -3296,8 +3296,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_speculative.py",
                       "component":  "project-tools",
-                      "bytes":  2079,
-                      "sha256":  "34194FD9E64AE3EC657D5FFB5579B7A2DC701D98D04BBECA14B620DAFA81B383"
+                      "bytes":  2850,
+                      "sha256":  "4999BE54DF82326621F7F4EB3958BCAA98CAF4156D095272C5D12706D709AA38"
                   },
                   {
                       "path":  "payload/project/.codex/config.toml",
