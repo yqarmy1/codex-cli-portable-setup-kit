@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  561,
-    "total_bytes":  4141576,
+    "file_count":  564,
+    "total_bytes":  4146074,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3230,8 +3230,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/speculative_interceptor.py",
                       "component":  "project-tools",
-                      "bytes":  13184,
-                      "sha256":  "6091BB4381F046D4B3BDA863D9F438AD51C0DE9BEBF2D22F7A30403621893A6E"
+                      "bytes":  14578,
+                      "sha256":  "F3664E6066054240F26DFE08C858641AF079975230299527FCDEB417D813F1BC"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/__init__.py",
@@ -3296,8 +3296,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_speculative.py",
                       "component":  "project-tools",
-                      "bytes":  2850,
-                      "sha256":  "4999BE54DF82326621F7F4EB3958BCAA98CAF4156D095272C5D12706D709AA38"
+                      "bytes":  3023,
+                      "sha256":  "410057EDDBA8743CCD082CB6D4B49999EDFFC8CC9426595A37ADD009B07E9764"
                   },
                   {
                       "path":  "payload/project/.codex/config.toml",
@@ -3322,6 +3322,12 @@
                       "component":  "project-control-plane",
                       "bytes":  848,
                       "sha256":  "59AA3E5AE8E2C7FB55F2A8A0BCEC69AF0523395F19D8CD18BB005E3CE192348B"
+                  },
+                  {
+                      "path":  "payload/project/.env.example",
+                      "component":  "project-control-plane",
+                      "bytes":  741,
+                      "sha256":  "C5A21DE404293A88E84D4F79AE3E917B113BEB103E047486484C1A8350435A18"
                   },
                   {
                       "path":  "payload/project/.github/workflows/context-control.yml",
@@ -3358,6 +3364,18 @@
                       "component":  "project-control-plane",
                       "bytes":  1986,
                       "sha256":  "B6560B63A343708F044D94E7A4173B915223FCB84C0FE6550C79C33674FFAB12"
+                  },
+                  {
+                      "path":  "payload/project/CONFIG_RELAYS.cmd",
+                      "component":  "project-control-plane",
+                      "bytes":  253,
+                      "sha256":  "C897698B7708EED9E914510C9EC4C31B9B6F78BD8D689D6760CDCA599D98DEB0"
+                  },
+                  {
+                      "path":  "payload/project/config_relays.ps1",
+                      "component":  "project-control-plane",
+                      "bytes":  1937,
+                      "sha256":  "E1CAF087E8A091DC6A1FB0EFCFE8887AAB5065D0ACE225181FA409495DA746EC"
                   },
                   {
                       "path":  "payload/project/opencode.json",

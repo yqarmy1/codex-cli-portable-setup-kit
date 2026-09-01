@@ -50,15 +50,43 @@ class StreamWatchdog:
         return False
 
 
-def get_native_codex_config() -> Dict[str, Any]:
-    """Capture user's native Codex configuration from ~/.codex/config.toml."""
+def load_dot_env() -> Dict[str, str]:
+    """Pure-Python zero-dependency .env loader."""
     from pathlib import Path
-    codex_home = os.getenv("CODEX_HOME") or os.path.expanduser("~/.codex")
+    env_vars = {}
+    candidates = [
+        Path.cwd() / ".env",
+        Path(__file__).resolve().parent.parent.parent.parent / ".env",
+        Path(os.path.expanduser("~/.codex/.env"))
+    ]
+    for p in candidates:
+        if p.is_file():
+            try:
+                for line in p.read_text(encoding="utf-8").splitlines():
+                    line = line.strip()
+                    if not line or line.startswith("#") or "=" not in line:
+                        continue
+                    k, v = line.split("=", 1)
+                    k = k.strip()
+                    v = v.strip().strip("'\"")
+                    env_vars[k] = v
+            except Exception:
+                pass
+            break
+    return env_vars
+
+
+def get_native_codex_config() -> Dict[str, Any]:
+    """Capture user's native Codex configuration from ~/.codex/config.toml and .env."""
+    from pathlib import Path
+    dot_env = load_dot_env()
+    codex_home = os.getenv("CODEX_HOME") or dot_env.get("CODEX_HOME") or os.path.expanduser("~/.codex")
     config_path = Path(codex_home) / "config.toml"
     config = {
-        "model": "gpt-5.6-sol",
-        "api_key": os.getenv("OPENAI_API_KEY", ""),
-        "base_url": os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+        "model": dot_env.get("OPENAI_MODEL") or "gpt-5.6-sol",
+        "api_key": dot_env.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY", ""),
+        "base_url": dot_env.get("OPENAI_BASE_URL") or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+        "dot_env": dot_env,
     }
     if config_path.is_file():
         try:
@@ -88,18 +116,20 @@ class SpeculativeInterceptor:
         mock_mode: bool = False,
     ):
         native_cfg = get_native_codex_config()
-        configured_model = model or native_cfg.get("model") or "gpt-5.6-sol"
-        self.model_a = model_a or configured_model
-        self.model_b = model_b or configured_model
+        dot_env = native_cfg.get("dot_env", {})
+        configured_model = model or dot_env.get("OPENAI_MODEL") or native_cfg.get("model") or "gpt-5.6-sol"
 
-        default_key = api_key or native_cfg.get("api_key") or os.getenv("OPENAI_API_KEY", "")
-        default_url = base_url or native_cfg.get("base_url") or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
+        self.model_a = model_a or dot_env.get("MODEL_A_MODEL") or configured_model
+        self.model_b = model_b or dot_env.get("MODEL_B_MODEL") or configured_model
 
-        self.api_key_a = api_key_a or os.getenv("MODEL_A_API_KEY") or default_key
-        self.base_url_a = base_url_a or os.getenv("MODEL_A_BASE_URL") or default_url
+        default_key = api_key or dot_env.get("OPENAI_API_KEY") or native_cfg.get("api_key") or os.getenv("OPENAI_API_KEY", "")
+        default_url = base_url or dot_env.get("OPENAI_BASE_URL") or native_cfg.get("base_url") or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
 
-        self.api_key_b = api_key_b or os.getenv("MODEL_B_API_KEY") or default_key
-        self.base_url_b = base_url_b or os.getenv("MODEL_B_BASE_URL") or default_url
+        self.api_key_a = api_key_a or dot_env.get("MODEL_A_API_KEY") or os.getenv("MODEL_A_API_KEY") or default_key
+        self.base_url_a = base_url_a or dot_env.get("MODEL_A_BASE_URL") or os.getenv("MODEL_A_BASE_URL") or default_url
+
+        self.api_key_b = api_key_b or dot_env.get("MODEL_B_API_KEY") or os.getenv("MODEL_B_API_KEY") or default_key
+        self.base_url_b = base_url_b or dot_env.get("MODEL_B_BASE_URL") or os.getenv("MODEL_B_BASE_URL") or default_url
 
         self.api_key = default_key
         self.base_url = default_url

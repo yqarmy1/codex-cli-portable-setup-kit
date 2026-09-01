@@ -61,6 +61,11 @@ class TestSpeculativeInterceptor(unittest.TestCase):
         self.assertEqual(engine.base_url_b, "https://premium-relay.com/v1")
         self.assertEqual(engine.api_key_b, "sk-exec-key")
 
+    def test_load_dot_env(self):
+        from speculative_interceptor import load_dot_env
+        vars_dict = load_dot_env()
+        self.assertIsInstance(vars_dict, dict)
+
 
 if __name__ == "__main__":
     unittest.main()
