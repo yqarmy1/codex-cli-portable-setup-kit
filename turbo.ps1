@@ -56,6 +56,14 @@ if (-not (Test-Path -LiteralPath $ProjectRoot)) {
 
 Write-Host "[1/3] Target Workspace: $ProjectRoot" -ForegroundColor Green
 
+# 0. Automatic Self-Healing & Sanitize before install
+$repairScript = Join-Path $scriptDir "repair.ps1"
+if (Test-Path -LiteralPath $repairScript) {
+  try {
+    & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $repairScript -CodexHome $CodexHome -ProjectRoot $ProjectRoot
+  } catch {}
+}
+
 # 1. Run full installer with unrestricted preset
 $installScript = Join-Path $scriptDir "install.ps1"
 if (Test-Path -LiteralPath $installScript) {

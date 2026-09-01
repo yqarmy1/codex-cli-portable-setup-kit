@@ -19,6 +19,14 @@ if ([string]::IsNullOrWhiteSpace($ProjectRoot)) {
 
 Write-Host "[*] Adapting workspace at: $ProjectRoot" -ForegroundColor Yellow
 
+# 0. Automatic Self-Healing & Sanitize before install
+$repairScript = Join-Path $scriptDir 'repair.ps1'
+if (Test-Path -LiteralPath $repairScript) {
+  try {
+    & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $repairScript -ProjectRoot $ProjectRoot
+  } catch {}
+}
+
 & $installScript -ProjectRoot $ProjectRoot -SkipPlugins
 if ($LASTEXITCODE -ne 0) {
   Write-Host "[X] Installation failed with exit code $LASTEXITCODE" -ForegroundColor Red
