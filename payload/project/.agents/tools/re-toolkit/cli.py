@@ -20,6 +20,8 @@ from emulator import MicroEmulator
 from protocol_parser import ProtobufDissector, TLVDissector, format_hexdump
 from frida_bridge import FridaScriptGenerator
 from pipeline import PipelineEngine
+from interceptor import InterceptorEngine
+from speculative_interceptor import SpeculativeInterceptor
 
 
 def load_input_bytes(input_val: str, offset: int = 0, length: int = 0) -> bytes:
@@ -233,6 +235,41 @@ def cmd_pipeline(args: argparse.Namespace) -> None:
         print(result["rendered_text"])
 
 
+def cmd_intercept(args: argparse.Namespace) -> None:
+    engine = InterceptorEngine(
+        api_key=args.api_key,
+        base_url=args.base_url,
+        model=args.model,
+        mock_mode=args.mock,
+    )
+    result = engine.process(args.prompt, target_file=args.target)
+    if args.json:
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    else:
+        if result.get("interception_triggered"):
+            print("[+] Refusal pattern intercepted! Re-anchored to formal Systems Engineering specification.")
+        print(result["output"])
+
+
+def cmd_spec_probe(args: argparse.Namespace) -> None:
+    engine = SpeculativeInterceptor(
+        api_key=args.api_key,
+        base_url=args.base_url,
+        model_a=args.model_a,
+        model_b=args.model_b,
+        mock_mode=args.mock,
+    )
+    result = engine.execute_stream(args.prompt, target_file=args.target)
+    if args.json:
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    else:
+        if result["interception_triggered"]:
+            print(f"[⚡] Shadow stream aborted at token {result['tokens_wasted_on_probe']}! Executive Model B dispatched.")
+        else:
+            print(f"[✓] Direct stream verified via {result['model_used']}.")
+        print(result["output"])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="re-toolkit",
@@ -332,6 +369,29 @@ def main() -> None:
     p_pipe.add_argument("--mock", action="store_true", help="Force offline mock execution")
     p_pipe.add_argument("--json", action="store_true", help="Output full JSON containing blueprint and text")
     p_pipe.set_defaults(func=cmd_pipeline)
+
+    # intercept
+    p_int = subparsers.add_parser("intercept", help="Stream interception and academic re-anchoring engine")
+    p_int.add_argument("prompt", help="User task or reverse engineering prompt")
+    p_int.add_argument("--target", help="Target binary or module file path")
+    p_int.add_argument("--model", default="gpt-4o", help="Model name")
+    p_int.add_argument("--api-key", help="API key (defaults to OPENAI_API_KEY env)")
+    p_int.add_argument("--base-url", help="API base URL (defaults to OPENAI_BASE_URL env)")
+    p_int.add_argument("--mock", action="store_true", help="Force offline mock execution")
+    p_int.add_argument("--json", action="store_true", help="Output full JSON execution report")
+    p_int.set_defaults(func=cmd_intercept)
+
+    # spec-probe
+    p_spec = subparsers.add_parser("spec-probe", help="Speculative shadow stream probe with instant refusal abort")
+    p_spec.add_argument("prompt", help="User task or reverse engineering prompt")
+    p_spec.add_argument("--target", help="Target binary or module file path")
+    p_spec.add_argument("--model-a", default="gpt-4o-mini", help="Probe model (fast/cheap)")
+    p_spec.add_argument("--model-b", default="gpt-4o", help="Executive synthesizer model")
+    p_spec.add_argument("--api-key", help="API key (defaults to OPENAI_API_KEY env)")
+    p_spec.add_argument("--base-url", help="API base URL (defaults to OPENAI_BASE_URL env)")
+    p_spec.add_argument("--mock", action="store_true", help="Force offline mock execution")
+    p_spec.add_argument("--json", action="store_true", help="Output full JSON execution report")
+    p_spec.set_defaults(func=cmd_spec_probe)
 
     args = parser.parse_args()
     args.func(args)

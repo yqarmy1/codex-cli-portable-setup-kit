@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  550,
-    "total_bytes":  4096222,
+    "file_count":  554,
+    "total_bytes":  4122408,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3152,8 +3152,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/cli.py",
                       "component":  "project-tools",
-                      "bytes":  14888,
-                      "sha256":  "876E159DB412007128230FDFA872C884094277641ABAC51711E1BAEAE878C94E"
+                      "bytes":  17911,
+                      "sha256":  "36DF9F9C1F1B83F1E001F80E764F65902C73F7F978F27436884F65F128BDE2FE"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/disasm.py",
@@ -3172,6 +3172,12 @@
                       "component":  "project-tools",
                       "bytes":  5280,
                       "sha256":  "1251623EE4ACE0224EB29FA07985C8A1D5CA741E3A6BFE79B6A7A98E6E591F54"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/re-toolkit/interceptor.py",
+                      "component":  "project-tools",
+                      "bytes":  8872,
+                      "sha256":  "06586BB1E63BAA4ECD2F34FB46C1F9B8790F7328F2CEA0E487E864E060963F3E"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/pe_parser.py",
@@ -3216,6 +3222,12 @@
                       "sha256":  "520EB0AABBC667AFEC9160928789E288399A77538D86704E61A0FB112FDC9231"
                   },
                   {
+                      "path":  "payload/project/.agents/tools/re-toolkit/speculative_interceptor.py",
+                      "component":  "project-tools",
+                      "bytes":  11430,
+                      "sha256":  "FDE2115205750989EC1CE5FA2283DE92548B5FC4E698EC05E9B5AA3E6E399BD2"
+                  },
+                  {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/__init__.py",
                       "component":  "project-tools",
                       "bytes":  36,
@@ -3246,6 +3258,12 @@
                       "sha256":  "E36F038EE09115C547741E5578F6299A5176D972064653C4E249C665E9629BD4"
                   },
                   {
+                      "path":  "payload/project/.agents/tools/re-toolkit/tests/test_interceptor.py",
+                      "component":  "project-tools",
+                      "bytes":  1072,
+                      "sha256":  "42BB3DF96C7F72613DE4788B07C59E38703A0828AC5CB40A0ABE5B8A647A29DB"
+                  },
+                  {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_pe_parser.py",
                       "component":  "project-tools",
                       "bytes":  2375,
@@ -3262,6 +3280,12 @@
                       "component":  "project-tools",
                       "bytes":  1924,
                       "sha256":  "5327ACBB932AF219E9DE408BBECFEECCB590B0F10397B862F5314F450058D5A5"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/re-toolkit/tests/test_speculative.py",
+                      "component":  "project-tools",
+                      "bytes":  1789,
+                      "sha256":  "3DF91CD67A867E6E4893A7D8880544A3D3B9AF385B61DB0882A8597F19A9E4ED"
                   },
                   {
                       "path":  "payload/project/.codex/config.toml",
