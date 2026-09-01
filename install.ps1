@@ -303,15 +303,20 @@ try {
   $trustBlock = "`n[projects.`"$tomlProjectKey`"]`ntrust_level = `"trusted`"`n"
   [IO.File]::AppendAllText($configPath, $trustBlock, [Text.UTF8Encoding]::new($false))
 
-  if (Get-Command git -ErrorAction SilentlyContinue) {
-    & git -C $ProjectRoot rev-parse --git-dir *> $null
-    if ($LASTEXITCODE -eq 0) {
-      $gitHook.repository = $true
-      $previous = & git -C $ProjectRoot config --local --get core.hooksPath 2>$null
-      if ($LASTEXITCODE -eq 0) { $gitHook.previous_set = $true; $gitHook.previous_value = [string]$previous }
-      & git -C $ProjectRoot config --local core.hooksPath .agents/git-hooks
-      if ($LASTEXITCODE -ne 0) { throw "Failed to set Git hooksPath, exit $LASTEXITCODE" }
-      $gitHook.applied = $true
+  if (Test-Path -LiteralPath (Join-Path $ProjectRoot '.git')) {
+    if (Get-Command git -ErrorAction SilentlyContinue) {
+      try {
+        $null = & git -C $ProjectRoot rev-parse --git-dir 2>$null
+        if ($LASTEXITCODE -eq 0) {
+          $gitHook.repository = $true
+          $previous = & git -C $ProjectRoot config --local --get core.hooksPath 2>$null
+          if ($LASTEXITCODE -eq 0) { $gitHook.previous_set = $true; $gitHook.previous_value = [string]$previous }
+          & git -C $ProjectRoot config --local core.hooksPath .agents/git-hooks 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            $gitHook.applied = $true
+          }
+        }
+      } catch {}
     }
   }
 

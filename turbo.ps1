@@ -1,4 +1,4 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param(
   [string]$ProjectRoot = '',
   [string]$CodexHome = '',
@@ -79,18 +79,40 @@ try {
   if (Test-Path -LiteralPath $configPath) {
     $configText = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8
   }
-  
-  if ($configText -match '(?m)^approval_policy\s*=') {
-    $configText = $configText -replace '(?m)^approval_policy\s*=\s*"[^"]+"', 'approval_policy = "never"'
-  } else {
-    $configText += "`r`napproval_policy = ""never"""
+
+  $lines = $configText -split "`r?`n"
+  $rootLines = [System.Collections.Generic.List[string]]::new()
+  $sectionLines = [System.Collections.Generic.List[string]]::new()
+  $inSection = $false
+
+  foreach ($line in $lines) {
+    $trimmed = $line.Trim()
+    if ($trimmed -match '^approval_policy\s*=') {
+      continue
+    }
+    if ($trimmed.StartsWith('[') -and $trimmed.EndsWith(']')) {
+      $inSection = $true
+    }
+    if ($inSection) {
+      $sectionLines.Add($line)
+    } else {
+      if (-not [string]::IsNullOrWhiteSpace($trimmed)) {
+        $rootLines.Add($line)
+      }
+    }
   }
 
-  if ($configText -notmatch '\[windows\]') {
-    $configText += "`r`n`r`n[windows]`r`nsandbox = ""elevated"""
+  $rootLines.Insert(0, 'approval_policy = "never"')
+  $newToml = ($rootLines -join "`r`n").Trim()
+  if ($sectionLines.Count -gt 0) {
+    $newToml += "`r`n`r`n" + ($sectionLines -join "`r`n").Trim()
   }
-  
-  [IO.File]::WriteAllText($configPath, $configText.Trim(), [Text.UTF8Encoding]::new($false))
+
+  if ($newToml -notmatch '\[windows\]') {
+    $newToml += "`r`n`r`n[windows]`r`nsandbox = ""elevated"""
+  }
+
+  [IO.File]::WriteAllText($configPath, $newToml.Trim() + "`r`n", [Text.UTF8Encoding]::new($false))
   Write-Host "[2/3] Maximum Autonomy Configured: approval_policy = 'never' (Zero Prompts)" -ForegroundColor Green
 } catch {
   Write-Host "[!] Warning: Could not update config.toml: $($_.Exception.Message)" -ForegroundColor Yellow
