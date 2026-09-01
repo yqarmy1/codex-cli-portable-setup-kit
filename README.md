@@ -58,7 +58,7 @@ mechanism. The product is a tuned operating style for Codex. **Do the work, then
 
 ## Quick start
 
-### 1. One-Click TURBO Launch (Zero Friction)
+### 🪟 Windows 10 & 11 (Primary Platform — 1-Click Launch)
 
 Extract the release ZIP and double-click:
 ```cmd
@@ -66,14 +66,27 @@ TURBO.cmd
 ```
 This automatically validates the workspace, configures elevated execution policies, inherits your native model settings, and launches Codex ready for work.
 
-### 2. Manual Transactional Installation
+To adapt all agent platforms (Codex, OpenCode, Cursor, Windsurf, Claude Code) in 1 second:
+```cmd
+ADAPT_ALL.cmd
+```
+
+### 🍏 macOS & 🐧 Linux / WSL (Cross-Platform Execution)
+
+```bash
+bash ADAPT_ALL.sh
+# Or launch directly:
+bash TURBO.sh
+```
+
+### Manual Transactional Installation
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\install.ps1 -ProjectRoot 'C:\path\to\your-workspace' -KeysmithPreset unrestricted -SkipPlugins
 ```
 
-### 3. Verify Package Integrity
+### Verify Package Integrity
 
 ```powershell
 .\verify.ps1
