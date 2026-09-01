@@ -17,7 +17,7 @@
 </p>
 
 > [!TIP]
-> **社区友链 / Community Link**: 本项目认可并加入 **[LINUX DO 社区](https://linux.do)** (https://linux.do) 开源项目支持计划。
+> **Community Link & Acknowledgements**: This project is recognized by and affiliated with the **[LINUX DO Community](https://linux.do)** (https://linux.do) open-source initiative.
 > 
 > This is a community-maintained Codex configuration and installer. It is not Codex itself and is not an official OpenAI product.
 
@@ -266,9 +266,9 @@ The release does not include or migrate:
 - [Build skills](https://learn.chatgpt.com/docs/build-skills)
 - [Build plugins](https://learn.chatgpt.com/docs/build-plugins)
 
-## 社区友链与致谢 / Community & Acknowledgements
+## Community & Acknowledgements
 
-- 感谢 **[LINUX DO 社区](https://linux.do)** (https://linux.do) 的认可与开源支持！
+- Officially recognized and supported by the **[LINUX DO Community](https://linux.do)** (https://linux.do).
 - See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ## License
