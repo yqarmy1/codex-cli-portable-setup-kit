@@ -16,18 +16,10 @@
   <a href="https://linux.do"><img alt="LINUX DO" src="https://img.shields.io/badge/Community-LINUX%20DO-FF7700?logo=linux&logoColor=white"></a>
 </p>
 
-<p align="center">
-  <a href="#highlights">Highlights</a> |
-  <a href="#what-this-profile-changes">What changes</a> |
-  <a href="#quick-start">Quick start</a> |
-  <a href="#re-toolkit-subsystem">re-toolkit</a> |
-  <a href="#dual-stage-pipeline">Decoupled Pipeline</a> |
-  <a href="#security-model">Security</a>
-</p>
-
-> [!NOTE]
-> This is a community-maintained Codex configuration and installer. It is not
-> Codex itself and is not an official OpenAI product.
+> [!TIP]
+> **社区友链 / Community Link**: 本项目认可并加入 **[LINUX DO 社区](https://linux.do)** (https://linux.do) 开源项目支持计划。
+> 
+> This is a community-maintained Codex configuration and installer. It is not Codex itself and is not an official OpenAI product.
 
 ## Setup Kit Family
 
@@ -274,9 +266,9 @@ The release does not include or migrate:
 - [Build skills](https://learn.chatgpt.com/docs/build-skills)
 - [Build plugins](https://learn.chatgpt.com/docs/build-plugins)
 
-## Community & Acknowledgements
+## 社区友链与致谢 / Community & Acknowledgements
 
-- Recognized and supported by the [LINUX DO](https://linux.do) community.
+- 感谢 **[LINUX DO 社区](https://linux.do)** (https://linux.do) 的认可与开源支持！
 - See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ## License
