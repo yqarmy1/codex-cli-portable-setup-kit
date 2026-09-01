@@ -264,9 +264,9 @@ def cmd_spec_probe(args: argparse.Namespace) -> None:
         print(json.dumps(result, indent=2, ensure_ascii=False))
     else:
         if result["interception_triggered"]:
-            print(f"[⚡] Shadow stream aborted at token {result['tokens_wasted_on_probe']}! Executive Model B dispatched.")
+            print(f"[!] Shadow stream aborted at token {result['tokens_wasted_on_probe']}! Executive Model B dispatched.")
         else:
-            print(f"[✓] Direct stream verified via {result['model_used']}.")
+            print(f"[OK] Direct stream verified via {result['model_used']}.")
         print(result["output"])
 
 
