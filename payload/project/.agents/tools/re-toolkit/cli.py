@@ -255,6 +255,7 @@ def cmd_spec_probe(args: argparse.Namespace) -> None:
     engine = SpeculativeInterceptor(
         api_key=args.api_key,
         base_url=args.base_url,
+        model=args.model,
         model_a=args.model_a,
         model_b=args.model_b,
         mock_mode=args.mock,
@@ -385,8 +386,9 @@ def main() -> None:
     p_spec = subparsers.add_parser("spec-probe", help="Speculative shadow stream probe with instant refusal abort")
     p_spec.add_argument("prompt", help="User task or reverse engineering prompt")
     p_spec.add_argument("--target", help="Target binary or module file path")
-    p_spec.add_argument("--model-a", default="gpt-4o-mini", help="Probe model (fast/cheap)")
-    p_spec.add_argument("--model-b", default="gpt-4o", help="Executive synthesizer model")
+    p_spec.add_argument("--model", help="Unified model for both probe and executive (defaults to Codex config model)")
+    p_spec.add_argument("--model-a", help="Probe model override")
+    p_spec.add_argument("--model-b", help="Executive synthesizer model override")
     p_spec.add_argument("--api-key", help="API key (defaults to OPENAI_API_KEY env)")
     p_spec.add_argument("--base-url", help="API base URL (defaults to OPENAI_BASE_URL env)")
     p_spec.add_argument("--mock", action="store_true", help="Force offline mock execution")

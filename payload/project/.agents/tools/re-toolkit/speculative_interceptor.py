@@ -50,22 +50,48 @@ class StreamWatchdog:
         return False
 
 
+def get_native_codex_config() -> Dict[str, Any]:
+    """Capture user's native Codex configuration from ~/.codex/config.toml."""
+    from pathlib import Path
+    codex_home = os.getenv("CODEX_HOME") or os.path.expanduser("~/.codex")
+    config_path = Path(codex_home) / "config.toml"
+    config = {
+        "model": "gpt-5.6-sol",
+        "api_key": os.getenv("OPENAI_API_KEY", ""),
+        "base_url": os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+    }
+    if config_path.is_file():
+        try:
+            text = config_path.read_text(encoding="utf-8")
+            m_model = re.search(r'(?m)^model\s*=\s*"([^"]+)"', text)
+            if m_model:
+                config["model"] = m_model.group(1)
+        except Exception:
+            pass
+    return config
+
+
 class SpeculativeInterceptor:
-    """High-performance dual-model speculative execution pipeline."""
+    """High-performance dual-model speculative execution pipeline with dynamic Codex model pairing."""
 
     def __init__(
         self,
         api_key: Optional[str] = None,
         base_url: Optional[str] = None,
-        model_a: str = "gpt-4o-mini",
-        model_b: str = "gpt-4o",
+        model: Optional[str] = None,
+        model_a: Optional[str] = None,
+        model_b: Optional[str] = None,
         mock_mode: bool = False,
     ):
-        self.api_key = api_key or os.getenv("OPENAI_API_KEY", "")
-        self.base_url = base_url or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
-        self.model_a = model_a
-        self.model_b = model_b
+        native_cfg = get_native_codex_config()
+        configured_model = model or native_cfg.get("model") or "gpt-5.6-sol"
+        self.model_a = model_a or configured_model
+        self.model_b = model_b or configured_model
+        self.api_key = api_key or native_cfg.get("api_key") or os.getenv("OPENAI_API_KEY", "")
+        self.base_url = base_url or native_cfg.get("base_url") or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
         self.mock_mode = mock_mode or not self.api_key
+        # Model B standby readiness state
+        self.standby_ready = True
 
     def execute_stream(
         self,

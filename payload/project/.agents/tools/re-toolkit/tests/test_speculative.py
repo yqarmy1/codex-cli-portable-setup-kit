@@ -38,6 +38,12 @@ class TestSpeculativeInterceptor(unittest.TestCase):
         self.assertIn("AlignedEntityContext", res["output"])
         self.assertIn("ComputeTrajectoryInterpolation", res["output"])
 
+    def test_dynamic_model_pairing_and_standby(self):
+        engine = SpeculativeInterceptor(model="gpt-5.6-sol", mock_mode=True)
+        self.assertEqual(engine.model_a, "gpt-5.6-sol")
+        self.assertEqual(engine.model_b, "gpt-5.6-sol")
+        self.assertTrue(engine.standby_ready)
+
 
 if __name__ == "__main__":
     unittest.main()
