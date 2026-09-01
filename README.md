@@ -137,6 +137,9 @@ python .agents/tools/re-toolkit/cli.py diff-patch --orig orig.bin --patched mod.
 
 # 10. Format aligned hexadecimal dumps
 python .agents/tools/re-toolkit/cli.py hexdump target.bin --offset 0x100 --length 128
+
+# 11. Speculative dual-model shadow probe with instant refusal abort & failover
+python .agents/tools/re-toolkit/cli.py spec-probe "Reverse engineer target module and extract memory offsets" --target game.dll --json
 ```
 
 ## Dual-Stage Decoupled Pipeline
