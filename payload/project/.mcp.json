@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "re-toolkit": {
+      "command": "python",
+      "args": [
+        ".agents/tools/re-toolkit/mcp_server.py"
+      ]
+    }
+  }
+}

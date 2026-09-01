@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  558,
-    "total_bytes":  4131316,
+    "file_count":  561,
+    "total_bytes":  4139665,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3180,6 +3180,12 @@
                       "sha256":  "06586BB1E63BAA4ECD2F34FB46C1F9B8790F7328F2CEA0E487E864E060963F3E"
                   },
                   {
+                      "path":  "payload/project/.agents/tools/re-toolkit/mcp_server.py",
+                      "component":  "project-tools",
+                      "bytes":  6918,
+                      "sha256":  "886E7DE3816F879FA8F986CF9B1A353679E80440C797A52EE121F8FBFD6FD576"
+                  },
+                  {
                       "path":  "payload/project/.agents/tools/re-toolkit/pe_parser.py",
                       "component":  "project-tools",
                       "bytes":  12910,
@@ -3264,6 +3270,12 @@
                       "sha256":  "42BB3DF96C7F72613DE4788B07C59E38703A0828AC5CB40A0ABE5B8A647A29DB"
                   },
                   {
+                      "path":  "payload/project/.agents/tools/re-toolkit/tests/test_mcp.py",
+                      "component":  "project-tools",
+                      "bytes":  1279,
+                      "sha256":  "BE22E8BC2E7DEF38CA8004A30AC57101791DA46BC25FD1A726B71364AC124117"
+                  },
+                  {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_pe_parser.py",
                       "component":  "project-tools",
                       "bytes":  2375,
@@ -3322,6 +3334,12 @@
                       "component":  "project-control-plane",
                       "bytes":  1557,
                       "sha256":  "17FA7B96C96966B7DFE1CC2B8ABF5B9FE7CD03351EEEF416683823D618D1FDF8"
+                  },
+                  {
+                      "path":  "payload/project/.mcp.json",
+                      "component":  "project-control-plane",
+                      "bytes":  152,
+                      "sha256":  "C072B700F5FD41E1BC47E2C98BA94823FA9E5BD625D7E50A52B0175D4EC16C20"
                   },
                   {
                       "path":  "payload/project/.windsurfrules",
