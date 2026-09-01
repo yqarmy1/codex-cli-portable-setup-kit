@@ -274,7 +274,7 @@ try {
     Install-ExactPath $keysmithPayload (Join-Path $CodexHome 'keysmith') 'codex-home\keysmith'
   }
 
-  foreach ($item in @('.agents', '.codex', 'AGENTS.md', 'CLAUDE.md', 'OPENCODE.md', 'opencode.json', '.cursorrules', '.windsurfrules', '.mcp.json', 'CONFIG_RELAYS.cmd', 'config_relays.ps1', '.env.example', '.gitignore')) {
+  foreach ($item in @('.agents', '.codex', 'AGENTS.md', 'CLAUDE.md', 'OPENCODE.md', 'opencode.json', '.cursorrules', '.windsurfrules', '.mcp.json', 'CONFIG_RELAYS.cmd', 'config_relays.ps1', 'REPAIR_ALL.cmd', 'repair.ps1', '.env.example', '.gitignore')) {
     $source = Join-Path (Join-Path $Payload 'project') $item
     if (Test-Path -LiteralPath $source) {
       Install-ExactPath $source (Join-Path $ProjectRoot $item) "project\$item"
@@ -286,7 +286,7 @@ try {
   }
 
   $textExtensions = @('.md', '.txt', '.json', '.toml', '.yaml', '.yml', '.ps1', '.py', '.js', '.mjs', '.cmd', '.sh', '.example', '')
-  foreach ($root in @((Join-Path $ProjectRoot '.agents'), (Join-Path $ProjectRoot '.codex'), (Join-Path $ProjectRoot 'AGENTS.md'), (Join-Path $ProjectRoot 'CLAUDE.md'), (Join-Path $ProjectRoot 'OPENCODE.md'), (Join-Path $ProjectRoot 'opencode.json'), (Join-Path $ProjectRoot '.cursorrules'), (Join-Path $ProjectRoot '.windsurfrules'), (Join-Path $ProjectRoot '.mcp.json'), (Join-Path $ProjectRoot 'CONFIG_RELAYS.cmd'), (Join-Path $ProjectRoot 'config_relays.ps1'), (Join-Path $ProjectRoot '.env.example'))) {
+  foreach ($root in @((Join-Path $ProjectRoot '.agents'), (Join-Path $ProjectRoot '.codex'), (Join-Path $ProjectRoot 'AGENTS.md'), (Join-Path $ProjectRoot 'CLAUDE.md'), (Join-Path $ProjectRoot 'OPENCODE.md'), (Join-Path $ProjectRoot 'opencode.json'), (Join-Path $ProjectRoot '.cursorrules'), (Join-Path $ProjectRoot '.windsurfrules'), (Join-Path $ProjectRoot '.mcp.json'), (Join-Path $ProjectRoot 'CONFIG_RELAYS.cmd'), (Join-Path $ProjectRoot 'config_relays.ps1'), (Join-Path $ProjectRoot 'REPAIR_ALL.cmd'), (Join-Path $ProjectRoot 'repair.ps1'), (Join-Path $ProjectRoot '.env.example'))) {
     $files = @()
     if (Test-Path -LiteralPath $root -PathType Leaf) { $files = @(Get-Item -LiteralPath $root) }
     elseif (Test-Path -LiteralPath $root -PathType Container) { $files = @(Get-ChildItem -LiteralPath $root -Recurse -File -Force) }

@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  564,
-    "total_bytes":  4146074,
+    "file_count":  566,
+    "total_bytes":  4152050,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3388,6 +3388,18 @@
                       "component":  "project-control-plane",
                       "bytes":  2296,
                       "sha256":  "926483E10570984573C69FF07145191EAB494BAE0D845F8A70CAAF86435E40F7"
+                  },
+                  {
+                      "path":  "payload/project/repair.ps1",
+                      "component":  "project-control-plane",
+                      "bytes":  5476,
+                      "sha256":  "1760AEB03453B3055DB6A336B8E98AF20F18F2C1D51EBD59EBFBE0F3AA7D7916"
+                  },
+                  {
+                      "path":  "payload/project/REPAIR_ALL.cmd",
+                      "component":  "project-control-plane",
+                      "bytes":  500,
+                      "sha256":  "4D42986A3832962381A6F2B2B294D5F8280DAD08136EAA4FF7EB04D2994AA0C5"
                   }
               ]
 }
