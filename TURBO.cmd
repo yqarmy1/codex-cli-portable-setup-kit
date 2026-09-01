@@ -10,7 +10,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0turbo.ps1"
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0turbo.ps1" %*
 if errorlevel 1 (
   echo.
   echo [!] Turbo mode exited with an error.

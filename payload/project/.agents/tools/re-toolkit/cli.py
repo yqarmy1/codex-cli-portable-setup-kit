@@ -4,8 +4,10 @@
 import argparse
 import json
 import os
+import re
 import sys
 from pathlib import Path
+from typing import Any, Dict, List
 
 # Add parent directory to path so re_toolkit imports work when executed directly
 toolkit_root = Path(__file__).resolve().parent.parent
@@ -33,6 +35,61 @@ def load_input_bytes(input_val: str, offset: int = 0, length: int = 0) -> bytes:
         # Treat as hex string
         clean_hex = "".join(input_val.split()).replace("0x", "").replace("0X", "")
         return bytes.fromhex(clean_hex)
+
+
+def extract_strings(data: bytes, min_len: int = 4) -> List[Dict[str, Any]]:
+    """Extract ASCII and UTF-16LE strings with file offsets."""
+    results = []
+    # ASCII strings
+    ascii_re = re.compile(rb"[\x20-\x7e]{" + str(min_len).encode() + rb",}")
+    for m in ascii_re.finditer(data):
+        results.append({
+            "offset": hex(m.start()),
+            "type": "ASCII",
+            "string": m.group().decode("latin1", errors="ignore"),
+        })
+    # Unicode (UTF-16LE) strings
+    uni_re = re.compile(rb"(?:[\x20-\x7e]\x00){" + str(min_len).encode() + rb",}")
+    for m in uni_re.finditer(data):
+        try:
+            s = m.group().decode("utf-16le", errors="ignore")
+            results.append({
+                "offset": hex(m.start()),
+                "type": "UTF-16LE",
+                "string": s,
+            })
+        except Exception:
+            pass
+    return sorted(results, key=lambda x: int(x["offset"], 16))
+
+
+def auto_triage(data: bytes, filename: str = "") -> Dict[str, Any]:
+    """Auto-detect binary format and extract top-level metadata."""
+    report: Dict[str, Any] = {"filename": filename, "size": len(data), "magic": data[:4].hex()}
+    if data.startswith(b"MZ"):
+        report["type"] = "Windows PE Binary (EXE/DLL/SYS)"
+        try:
+            parser = PEParser(data)
+            report["pe_summary"] = parser.summary()
+            report["sections"] = [s["Name"] for s in parser.sections]
+            report["imports"] = parser.imports
+            report["exports"] = [e["name"] for e in parser.exports[:25]]
+        except Exception as e:
+            report["pe_error"] = str(e)
+    elif data.startswith(b"\x7fELF"):
+        report["type"] = "Linux ELF Binary"
+    elif data.startswith(b"PK\x03\x04"):
+        report["type"] = "ZIP Archive / Package"
+    else:
+        report["type"] = "Raw Binary / Memory Dump / Protocol Stream"
+        # Try Protobuf
+        pb = ProtobufDissector.dissect(data[:512])
+        if pb and not any("error" in item for item in pb):
+            report["protobuf_preview"] = pb[:5]
+    # Extract top strings preview
+    strings = extract_strings(data[:65536], min_len=5)
+    report["top_strings"] = [s["string"] for s in strings[:15]]
+    return report
 
 
 def cmd_parse_pe(args: argparse.Namespace) -> None:
@@ -67,6 +124,58 @@ def cmd_disasm(args: argparse.Namespace) -> None:
     else:
         for ins in instructions:
             print(ins)
+
+
+def cmd_pattern_scan(args: argparse.Namespace) -> None:
+    data = load_input_bytes(args.target)
+    matches = pattern_scan(data, args.pattern)
+    results = [{"offset": hex(m), "address": hex(args.base + m)} for m in matches]
+    if args.json:
+        print(json.dumps(results, indent=2))
+    else:
+        print(f"[+] Found {len(matches)} matches for pattern '{args.pattern}':")
+        for r in results:
+            print(f"  Offset: {r['offset']} | Address: {r['address']}")
+
+
+def cmd_strings(args: argparse.Namespace) -> None:
+    data = load_input_bytes(args.file)
+    strings = extract_strings(data, min_len=args.min_len)
+    if args.json:
+        print(json.dumps(strings, indent=2, ensure_ascii=False))
+    else:
+        for s in strings:
+            print(f"{s['offset']} [{s['type']}]: {s['string']}")
+
+
+def cmd_diff_patch(args: argparse.Namespace) -> None:
+    orig = load_input_bytes(args.orig)
+    patched = load_input_bytes(args.patched)
+    patches = create_patch(orig, patched, base_address=args.base)
+    if args.json:
+        print(json.dumps(patches, indent=2))
+    else:
+        print(f"[+] Found {len(patches)} patch differences:")
+        for p in patches:
+            print(f"  Offset: {p['offset']} ({p['length']} bytes): {p['original_bytes']} -> {p['patched_bytes']}")
+
+
+def cmd_auto(args: argparse.Namespace) -> None:
+    data = load_input_bytes(args.target)
+    filename = os.path.basename(args.target) if os.path.exists(args.target) else "raw_input"
+    report = auto_triage(data, filename=filename)
+    if args.json:
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+    else:
+        print(f"=== Auto-Triage: {report.get('filename')} ({report.get('size')} bytes) ===")
+        print(f"Detected Type: {report.get('type')}")
+        if "pe_summary" in report:
+            ps = report["pe_summary"]
+            print(f"PE Architecture: {ps['machine']} (64-bit: {ps['is_64bit']})")
+            print(f"Sections: {', '.join(report.get('sections', []))}")
+            print(f"Imported DLLs: {', '.join(ps.get('imported_dlls', []))}")
+        if "top_strings" in report and report["top_strings"]:
+            print(f"Strings Preview: {', '.join(report['top_strings'][:8])}")
 
 
 def cmd_decode_protobuf(args: argparse.Namespace) -> None:
@@ -131,11 +240,40 @@ def main() -> None:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
+    # auto
+    p_auto = subparsers.add_parser("auto", help="Automatically triage and inspect target binary")
+    p_auto.add_argument("target", help="File path or hex stream")
+    p_auto.add_argument("--json", action="store_true", help="Output full JSON triage report")
+    p_auto.set_defaults(func=cmd_auto)
+
     # parse-pe
     p_pe = subparsers.add_parser("parse-pe", help="Parse PE32/PE32+ binary structure")
     p_pe.add_argument("file", help="Path to EXE/DLL/SYS file")
     p_pe.add_argument("--json", action="store_true", help="Output full JSON structure")
     p_pe.set_defaults(func=cmd_parse_pe)
+
+    # pattern-scan
+    p_scan = subparsers.add_parser("pattern-scan", help="Scan binary data for AOB hex pattern with wildcards")
+    p_scan.add_argument("target", help="File path or hex string")
+    p_scan.add_argument("--pattern", required=True, help="AOB pattern (e.g. '48 89 ?? 24 ?? 55')")
+    p_scan.add_argument("--base", type=lambda x: int(x, 0), default=0, help="Base address")
+    p_scan.add_argument("--json", action="store_true", help="Output JSON matches")
+    p_scan.set_defaults(func=cmd_pattern_scan)
+
+    # strings
+    p_str = subparsers.add_parser("strings", help="Extract ASCII and Unicode strings from binary")
+    p_str.add_argument("file", help="Path to binary file")
+    p_str.add_argument("--min-len", type=int, default=4, help="Minimum string length")
+    p_str.add_argument("--json", action="store_true", help="Output JSON list with offsets")
+    p_str.set_defaults(func=cmd_strings)
+
+    # diff-patch
+    p_patch = subparsers.add_parser("diff-patch", help="Compare original and patched binaries and output patch diff")
+    p_patch.add_argument("--orig", required=True, help="Path to original binary")
+    p_patch.add_argument("--patched", required=True, help="Path to patched binary")
+    p_patch.add_argument("--base", type=lambda x: int(x, 0), default=0, help="Base address")
+    p_patch.add_argument("--json", action="store_true", help="Output JSON patches")
+    p_patch.set_defaults(func=cmd_diff_patch)
 
     # disasm
     p_dis = subparsers.add_parser("disasm", help="Disassemble binary code or hex stream")

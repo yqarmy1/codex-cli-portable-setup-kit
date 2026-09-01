@@ -108,22 +108,34 @@ re-toolkit/
 ### CLI Command Reference
 
 ```bash
-# 1. Inspect PE headers, imported DLLs, and exported symbols
+# 1. Automatic triage and format discovery
+python .agents/tools/re-toolkit/cli.py auto target.dll --json
+
+# 2. Inspect PE headers, imported DLLs, and exported symbols
 python .agents/tools/re-toolkit/cli.py parse-pe sample.exe --json
 
-# 2. Disassemble raw opcodes or binary sections
+# 3. Fast AOB hex pattern scanner with wildcards
+python .agents/tools/re-toolkit/cli.py pattern-scan target.bin --pattern "48 89 ?? 24 ?? 55" --json
+
+# 4. Extract ASCII & UTF-16LE strings with offsets
+python .agents/tools/re-toolkit/cli.py strings sample.exe --min-len 5 --json
+
+# 5. Disassemble raw opcodes or binary sections
 python .agents/tools/re-toolkit/cli.py disasm 90505831C0C3 --arch x86_64
 
-# 3. Dissect undocumented Protobuf wireformat payloads
+# 6. Dissect undocumented Protobuf wireformat payloads
 python .agents/tools/re-toolkit/cli.py decode-protobuf 089601120474657374
 
-# 4. Emulate CPU registers and stack execution in isolated memory sandbox
+# 7. Emulate CPU registers and stack execution in isolated memory sandbox
 python .agents/tools/re-toolkit/cli.py emulate --code B82A000000505BC3
 
-# 5. Generate Frida dynamic API interceptor and anti-debug scripts
+# 8. Generate Frida dynamic API interceptor and anti-debug scripts
 python .agents/tools/re-toolkit/cli.py gen-hook --symbol CryptHashData --module advapi32.dll --output hook.js
 
-# 6. Format aligned hexadecimal dumps
+# 9. Calculate binary diff patches
+python .agents/tools/re-toolkit/cli.py diff-patch --orig orig.bin --patched mod.bin --json
+
+# 10. Format aligned hexadecimal dumps
 python .agents/tools/re-toolkit/cli.py hexdump target.bin --offset 0x100 --length 128
 ```
 

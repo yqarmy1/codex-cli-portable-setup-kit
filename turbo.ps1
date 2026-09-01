@@ -2,7 +2,8 @@
 param(
   [string]$ProjectRoot = $(if ($env:CODEX_INSTALL_PROJECT_ROOT) { $env:CODEX_INSTALL_PROJECT_ROOT } else { (Split-Path -Parent $PSScriptRoot) }),
   [string]$CodexHome = $(if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }),
-  [switch]$NoLaunch
+  [switch]$NoLaunch,
+  [Parameter(ValueFromRemainingArguments=$true)][string[]]$CodexArgs
 )
 
 Set-StrictMode -Version Latest
@@ -47,7 +48,11 @@ if (-not $NoLaunch) {
   Push-Location -LiteralPath $ProjectRoot
   try {
     if (Get-Command codex -ErrorAction SilentlyContinue) {
-      & codex
+      if ($CodexArgs -and $CodexArgs.Count -gt 0) {
+        & codex @CodexArgs
+      } else {
+        & codex
+      }
     } else {
       Write-Host "[!] Codex CLI not found in PATH. Please run 'npm i -g @openai/codex' or install Node.js." -ForegroundColor Yellow
     }

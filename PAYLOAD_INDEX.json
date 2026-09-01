@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  549,
-    "total_bytes":  4087832,
+    "file_count":  550,
+    "total_bytes":  4096222,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3152,8 +3152,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/cli.py",
                       "component":  "project-tools",
-                      "bytes":  8645,
-                      "sha256":  "087C238CFE44E2807489897FEFE87FAB76E12786DE72354EFB14B6E3BD379A45"
+                      "bytes":  14888,
+                      "sha256":  "876E159DB412007128230FDFA872C884094277641ABAC51711E1BAEAE878C94E"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/disasm.py",
@@ -3220,6 +3220,12 @@
                       "component":  "project-tools",
                       "bytes":  36,
                       "sha256":  "12574D8B6F92F288A882C8673A203A506F581883A9A0490E746AD152A55ADA51"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/re-toolkit/tests/test_cli_extended.py",
+                      "component":  "project-tools",
+                      "bytes":  2147,
+                      "sha256":  "7A6CE25E0418609E08EB95A6AEFA6615AED8D7F3E37EBAAA49AC90E0263C30E6"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_disasm.py",
