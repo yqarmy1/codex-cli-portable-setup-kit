@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 setlocal EnableExtensions DisableDelayedExpansion
 cd /d "%~dp0"
 title Codex CLI Turbo Max Power Mode
@@ -33,18 +33,23 @@ if not exist "%~dp0turbo.ps1" (
   exit /b 1
 )
 
-:: 3. Check for PowerShell
+:: 3. Check for PowerShell with fallback
+set "PS_EXE=powershell.exe"
 where powershell.exe >nul 2>&1
 if errorlevel 1 (
-  echo [ERROR] Windows PowerShell (powershell.exe) was not found.
-  echo This tool requires Windows PowerShell 5.1 or higher.
-  echo ============================================================
-  pause
-  exit /b 1
+  if exist "%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" (
+    set "PS_EXE=%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe"
+  ) else (
+    echo [ERROR] Windows PowerShell was not found on this system.
+    echo This tool requires Windows PowerShell 5.1 or higher.
+    echo ============================================================
+    pause
+    exit /b 1
+  )
 )
 
 :: 4. Run turbo.ps1 with execution policy bypass
-powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0turbo.ps1" %*
+"%PS_EXE%" -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0turbo.ps1" %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 :: 5. Stable pause to ensure the window never flashes away
