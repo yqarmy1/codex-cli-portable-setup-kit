@@ -165,12 +165,17 @@ class SpeculativeInterceptor:
             }).encode("utf-8")
 
             url = f"{self.base_url_a.rstrip('/')}/chat/completions"
-            req = urllib.request.Request(url, data=req_data, headers={
+            headers_a = {
                 "Authorization": f"Bearer {self.api_key_a}",
                 "Content-Type": "application/json",
-            })
+                "Accept": "text/event-stream",
+                "Cache-Control": "no-cache",
+                "X-Accel-Buffering": "no",
+                "User-Agent": "codex-cli/re-toolkit-speculative",
+            }
+            req = urllib.request.Request(url, data=req_data, headers=headers_a)
 
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=90) as resp:
                 for line in resp:
                     line_str = line.decode("utf-8").strip()
                     if not line_str.startswith("data: ") or line_str == "data: [DONE]":
@@ -258,12 +263,16 @@ class SpeculativeInterceptor:
         }).encode("utf-8")
 
         url = f"{self.base_url_b.rstrip('/')}/chat/completions"
-        req = urllib.request.Request(url, data=req_data, headers={
+        headers_b = {
             "Authorization": f"Bearer {self.api_key_b}",
             "Content-Type": "application/json",
-        })
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+            "User-Agent": "codex-cli/re-toolkit-speculative",
+        }
+        req = urllib.request.Request(url, data=req_data, headers=headers_b)
 
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=180) as resp:
             data = json.loads(resp.read().decode("utf-8"))
             content = data["choices"][0]["message"]["content"]
             if on_token:

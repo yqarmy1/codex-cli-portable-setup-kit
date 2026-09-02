@@ -3,7 +3,7 @@
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
     "file_count":  566,
-    "total_bytes":  4152050,
+    "total_bytes":  4152458,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3230,8 +3230,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/speculative_interceptor.py",
                       "component":  "project-tools",
-                      "bytes":  14578,
-                      "sha256":  "F3664E6066054240F26DFE08C858641AF079975230299527FCDEB417D813F1BC"
+                      "bytes":  14986,
+                      "sha256":  "2E9B3321A768D9E9DD45617BDF9B8EED5984A3D15331D719307A9E6E0FE98CB0"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/__init__.py",
