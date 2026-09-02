@@ -3,7 +3,7 @@
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
     "file_count":  566,
-    "total_bytes":  4152458,
+    "total_bytes":  4152572,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -44,8 +44,8 @@
                   {
                       "path":  "payload/codex-home/config.portable.toml",
                       "component":  "codex-user",
-                      "bytes":  1274,
-                      "sha256":  "B4FB9DC53A3203FD5BC7BCBBB7F607C1D578482629BB498B0A6D970E6E63415B"
+                      "bytes":  1276,
+                      "sha256":  "D822B947A14E6C40A3ECEF5DA0C63852BC1B4EE9A03CF2646437A77E3585055B"
                   },
                   {
                       "path":  "payload/codex-home/instructions/gpt-contract.md",
@@ -3392,8 +3392,8 @@
                   {
                       "path":  "payload/project/repair.ps1",
                       "component":  "project-control-plane",
-                      "bytes":  5476,
-                      "sha256":  "1760AEB03453B3055DB6A336B8E98AF20F18F2C1D51EBD59EBFBE0F3AA7D7916"
+                      "bytes":  5588,
+                      "sha256":  "3BB157291236FCED11C721DA90E3BC56A87C5DC459CDF5C1958F7B867A6CC4DF"
                   },
                   {
                       "path":  "payload/project/REPAIR_ALL.cmd",

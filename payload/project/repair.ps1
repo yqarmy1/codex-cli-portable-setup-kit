@@ -94,6 +94,7 @@ if (Test-Path -LiteralPath $configPath) {
     else { $rootKeys['approval_policy'] = '"never"' }
     if (-not $rootKeys.Contains('sandbox_mode')) { $rootKeys['sandbox_mode'] = '"workspace-write"' }
     if (-not $rootKeys.Contains('model_verbosity')) { $rootKeys['model_verbosity'] = '"low"' }
+    if (-not $rootKeys.Contains('model_reasoning_effort')) { $rootKeys['model_reasoning_effort'] = '"medium"' }
 
     # Reconstruct clean sanitized TOML
     $outLines = [System.Collections.Generic.List[string]]::new()
