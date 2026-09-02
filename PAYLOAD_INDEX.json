@@ -2,8 +2,8 @@
     "schema":  1,
     "release":  "6.3.0",
     "generated_at":  "2026-08-31",
-    "file_count":  566,
-    "total_bytes":  4152572,
+    "file_count":  569,
+    "total_bytes":  4166314,
     "files":  [
                   {
                       "path":  "payload/agents-home/skills/binary-analysis/SKILL.md",
@@ -3152,8 +3152,8 @@
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/cli.py",
                       "component":  "project-tools",
-                      "bytes":  21195,
-                      "sha256":  "130E5AF56857C3033E7FDA772247C98A39B28D007F7622B781A05AD82AC47606"
+                      "bytes":  21706,
+                      "sha256":  "53DE71955D24A4D86C1975AF08F346CE6FD764316908460A46F5750B13D0F99B"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/disasm.py",
@@ -3172,6 +3172,12 @@
                       "component":  "project-tools",
                       "bytes":  5280,
                       "sha256":  "1251623EE4ACE0224EB29FA07985C8A1D5CA741E3A6BFE79B6A7A98E6E591F54"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/re-toolkit/gateway.py",
+                      "component":  "project-tools",
+                      "bytes":  9787,
+                      "sha256":  "4F3D5EC8F57A894B4FDEA886C09E78B84526F160C241ED0788FBF10A3EE94226"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/interceptor.py",
@@ -3262,6 +3268,12 @@
                       "component":  "project-tools",
                       "bytes":  1500,
                       "sha256":  "E36F038EE09115C547741E5578F6299A5176D972064653C4E249C665E9629BD4"
+                  },
+                  {
+                      "path":  "payload/project/.agents/tools/re-toolkit/tests/test_gateway.py",
+                      "component":  "project-tools",
+                      "bytes":  3139,
+                      "sha256":  "7F74C033B3A149E2FDC3163BF2D861D37ACCC977DC81331FC5D345649752E7B2"
                   },
                   {
                       "path":  "payload/project/.agents/tools/re-toolkit/tests/test_interceptor.py",
@@ -3400,6 +3412,12 @@
                       "component":  "project-control-plane",
                       "bytes":  500,
                       "sha256":  "4D42986A3832962381A6F2B2B294D5F8280DAD08136EAA4FF7EB04D2994AA0C5"
+                  },
+                  {
+                      "path":  "payload/project/START_GATEWAY.cmd",
+                      "component":  "project-control-plane",
+                      "bytes":  305,
+                      "sha256":  "C1FF21B069EC56C4515917A79A5CDA8B3BF3BB484B26CF0675D53122CB53DDC4"
                   }
               ]
 }

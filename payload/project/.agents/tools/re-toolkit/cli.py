@@ -275,6 +275,11 @@ def cmd_spec_probe(args: argparse.Namespace) -> None:
         print(result["output"])
 
 
+def cmd_gateway(args: argparse.Namespace) -> None:
+    from gateway import start_gateway_server
+    start_gateway_server(host=args.host, port=args.port)
+
+
 def cmd_export_preset(args: argparse.Namespace) -> None:
     presets = {
         "chatgpt": {
@@ -444,6 +449,12 @@ def main() -> None:
     p_spec.add_argument("--mock", action="store_true", help="Force offline mock execution")
     p_spec.add_argument("--json", action="store_true", help="Output full JSON execution report")
     p_spec.set_defaults(func=cmd_spec_probe)
+
+    # gateway
+    p_gw = subparsers.add_parser("gateway", help="Start local OpenAI-compatible anti-refusal API gateway server")
+    p_gw.add_argument("--host", default="127.0.0.1", help="Host address (default: 127.0.0.1)")
+    p_gw.add_argument("--port", type=int, default=8088, help="Port number (default: 8088)")
+    p_gw.set_defaults(func=cmd_gateway)
 
     # export-preset
     p_preset = subparsers.add_parser("export-preset", help="Export universal configuration presets for ChatGPT, OpenCode, Cursor, etc.")

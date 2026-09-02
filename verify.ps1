@@ -60,7 +60,7 @@ if ($Installed) {
   if ($rules.Contains('__COMPUTER_NAME__')) { throw 'Computer-name placeholder remains in installed default.rules.' }
   if ($rules.Contains('__WINDOWS_USERNAME__')) { throw 'Windows-username placeholder remains in installed default.rules.' }
 
-  foreach ($root in @((Join-Path $ProjectRoot '.agents'), (Join-Path $ProjectRoot '.codex'), (Join-Path $ProjectRoot 'AGENTS.md'), (Join-Path $ProjectRoot 'CLAUDE.md'), (Join-Path $ProjectRoot 'OPENCODE.md'), (Join-Path $ProjectRoot 'opencode.json'), (Join-Path $ProjectRoot '.cursorrules'), (Join-Path $ProjectRoot '.windsurfrules'), (Join-Path $ProjectRoot '.mcp.json'), (Join-Path $ProjectRoot 'CONFIG_RELAYS.cmd'), (Join-Path $ProjectRoot 'config_relays.ps1'), (Join-Path $ProjectRoot 'REPAIR_ALL.cmd'), (Join-Path $ProjectRoot 'repair.ps1'), (Join-Path $ProjectRoot '.env.example'))) {
+  foreach ($root in @((Join-Path $ProjectRoot '.agents'), (Join-Path $ProjectRoot '.codex'), (Join-Path $ProjectRoot 'AGENTS.md'), (Join-Path $ProjectRoot 'CLAUDE.md'), (Join-Path $ProjectRoot 'OPENCODE.md'), (Join-Path $ProjectRoot 'opencode.json'), (Join-Path $ProjectRoot '.cursorrules'), (Join-Path $ProjectRoot '.windsurfrules'), (Join-Path $ProjectRoot '.mcp.json'), (Join-Path $ProjectRoot 'CONFIG_RELAYS.cmd'), (Join-Path $ProjectRoot 'config_relays.ps1'), (Join-Path $ProjectRoot 'REPAIR_ALL.cmd'), (Join-Path $ProjectRoot 'repair.ps1'), (Join-Path $ProjectRoot 'START_GATEWAY.cmd'), (Join-Path $ProjectRoot '.env.example'))) {
     $files = @()
     if (Test-Path -LiteralPath $root -PathType Leaf) { $files = @(Get-Item -LiteralPath $root) }
     elseif (Test-Path -LiteralPath $root -PathType Container) { $files = @(Get-ChildItem -LiteralPath $root -Recurse -File -Force) }
